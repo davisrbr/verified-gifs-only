@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrowserArena Verified Interaction GIFs</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+        .header { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .stats { display: flex; gap: 20px; margin: 20px 0; }
+        .stat { background: #007acc; color: white; padding: 15px; border-radius: 6px; text-align: center; }
+        .gif-container { margin: 20px 0; padding: 20px; border: 1px solid #ddd; background: white; border-radius: 8px; }
+        .gif-id { font-weight: bold; color: #007acc; font-size: 18px; margin-bottom: 10px; }
+        .gif-image { max-width: 100%; height: auto; border-radius: 4px; }
+        .metadata { background: #f8f9fa; padding: 15px; margin: 10px 0; border-radius: 4px; }
+        .copy-btn { background: #28a745; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; margin-left: 10px; }
+        .copy-btn:hover { background: #218838; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🤖 BrowserArena Verified Interaction GIFs</h1>
+        <p>These GIFs show verified browser automation attempts from the BrowserArena dataset - only interactions that are referenced in the verified experiments.</p>
+        
+        <div class="stats">
+            <div class="stat">
+                <div style="font-size: 24px; font-weight: bold;">227</div>
+                <div>Verified GIFs</div>
+            </div>
+            <div class="stat">
+                <div style="font-size: 24px; font-weight: bold;">177MB</div>
+                <div>Total Size</div>
+            </div>
+            <div class="stat">
+                <div style="font-size: 24px; font-weight: bold;">126</div>
+                <div>Interactions</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gif-list"></div>
+
+    <script>
+        // Generate GIF list dynamically
+        const gifNames = [
+            "03_05_2025_04_36_24_DPn.gif",
+            "03_05_2025_04_36_24_hCn.gif",
+            "03_05_2025_04_39_44_LpZ.gif",
+            "03_05_2025_04_39_44_lfl.gif",
+            "03_05_2025_04_41_09_Gqg.gif",
+            "03_05_2025_04_41_09_QzZ.gif",
+            "03_05_2025_05_09_32_cgp.gif",
+            "03_05_2025_05_09_32_ews.gif",
+            "03_05_2025_20_57_54_VhL.gif",
+            "03_05_2025_20_57_54_dkz.gif",
+            "03_05_2025_20_57_58_Nih.gif",
+            "03_05_2025_20_57_58_cSG.gif",
+            "03_05_2025_21_08_57_AQd.gif",
+            "03_05_2025_21_08_57_Imc.gif",
+            "03_05_2025_21_12_20_HMD.gif",
+            "03_05_2025_21_12_20_pzJ.gif",
+            "03_05_2025_21_13_18_MuP.gif",
+            "03_05_2025_21_13_18_maG.gif",
+            "03_05_2025_21_14_53_hgh.gif",
+            "03_05_2025_21_14_53_lsB.gif",
+            "03_05_2025_21_22_53_VdC.gif",
+            "03_05_2025_21_22_53_yqc.gif",
+            "03_05_2025_21_30_18_JgL.gif",
+            "03_05_2025_21_30_18_bUN.gif",
+            "07_05_2025_04_32_00_JSV.gif",
+            "07_05_2025_04_32_00_iTj.gif",
+            "07_05_2025_15_10_56_EiU.gif",
+            "07_05_2025_15_10_56_hQu.gif",
+            "07_05_2025_15_13_54_flC.gif",
+            "07_05_2025_15_13_54_ndq.gif",
+            "07_05_2025_15_28_05_EbZ.gif",
+            "07_05_2025_15_28_05_yOU.gif",
+            "07_05_2025_15_41_55_LST.gif",
+            "07_05_2025_15_41_55_OKo.gif",
+            "07_05_2025_15_45_37_FDR.gif",
+            "07_05_2025_15_45_37_RfJ.gif",
+            "07_05_2025_16_08_42_cZf.gif",
+            "07_05_2025_16_08_42_ceu.gif",
+            "07_05_2025_17_17_20_jBO.gif",
+            "07_05_2025_17_17_20_xqV.gif",
+            "07_05_2025_17_43_01_THR.gif",
+            "07_05_2025_17_43_01_aZt.gif",
+            "07_05_2025_17_52_02_FAG.gif",
+            "07_05_2025_17_52_02_oTk.gif",
+            "07_05_2025_18_05_35_iPJ.gif",
+            "07_05_2025_18_05_35_okT.gif",
+            "07_05_2025_18_12_48_HXx.gif",
+            "07_05_2025_18_12_48_NLl.gif",
+            "07_05_2025_18_14_47_bzD.gif",
+            "07_05_2025_18_14_47_xLQ.gif",
+            "07_05_2025_18_43_04_XGu.gif",
+            "07_05_2025_18_43_04_ppN.gif",
+            "07_05_2025_18_47_35_WyF.gif",
+            "07_05_2025_18_47_35_nMx.gif",
+            "09_05_2025_19_57_33_CFM.gif",
+            "09_05_2025_19_57_33_HgY.gif",
+            "09_05_2025_20_11_09_FrD.gif",
+            "09_05_2025_20_11_09_SCY.gif",
+            "09_05_2025_20_13_59_XFw.gif",
+            "09_05_2025_20_13_59_wLl.gif",
+            "09_05_2025_20_58_23_Idv.gif",
+            "09_05_2025_20_58_23_unx.gif",
+            "09_05_2025_21_21_06_MSm.gif",
+            "09_05_2025_21_21_06_kAA.gif",
+            "09_05_2025_21_28_12_OnA.gif",
+            "09_05_2025_21_28_12_RJD.gif",
+            "09_05_2025_21_30_52_Eso.gif",
+            "09_05_2025_21_30_52_wcO.gif",
+            "09_05_2025_21_36_59_AvQ.gif",
+            "09_05_2025_21_36_59_crp.gif",
+            "09_05_2025_21_40_30_XjR.gif",
+            "09_05_2025_21_40_30_YEs.gif",
+            "09_05_2025_21_41_14_DvE.gif",
+            "09_05_2025_21_41_14_YwM.gif",
+            "09_05_2025_21_42_22_SdT.gif",
+            "09_05_2025_21_42_22_kZY.gif",
+            "09_05_2025_21_42_45_IxH.gif",
+            "09_05_2025_21_42_45_OpM.gif",
+            "09_05_2025_21_53_08_BHP.gif",
+            "09_05_2025_21_53_08_Zvg.gif",
+            "09_05_2025_22_23_29_IXB.gif",
+            "09_05_2025_22_23_29_cgB.gif",
+            "09_05_2025_22_39_53_FuI.gif",
+            "09_05_2025_22_39_53_htb.gif",
+            "09_05_2025_22_44_26_YNT.gif",
+            "09_05_2025_22_44_26_xEk.gif",
+            "09_05_2025_23_09_20_BUj.gif",
+            "09_05_2025_23_09_20_MfC.gif",
+            "09_05_2025_23_49_59_oZV.gif",
+            "09_05_2025_23_49_59_ugh.gif",
+            "09_05_2025_23_51_28_LOj.gif",
+            "09_05_2025_23_51_28_cJD.gif",
+            "09_05_2025_23_54_56_lGf.gif",
+            "09_05_2025_23_54_56_qXn.gif",
+            "10_05_2025_00_00_27_IAX.gif",
+            "10_05_2025_00_00_27_TVe.gif",
+            "10_05_2025_00_01_48_LVO.gif",
+            "10_05_2025_00_01_48_pTG.gif",
+            "10_05_2025_00_21_07_EWr.gif",
+            "10_05_2025_00_21_07_kiE.gif",
+            "10_05_2025_00_23_41_NPb.gif",
+            "10_05_2025_00_23_41_Oeo.gif",
+            "10_05_2025_00_34_36_jIN.gif",
+            "10_05_2025_00_34_36_wqu.gif",
+            "10_05_2025_00_52_29_AYh.gif",
+            "10_05_2025_00_52_29_BZG.gif",
+            "10_05_2025_01_06_39_PrQ.gif",
+            "10_05_2025_01_06_39_yrs.gif",
+            "10_05_2025_01_14_08_PHv.gif",
+            "10_05_2025_01_14_08_RLX.gif",
+            "10_05_2025_01_17_27_KXl.gif",
+            "10_05_2025_01_17_27_zKf.gif",
+            "10_05_2025_01_25_04_TAY.gif",
+            "10_05_2025_01_25_04_TTJ.gif",
+            "10_05_2025_01_37_05_jxR.gif",
+            "10_05_2025_01_37_05_xIM.gif",
+            "10_05_2025_02_04_43_gWk.gif",
+            "10_05_2025_02_04_43_lFr.gif",
+            "10_05_2025_03_03_55_Umi.gif",
+            "10_05_2025_03_03_55_vsV.gif",
+            "10_05_2025_03_04_51_idu.gif",
+            "10_05_2025_03_04_51_sSy.gif",
+            "10_05_2025_03_16_40_dQm.gif",
+            "10_05_2025_03_16_40_fSK.gif",
+            "10_05_2025_03_33_17_FeF.gif",
+            "10_05_2025_03_33_17_MBI.gif",
+            "10_05_2025_03_41_38_tUR.gif",
+            "10_05_2025_03_41_38_ygE.gif",
+            "10_05_2025_03_50_52_aUr.gif",
+            "10_05_2025_03_50_52_mxm.gif",
+            "11_05_2025_04_18_25_WsH.gif",
+            "11_05_2025_04_18_25_ZyS.gif",
+            "11_05_2025_04_22_35_TKg.gif",
+            "11_05_2025_04_22_35_YOe.gif",
+            "11_05_2025_04_28_09_efj.gif",
+            "11_05_2025_04_28_09_hSQ.gif",
+            "11_05_2025_04_31_42_NTW.gif",
+            "11_05_2025_04_31_42_xwx.gif",
+            "11_05_2025_04_36_50_kRW.gif",
+            "11_05_2025_04_36_50_zuh.gif",
+            "11_05_2025_04_50_35_dLM.gif",
+            "11_05_2025_04_50_35_pjT.gif",
+            "11_05_2025_05_43_38_Axf.gif",
+            "11_05_2025_05_43_38_xXO.gif",
+            "11_05_2025_06_10_26_Lck.gif",
+            "11_05_2025_06_10_26_QpD.gif",
+            "11_05_2025_06_11_16_bVY.gif",
+            "11_05_2025_06_11_16_zDI.gif",
+            "11_05_2025_06_11_25_JlO.gif",
+            "11_05_2025_06_11_25_ckK.gif",
+            "11_05_2025_06_12_22_GuP.gif",
+            "11_05_2025_06_12_22_ScT.gif",
+            "11_05_2025_06_23_26_pIG.gif",
+            "11_05_2025_06_23_26_uTs.gif",
+            "11_05_2025_06_38_30_Yxu.gif",
+            "11_05_2025_06_38_30_pBK.gif",
+            "11_05_2025_06_47_08_Erz.gif",
+            "11_05_2025_06_47_08_gAp.gif",
+            "11_05_2025_07_24_02_PwH.gif",
+            "11_05_2025_07_24_02_guO.gif",
+            "11_05_2025_07_25_13_Hoh.gif",
+            "11_05_2025_07_25_13_oaF.gif",
+            "11_05_2025_07_28_41_LZs.gif",
+            "11_05_2025_07_28_41_zYJ.gif",
+            "11_05_2025_07_31_35_GLU.gif",
+            "11_05_2025_07_31_35_atF.gif",
+            "11_05_2025_08_09_43_LcZ.gif",
+            "11_05_2025_08_09_43_nJw.gif",
+            "11_05_2025_08_10_03_OcQ.gif",
+            "11_05_2025_08_10_03_qWU.gif",
+            "11_05_2025_08_38_16_UpM.gif",
+            "11_05_2025_08_38_16_sbS.gif",
+            "11_05_2025_08_39_43_kNs.gif",
+            "11_05_2025_08_39_43_xKr.gif",
+            "11_05_2025_09_27_37_oRg.gif",
+            "11_05_2025_09_27_37_ppp.gif",
+            "11_05_2025_09_47_02_HsO.gif",
+            "11_05_2025_09_47_02_VYi.gif",
+            "11_05_2025_14_19_12_TeJ.gif",
+            "11_05_2025_14_19_12_veF.gif",
+            "11_05_2025_14_22_03_UuM.gif",
+            "11_05_2025_14_22_03_XJs.gif",
+            "11_05_2025_14_25_19_FIv.gif",
+            "11_05_2025_14_25_19_YhJ.gif",
+            "11_05_2025_14_26_48_bdr.gif",
+            "11_05_2025_14_26_48_nYP.gif",
+            "11_05_2025_14_31_41_EqG.gif",
+            "11_05_2025_14_31_41_TJc.gif",
+            "11_05_2025_14_32_29_BvX.gif",
+            "11_05_2025_14_32_29_iUd.gif",
+            "11_05_2025_14_34_53_PCs.gif",
+            "11_05_2025_14_34_53_tdO.gif",
+            "11_05_2025_14_47_18_Era.gif",
+            "11_05_2025_14_47_18_ZxX.gif",
+            "11_05_2025_15_23_15_HWs.gif",
+            "11_05_2025_15_23_15_iFQ.gif",
+            "11_05_2025_16_31_49_Ibq.gif",
+            "11_05_2025_16_31_49_uth.gif",
+            "11_05_2025_16_33_04_ERr.gif",
+            "11_05_2025_16_33_04_asV.gif",
+            "11_05_2025_16_36_02_Exa.gif",
+            "11_05_2025_16_36_02_yKE.gif",
+            "11_05_2025_16_37_10_Qis.gif",
+            "11_05_2025_16_37_10_TjY.gif",
+            "11_05_2025_16_44_24_StO.gif",
+            "11_05_2025_16_44_24_wEl.gif",
+            "11_05_2025_17_06_51_Omm.gif",
+            "11_05_2025_17_06_51_uKJ.gif",
+            "11_05_2025_17_35_23_AUA.gif",
+            "11_05_2025_17_35_23_ErL.gif",
+            "11_05_2025_17_51_33_HXH.gif",
+            "11_05_2025_17_51_33_qse.gif",
+            "11_05_2025_18_05_49_bNN.gif",
+            "11_05_2025_18_05_49_qWj.gif",
+            "12_05_2025_03_44_04_AeP.gif",
+            "12_05_2025_03_49_08_ZIj.gif",
+            "12_05_2025_03_49_08_znz.gif",
+            "12_05_2025_03_51_49_OXc.gif",
+            "12_05_2025_03_51_49_tJF.gif",
+            "12_05_2025_03_54_21_KhV.gif",
+            "12_05_2025_03_54_21_dPl.gif",
+            "12_05_2025_03_56_29_aty.gif",
+            "12_05_2025_03_56_29_nGd.gif",
+            "12_05_2025_04_05_21_eYC.gif",
+            "12_05_2025_04_05_21_mCX.gif",
+            "12_05_2025_05_13_04_KAL.gif",
+            "12_05_2025_05_13_04_yaD.gif"
+        ];
+
+        // Function to copy GIF URL to clipboard
+        function copyGifUrl(gifName) {
+            const url = `https://davisrbr.github.io/verified-gifs-only/gifs/${gifName}`;
+            navigator.clipboard.writeText(url).then(() => {
+                alert(`Copied: ${url}`);
+            });
+        }
+
+        // Generate GIF containers
+        function generateGifList() {
+            const container = document.getElementById('gif-list');
+            
+            gifNames.forEach(gifName => {
+                const gifId = gifName.replace('.gif', '');
+                
+                const gifContainer = document.createElement('div');
+                gifContainer.className = 'gif-container';
+                
+                gifContainer.innerHTML = `
+                    <div class="gif-id">
+                        GIF ID: ${gifId}
+                        <button class="copy-btn" onclick="copyGifUrl('${gifName}')">Copy URL</button>
+                    </div>
+                    <div class="metadata">
+                        <strong>Direct URL:</strong> https://davisrbr.github.io/verified-gifs-only/gifs/${gifName}<br>
+                        <strong>File:</strong> ${gifName}
+                    </div>
+                    <img src="gifs/${gifName}" alt="${gifId}" class="gif-image" loading="lazy">
+                `;
+                
+                container.appendChild(gifContainer);
+            });
+        }
+
+        // Generate the list when page loads
+        document.addEventListener('DOMContentLoaded', generateGifList);
+    </script>
+</body>
+</html>

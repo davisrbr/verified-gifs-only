@@ -1,12 +1,12 @@
-# 🤖 BrowserArena Verified GIFs
+# 🤖 BrowserArena Survey GIFs
 
-This repository contains **227 verified GIFs** (177MB) from the BrowserArena dataset - only the GIFs that are referenced in verified human preference experiments.
+This repository contains **50 selected GIFs** from the BrowserArena dataset - a curated subset of 25 interactions for survey purposes where both models have GIFs available.
 
 ## 📊 Overview
 
-- **227 verified GIFs** from 126 browser automation interactions
-- **177MB total size** (reduced from 560MB of all GIFs)
-- **Interactive web viewer** with copy-to-clipboard functionality
+- **50 GIFs** from 25 browser automation interactions
+- **25 interactions** with both model attempts having GIFs
+- **Curated for surveys** - only complete interaction pairs
 - **GitHub Pages deployment** ready
 
 ## 🚀 Quick Start
@@ -27,68 +27,28 @@ This repository contains **227 verified GIFs** (177MB) from the BrowserArena dat
 ```
 verified-gifs-only/
 ├── index.html          # Interactive GIF viewer
-├── gifs/              # 227 verified GIF files
-│   ├── 03_05_2025_04_36_24_DPn.gif
-│   ├── 03_05_2025_04_36_24_hCn.gif
+├── gifs/              # 50 survey GIF files (25 interactions × 2 models)
+│   ├── 12_05_2025_03_54_21_KhV.gif
+│   ├── 12_05_2025_03_54_21_dPl.gif
 │   └── ...
 └── README.md          # This file
 ```
 
-## 🎯 Usage in Research
+## 🎯 Survey Interactions
 
-### Markdown
-```markdown
-![Browser Automation](https://davisrbr.github.io/verified-gifs-only/gifs/12_05_2025_03_54_21_KhV.gif)
-```
-
-### HTML
-```html
-<img src="https://davisrbr.github.io/verified-gifs-only/gifs/12_05_2025_03_54_21_KhV.gif" alt="Browser Task">
-```
-
-### LaTeX
-```latex
-\includegraphics[width=\textwidth]{https://davisrbr.github.io/verified-gifs-only/gifs/12_05_2025_03_54_21_KhV.gif}
-```
-
-## 🔄 Deployment to GitHub Pages
-
-### Prerequisites
-1. Create a **public** repository named `verified-gifs-only` on GitHub
-2. Ensure you have git configured with your GitHub username
-
-### Deploy Steps
-```bash
-# Add GitHub remote
-git remote add origin https://github.com/davisrbr/verified-gifs-only.git
-
-# Push to GitHub
-git branch -M main
-git push -u origin main
-```
-
-### Enable GitHub Pages
-1. Go to repository **Settings** → **Pages**
-2. Source: **Deploy from a branch**
-3. Branch: **main** / (root)
-4. Click **Save**
-
-Your GIFs will be available at: `https://davisrbr.github.io/verified-gifs-only/`
+The survey interactions file (`survey_interactions.txt`) contains 25 carefully selected interactions where:
+- Both models successfully generated GIFs
+- Complete task execution is visible
+- Suitable for human preference evaluation
 
 ## 📈 Dataset Information
 
 These GIFs represent browser automation attempts from the BrowserArena dataset:
-- Each GIF shows a model attempting to complete a specific user task
+- Each interaction shows 2 models attempting the same user task
 - Tasks include web browsing, form filling, information extraction, etc.
-- GIFs are paired (2 model attempts per task) for human preference evaluation
-- Only successful and verified interactions are included
-
-## 🔗 Related Files
-
-- **Full dataset:** `/Users/davisbrown/browserarena/FastChat/verified_conv_log/verified_interactions-clean.json`
-- **Extracted interactions:** `/Users/davisbrown/browserarena/extracted_verified_interactions_fixed.txt`
-- **All GIFs (560MB):** `/Users/davisbrown/browserarena/browserarena-gifs/`
+- Selected from 85 interactions with complete GIF pairs
+- Reduced from original 693 GIFs to just 50 for manageable size
 
 ---
 
-**Total:** 227 verified GIFs • 177MB • Ready for web deployment 🚀
+**Total:** 50 survey GIFs • 25 interactions • Ready for web deployment 🚀

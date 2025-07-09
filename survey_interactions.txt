@@ -1,428 +1,1278 @@
-=== BROWSERARENA SURVEY INTERACTIONS ===
+=== BROWSERARENA SURVEY INTERACTIONS WITH AGENT TRACES ===
 Total interactions: 25 (subset with all GIFs available)
-==================================================
+======================================================================
 
+======================================================================
 INTERACTION 1
 Vote Type: leftvote
 User Task: How many nonstop flights to Las Vegas depart from Portland, Oregon every day and what airlines operate them?
+======================================================================
 
 📱 MODEL ATTEMPT 1: ✅ Success
   Model: openai/o4-mini
   GIF ID: 12_05_2025_03_54_21_KhV.gif
   Log ID: 12_05_2025_03_54_21_KhV
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: How many nonstop flights to Las Vegas depart from Portland, Oregon every day and what airlines operate them?
+  STEPS: Executed 7 steps
+  EVAL: Unknown - starting the task
+  EVAL: Success - Search performed
+  EVAL: Success - The page shows four airlines with their daily nonstop flight frequencies
+  GOAL: Search Google for daily nonstop flights from Portland to Las Vegas
+  GOAL: Open the FlightsFrom.com link to view nonstop flight details
+  GOAL: Extract the list of airlines and their daily nonstop flight counts
+  ACTION: search_anonymous LLM company
+  ACTION: click_element_by_index
+  ACTION: extract_content
+  SEARCH: nonstop flights from Portland PDX to Las Vegas LAS daily count airlines
+  CLICK: button with index 33: ...
+  EXTRACT: Content extracted from page
+  RESULT: Success
+
+
 📱 MODEL ATTEMPT 2: ❌ Failed
   Model: google/gemini-2.5-pro-preview-03-25
   GIF ID: 12_05_2025_03_54_21_dPl.gif
   Log ID: 12_05_2025_03_54_21_dPl
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: How many nonstop flights to Las Vegas depart from Portland, Oregon every day and what airlines operate them?
+  STEPS: Executed 3 steps
+  RESULT: Failed - stopping due to errors
 
 
+======================================================================
 INTERACTION 2
 Vote Type: leftvote
 User Task: Create a summary for the wikipedia article about Manchester Metrolink
+======================================================================
 
 📱 MODEL ATTEMPT 1: ✅ Success
   Model: deepseek/deepseek-r1
   GIF ID: 12_05_2025_04_05_21_mCX.gif
   Log ID: 12_05_2025_04_05_21_mCX
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: Create a summary for the wikipedia article about Manchester Metrolink
+  STEPS: Executed 4 steps
+  EVAL: Unknown - Starting fresh session
+  EVAL: Success - Google search yielded relevant Wikipedia results
+  EVAL: Success - Navigated to correct Wikipedia article
+  EVAL: Success - Extracted all required summary components
+  GOAL: Search Google for 'Manchester Metrolink Wikipedia'
+  GOAL: Navigate to Manchester Metrolink Wikipedia article
+  GOAL: Extract core summary elements from visible content
+  GOAL: Compile final summary and complete task
+  ACTION: search_anonymous LLM company
+  ACTION: click_element_by_index
+  ACTION: extract_content
+  ACTION: done
+  SEARCH: Manchester Metrolink Wikipedia
+  ... (3 more trace items)
+
+
 📱 MODEL ATTEMPT 2: ❌ Failed
   Model: google/gemini-2.5-pro-preview-03-25
   GIF ID: 12_05_2025_04_05_21_eYC.gif
   Log ID: 12_05_2025_04_05_21_eYC
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: Create a summary for the wikipedia article about Manchester Metrolink
+  STEPS: Executed 3 steps
+  RESULT: Failed - stopping due to errors
 
 
+======================================================================
 INTERACTION 3
 Vote Type: leftvote
 User Task: Go to Etsy.com, browse the trending home décor category, and list the top 5 most popular items including their titles and prices.
+======================================================================
 
 📱 MODEL ATTEMPT 1: ❌ Failed
   Model: deepseek/deepseek-r1
   GIF ID: 12_05_2025_03_56_29_aty.gif
   Log ID: 12_05_2025_03_56_29_aty
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: Go to Etsy.com, browse the trending home décor category, and list the top 5 most popular items including their titles and prices.
+  STEPS: Executed 8 steps
+  EVAL: Unknown - Just starting the task with a blank page
+  EVAL: Success - Successfully navigated to Etsy.com homepage
+  EVAL: Critical Failure - Page content remains unavailable despite direct category URL access
+  GOAL: Navigate to Etsy.com homepage to begin product search
+  GOAL: Wait for page elements to load and check for cookie consent popup
+  GOAL: Clear potential overlays and retry page loading
+  GOAL: Reload page and explicitly handle cookie consent if present
+  GOAL: Attempt cookie acceptance using text detection and ensure page content loads
+  GOAL: Force page functionality through user agent spoofing and element removal
+  GOAL: Try accessing trending home decor through direct URL bypassing frontpage
+  GOAL: Execute final content extraction attempt with forced scroll and element visibility
+  ACTION: go_to_url
+  ACTION: wait
+  ... (29 more trace items)
+
+
 📱 MODEL ATTEMPT 2: ❌ Failed
   Model: google/gemini-2.5-pro-preview-03-25
   GIF ID: 12_05_2025_03_56_29_nGd.gif
   Log ID: 12_05_2025_03_56_29_nGd
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: Go to Etsy.com, browse the trending home décor category, and list the top 5 most popular items including their titles and prices.
+  STEPS: Executed 15 steps
+  EVAL: Unknown - The previous step failed due to an invalid JSON response. The current page is blank, so no previous goal can be evaluated.
+  EVAL: Success - Navigated to Etsy.com although there is a captcha.
+  EVAL: Success - I have successfully searched on Google for \"Etsy trending home decor\". The Google search results page is now displayed.
+  GOAL: Navigate to Etsy.com.
+  GOAL: Solve the captcha to access Etsy.com.
+  GOAL: Solve the captcha to access Etsy.com by dragging the puzzle piece to the correct location.
+  GOAL: Solve the captcha to access Etsy.com by dragging the puzzle piece to the correct location using new estimated coordinates.
+  GOAL: Solve the captcha to access Etsy.com by dragging the puzzle piece to the correct location using new estimated coordinates.
+  GOAL: Refresh the page to try and get a new captcha or bypass the current one, as drag-and-drop has failed multiple times and there are no interactive elements for retry.
+  GOAL: Search Google for 'Etsy trending home decor' to find an alternative way to access the information.
+  GOAL: Click on the first Etsy link from the Google search results to find the trending home decor items. This will likely be element 33 or similar.
+  ACTION: go_to_url
+  ACTION: drag_drop
+  ... (9 more trace items)
 
 
+======================================================================
 INTERACTION 4
 Vote Type: leftvote
-User Task: find me any recipe on food.com 
+User Task: N/A
+======================================================================
 
 📱 MODEL ATTEMPT 1: ✅ Success
   Model: google/gemini-2.5-pro-preview-03-25
   GIF ID: 12_05_2025_05_13_04_KAL.gif
   Log ID: 12_05_2025_05_13_04_KAL
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: find me any recipe on food.com 
+  STEPS: Executed 8 steps
+  EVAL: Unknown
+  EVAL: Success
+  EVAL: Success
+  EVAL: Success
+  EVAL: Success
+  GOAL: Navigate to food.com
+  GOAL: Click on 'See Them All' to view recipes
+  GOAL: Click on the first recipe link to view a recipe.
+  GOAL: Click on the first recipe 'Ground Beef Gyros' to view it and complete the task.
+  GOAL: Click on the 'Ground Beef Gyros' recipe link to view the recipe details.
+  GOAL: Complete the task by providing the recipe found.
+  ACTION: go_to_url
+  ACTION: click_element_by_index
+  ... (9 more trace items)
+
+
 📱 MODEL ATTEMPT 2: ❌ Failed
   Model: anthropic/claude-3.7-sonnet:thinking
   GIF ID: 12_05_2025_05_13_04_yaD.gif
   Log ID: 12_05_2025_05_13_04_yaD
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: find me any recipe on food.com 
+  STEPS: Executed 15 steps
+  EVAL: Unknown - This is the first step, so there is no previous goal to evaluate.
+  EVAL: Success - I successfully clicked the 'I'm not a robot' checkbox. Now a CAPTCHA challenge has appeared asking me to identify squares with crosswalks.
+  EVAL: Success - I was trying to complete the CAPTCHA challenge by selecting squares with crosswalks. I've already selected square 14 (which shows a checkmark in the image).
+  EVAL: Success - I clicked on square 13 which contains part of a crosswalk and it is now selected (indicated by a checkmark).
+  EVAL: Success - I successfully clicked on square 16 which contains part of a crosswalk. Looking at the image, I can now see that squares 13 and 14 are already selected (with checkmarks), and square 16 is now selected.
+  EVAL: Success - I successfully clicked on square 17 which contains part of a crosswalk. The image shows squares 13, 14, and 17 are already selected (with checkmarks visible).
+  GOAL: Navigate to food.com website
+  GOAL: Search for food.com recipes using Google search
+  GOAL: Complete the CAPTCHA verification by clicking the 'I'm not a robot' checkbox
+  GOAL: Complete the CAPTCHA challenge by selecting all squares with crosswalks
+  GOAL: Complete the CAPTCHA by selecting the remaining crosswalk squares and clicking Next
+  GOAL: Complete the CAPTCHA by selecting square 13 which has a visible crosswalk
+  GOAL: Continue solving the CAPTCHA by clicking on square 16 which contains crosswalk stripes
+  ... (37 more trace items)
 
 
+======================================================================
 INTERACTION 5
 Vote Type: leftvote
 User Task: visit the New York Times homepage and summarize the main story currently featured at the top of the page
+======================================================================
 
 📱 MODEL ATTEMPT 1: ✅ Success
   Model: meta-llama/llama-4-maverick
   GIF ID: 07_05_2025_15_10_56_EiU.gif
   Log ID: 07_05_2025_15_10_56_EiU
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: visit the New York Times homepage and summarize the main story currently featured at the top of the page
+  STEPS: Executed 3 steps
+  EVAL: No previous goal to evaluate
+  EVAL: Success - I navigated to the New York Times homepage
+  EVAL: Success - I have successfully extracted the main story from the New York Times homepage
+  GOAL: Navigate to the New York Times homepage
+  GOAL: Extract the content of the main story featured at the top of the page
+  GOAL: Complete the task by summarizing the main story
+  ACTION: go_to_url
+  ACTION: extract_content
+  ACTION: done
+  EXTRACT: Content extracted from page
+  RESULT: Success
+
+
 📱 MODEL ATTEMPT 2: ✅ Success
   Model: deepseek/deepseek-r1
   GIF ID: 07_05_2025_15_10_56_hQu.gif
   Log ID: 07_05_2025_15_10_56_hQu
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: visit the New York Times homepage and summarize the main story currently featured at the top of the page
+  STEPS: Executed 3 steps
+  EVAL: Unknown - Starting fresh task with blank page
+  EVAL: Success - Successfully navigated to NYTimes homepage visible recent timestamped content
+  EVAL: Success - Main story details including headline and summary paragraphs were successfully extracted
+  GOAL: Load New York Times homepage
+  GOAL: Extract main story text including headline and first paragraphs
+  GOAL: Verify completion and finalize task
+  ACTION: go_to_url
+  ACTION: extract_content
+  ACTION: done
+  EXTRACT: Content extracted from page
+  RESULT: Success
 
 
+======================================================================
 INTERACTION 6
 Vote Type: leftvote
-User Task: Name the Top 10 headlines from BBC News
+User Task: N/A
+======================================================================
 
 📱 MODEL ATTEMPT 1: ✅ Success
   Model: google/gemini-2.5-pro-preview-03-25
   GIF ID: 09_05_2025_19_57_33_HgY.gif
   Log ID: 09_05_2025_19_57_33_HgY
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: Name the Top 10 headlines from BBC News
+  STEPS: Executed 3 steps
+  EVAL: Unknown
+  EVAL: Success
+  EVAL: Success
+  GOAL: Go to the BBC News website.
+  GOAL: Extract the top 10 headlines from the current page.
+  GOAL: The task is complete. I need to use the done action.
+  ACTION: go_to_url
+  ACTION: extract_content
+  ACTION: done
+  EXTRACT: Content extracted from page
+  RESULT: Success
+
+
 📱 MODEL ATTEMPT 2: ✅ Success
   Model: openai/o4-mini
   GIF ID: 09_05_2025_19_57_33_CFM.gif
   Log ID: 09_05_2025_19_57_33_CFM
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: Name the Top 10 headlines from BBC News
+  STEPS: Executed 8 steps
+  EVAL: Unknown - no actions taken yet
+  EVAL: Success - Google search performed successfully
+  EVAL: Success - BBC News homepage loaded with initial headlines visible
+  EVAL: Success - BBC News homepage loaded and top stories are visible
+  GOAL: Search Google for BBC News top headlines
+  GOAL: Navigate to the BBC News homepage by clicking the first search result
+  GOAL: Scroll down to load more headlines on the page
+  GOAL: Extract the top 10 headlines from the BBC News homepage
+  ACTION: search_anonymous LLM company
+  ACTION: click_element_by_index
+  ACTION: scroll_down
+  ACTION: extract_content
+  SEARCH: BBC News top headlines
+  ... (3 more trace items)
 
 
+======================================================================
 INTERACTION 7
 Vote Type: leftvote
 User Task: What are the today's top headlines from Fox News?
+======================================================================
 
 📱 MODEL ATTEMPT 1: ✅ Success
   Model: openai/o4-mini
   GIF ID: 09_05_2025_20_13_59_XFw.gif
   Log ID: 09_05_2025_20_13_59_XFw
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: What are the today's top headlines from Fox News?
+  STEPS: Executed 5 steps
+  EVAL: Unknown - starting new task
+  EVAL: Success - Navigated to Fox News homepage
+  GOAL: Navigate to Fox News homepage
+  GOAL: Scroll down to reveal the top headlines section
+  ACTION: go_to_url
+  ACTION: scroll_down
+  ACTION: extract_content
+  EXTRACT: Content extracted from page
+  RESULT: Success
+
+
 📱 MODEL ATTEMPT 2: ❌ Failed
   Model: google/gemini-2.5-pro-preview-03-25
   GIF ID: 09_05_2025_20_13_59_wLl.gif
   Log ID: 09_05_2025_20_13_59_wLl
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: What are the today's top headlines from Fox News?
+  STEPS: Executed 8 steps
+  EVAL: Unknown
+  EVAL: Success
+  EVAL: Success
+  GOAL: Search for 'Fox News' on Google.
+  GOAL: Click on the link to the Fox News website.
+  GOAL: Extract the top headlines from the page
+  ACTION: search_anonymous LLM company
+  ACTION: click_element_by_index
+  ACTION: extract_content
+  SEARCH: Fox News
+  SEARCH: Fox News
+  CLICK: button with index 33: Fox News - Breaking News Upd...
+  CLICK: button with index 33: Fox News - Breaking News Upd...
+  ... (2 more trace items)
 
 
+======================================================================
 INTERACTION 8
 Vote Type: leftvote
 User Task: Please provide a list of the types of boats that can be rented at Piney Run Park in Eldersburg, Maryland and include the hourly rate. 
+======================================================================
 
 📱 MODEL ATTEMPT 1: ✅ Success
   Model: anthropic/claude-3.7-sonnet:thinking
   GIF ID: 09_05_2025_20_11_09_SCY.gif
   Log ID: 09_05_2025_20_11_09_SCY
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: Please provide a list of the types of boats that can be rented at Piney Run Park in Eldersburg, Maryland and include the hourly rate. 
+  STEPS: Executed 9 steps
+  EVAL: Unknown - I haven't performed any actions yet. This is the first step and I'm starting with a blank page.
+  EVAL: Success - I successfully searched for information about boat rentals at Piney Run Park and found several search results containing details about the boat types and hourly rates.
+  EVAL: Success - I successfully searched for 'Piney Run Park Eldersburg Maryland boat rentals hourly rates' and can already see information about boat types and rates in the search results.
+  EVAL: Success - I've performed a Google search for 'Piney Run Park Eldersburg Maryland boat rentals hourly rates' and can see multiple search results with the information I need about boat types and their hourly rates.
+  EVAL: Success - I successfully clicked on the 'Boating at Piney Run Park' link and am now on the page with relevant boating information at Piney Run Park.
+  EVAL: Success - I scrolled down the page and can now see information about boat rentals at Piney Run Park, confirming they offer canoes, kayaks, and rowboats for rent.
+  EVAL: Success - I've scrolled down the page and found the complete information about boat rentals at Piney Run Park, including all boat types and their hourly rates.
+  GOAL: Search for information about boat rentals at Piney Run Park
+  GOAL: Click on the 'Boating at Piney Run Park' link to get more detailed information about boat rentals
+  GOAL: Click on the 'Boating at Piney Run Park' link to get detailed information about boat rentals and their rates
+  GOAL: Click on the 'Boating at Piney Run Park' link to get the most accurate and complete information
+  GOAL: Scroll down the page to find information about boat rentals and pricing
+  GOAL: Scroll down further to find the hourly rates for boat rentals
+  ... (11 more trace items)
+
+
 📱 MODEL ATTEMPT 2: ❌ Failed
   Model: google/gemini-2.5-pro-preview-03-25
   GIF ID: 09_05_2025_20_11_09_FrD.gif
   Log ID: 09_05_2025_20_11_09_FrD
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: Please provide a list of the types of boats that can be rented at Piney Run Park in Eldersburg, Maryland and include the hourly rate. 
+  STEPS: Executed 4 steps
+  EVAL: Unknown
+  GOAL: Search Google for Piney Run Park boat rentals.
+  ACTION: search_anonymous LLM company
+  SEARCH: Piney Run Park boat rentals Eldersburg Maryland
+  RESULT: Failed - stopping due to errors
 
 
+======================================================================
 INTERACTION 9
 Vote Type: leftvote
 User Task: create a list of the top 20 best selling nintendo switch games
+======================================================================
 
 📱 MODEL ATTEMPT 1: ✅ Success
   Model: meta-llama/llama-4-maverick
   GIF ID: 09_05_2025_20_58_23_Idv.gif
   Log ID: 09_05_2025_20_58_23_Idv
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: create a list of the top 20 best selling nintendo switch games
+  STEPS: Executed 8 steps
+  EVAL: No previous goal to evaluate. Starting fresh.
+  EVAL: Success - Navigated to Google homepage
+  EVAL: Success - Input the search query 'top 20 best-selling Nintendo Switch games'
+  EVAL: Success - Successfully searched for 'top 20 best-selling Nintendo Switch games'
+  EVAL: Success - Navigated to the Wikipedia page listing best-selling Nintendo Switch games
+  EVAL: Success - Navigated to the Wikipedia page listing best-selling Nintendo Switch games
+  EVAL: Success - Extracted the list of the top 20 best-selling Nintendo Switch games from the Wikipedia page
+  GOAL: Navigate to Google and search for the top 20 best-selling Nintendo Switch games
+  GOAL: Search for 'top 20 best-selling Nintendo Switch games'
+  GOAL: Submit the search query
+  GOAL: Navigate to the Wikipedia page for the list of best-selling Nintendo Switch games
+  GOAL: Extract the list of the top 20 best-selling Nintendo Switch games from the page
+  GOAL: Extract the list of the top 20 best-selling Nintendo Switch games from the page
+  ... (13 more trace items)
+
+
 📱 MODEL ATTEMPT 2: ❌ Failed
   Model: anthropic/claude-3.7-sonnet:thinking
   GIF ID: 09_05_2025_20_58_23_unx.gif
   Log ID: 09_05_2025_20_58_23_unx
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: create a list of the top 20 best selling nintendo switch games
+  STEPS: Executed 11 steps
+  EVAL: Unknown - This is the first step and I'm starting with a blank page.
+  EVAL: Success - I've successfully searched for 'top 20 best selling nintendo switch games' and have several promising results in the search listings.
+  EVAL: Success - I successfully searched for 'top 20 best selling nintendo switch games' and now have multiple relevant search results visible on the Google search page.
+  EVAL: Success - I successfully searched for 'top 20 best selling nintendo switch games' and now have several relevant search results on the Google page.
+  EVAL: Success - I've successfully navigated to the Wikipedia page about best-selling Nintendo Switch games, which contains comprehensive information with actual sales figures.
+  EVAL: Success - I've successfully scrolled down and can now see the top 10 best-selling Nintendo Switch games in the Wikipedia list with their sales figures.
+  GOAL: Search for information about top 20 best selling Nintendo Switch games
+  GOAL: Click on the Wikipedia article to get detailed information about the best-selling Nintendo Switch games
+  GOAL: Click on the Wikipedia article to get the comprehensive list of best-selling Nintendo Switch games with accurate sales figures
+  GOAL: Click on the Wikipedia article link to get the complete list of best-selling Nintendo Switch games with verified sales figures
+  GOAL: Scroll down to view the main list of best-selling Nintendo Switch games
+  GOAL: Scroll down to see the next 10 best-selling Nintendo Switch games
+  ACTION: search_anonymous LLM company
+  ... (8 more trace items)
 
 
+======================================================================
 INTERACTION 10
 Vote Type: leftvote
 User Task: a list of top 10 churches 
+======================================================================
 
 📱 MODEL ATTEMPT 1: ✅ Success
   Model: deepseek/deepseek-r1
   GIF ID: 09_05_2025_21_30_52_Eso.gif
   Log ID: 09_05_2025_21_30_52_Eso
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: a list of top 10 churches 
+  STEPS: Executed 3 steps
+  EVAL: Unknown - Starting the task. No previous actions taken yet.
+  EVAL: Success - Google search returned multiple relevant results with potential lists of churches
+  EVAL: Success - Successfully extracted full list of 10 churches from VisitedApp source
+  GOAL: Search Google for 'top 10 most famous churches worldwide' to find a list.
+  GOAL: Access first comprehensive list from VisitedApp (index 33) to extract top 10 churches
+  GOAL: Finalize list with no missing elements
+  ACTION: search_anonymous LLM company
+  ACTION: click_element_by_index
+  ACTION: extract_content
+  ACTION: done
+  SEARCH: top 10 most famous churches worldwide
+  CLICK: button with index 33: Top 10 Most Popular Churches...
+  EXTRACT: Content extracted from page
+  ... (1 more trace items)
+
+
 📱 MODEL ATTEMPT 2: ❌ Failed
   Model: anthropic/claude-3.7-sonnet:thinking
   GIF ID: 09_05_2025_21_30_52_wcO.gif
   Log ID: 09_05_2025_21_30_52_wcO
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: a list of top 10 churches 
+  STEPS: Executed 6 steps
+  EVAL: Unknown - I'm starting with a blank page, so there's no previous action to evaluate.
+  EVAL: Success - I successfully searched for 'top 10 most famous churches in the world' and Google has returned relevant search results showing several links that appear to contain lists of top churches.
+  EVAL: Success - I successfully searched for 'top 10 most famous churches in the world' in Google and now have several promising search results.
+  GOAL: Search Google for information about top 10 churches
+  GOAL: Click on the 'Top 10 Most Popular Churches' link to view the complete list
+  GOAL: Click on the 'Top 10 Most Popular Churches' link to view the complete list
+  ACTION: search_anonymous LLM company
+  ACTION: {}...
+  ACTION: click_element_by_index
+  SEARCH: top 10 most famous churches in the world
+  CLICK: button with index 33: Top 10 Most Popular Churches...
+  RESULT: Failed - stopping due to errors
 
 
+======================================================================
 INTERACTION 11
 Vote Type: leftvote
 User Task: What are the top video titles on youtube homepage?
+======================================================================
 
 📱 MODEL ATTEMPT 1: ❌ Failed
   Model: anthropic/claude-3.7-sonnet:thinking
   GIF ID: 09_05_2025_21_21_06_MSm.gif
   Log ID: 09_05_2025_21_21_06_MSm
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: What are the top video titles on youtube homepage?
+  STEPS: Executed 8 steps
+  EVAL: Unknown - This is the first step in the task. I am starting with a blank page.
+  EVAL: Success - I have successfully navigated to the YouTube website. The page appears to be showing a blank homepage with a 'Try searching to get started' message since I'm not signed in.
+  EVAL: Success - I clicked on the Home button in the YouTube interface, but the page still shows 'Try searching to get started' message, indicating that no video content is loading on the homepage.
+  EVAL: Success - I clicked on the YouTube logo to try refreshing the homepage, but the page still shows 'Try searching to get started', indicating that the YouTube homepage isn't loading video content for non-signed-in users.
+  EVAL: Success - I entered 'trending videos on youtube' into the search box, and now I see a dropdown of search suggestions while the search box contains my query.
+  GOAL: Navigate to YouTube homepage
+  GOAL: Click on Home tab to load the homepage content with video recommendations
+  GOAL: Click on the YouTube logo to try refreshing the homepage and load default content
+  GOAL: Search for trending videos on YouTube to find the most popular content
+  GOAL: Execute the search for trending videos to see the most popular YouTube content
+  ACTION: go_to_url
+  ACTION: click_element_by_index
+  ACTION: click_element_by_index
+  ... (6 more trace items)
+
+
 📱 MODEL ATTEMPT 2: ❌ Failed
   Model: google/gemini-2.5-pro-preview-03-25
   GIF ID: 09_05_2025_21_21_06_kAA.gif
   Log ID: 09_05_2025_21_21_06_kAA
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: What are the top video titles on youtube homepage?
+  STEPS: Executed 10 steps
+  EVAL: Unknown
+  EVAL: Success
+  EVAL: Success
+  EVAL: Success
+  GOAL: Navigate to youtube.com and then extract the video titles.
+  GOAL: Attempt to load videos on the homepage by clicking the 'Home' link, then extract video titles.
+  GOAL: Attempt to load videos on the homepage by clicking the 'Home' link again (index 30). If this doesn_t work, I will need to find another way to populate the video feed. Then extract the video titles.
+  GOAL: Search for 'trending videos' to populate the YouTube homepage, then extract video titles from the search results page or the newly populated homepage if it changes.
+  GOAL: Click the search button (index 21) to search for 'trending videos'. Then, extract the video titles from the search results page.
+  ACTION: go_to_url
+  ACTION: click_element_by_index
+  ACTION: click_element_by_index
+  ACTION: input_text
+  ... (6 more trace items)
 
 
+======================================================================
 INTERACTION 12
 Vote Type: leftvote
 User Task: Check all ticket touting websites and find the cheapest ticket I can get to Man City vs Bournemouth on the 20th of May
+======================================================================
 
 📱 MODEL ATTEMPT 1: ❌ Failed
   Model: anthropic/claude-3.7-sonnet:thinking
   GIF ID: 09_05_2025_21_28_12_OnA.gif
   Log ID: 09_05_2025_21_28_12_OnA
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: Check all ticket touting websites and find the cheapest ticket I can get to Man City vs Bournemouth on the 20th of May
+  STEPS: Executed 15 steps
+  EVAL: Unknown - I'm starting with a blank page and need to begin the task of finding the cheapest ticket for Man City vs Bournemouth on May 20th.
+  EVAL: Success - I successfully searched for ticket resale websites for the Man City vs Bournemouth match on May 20 and got relevant results showing various ticket platforms.
+  EVAL: Success - I successfully navigated to SeatPick and can see the Man City vs Bournemouth match listed for May 20, 2025 with tickets starting at $42.
+  EVAL: Success - I successfully clicked on the SeatPick website and can now see a list of Manchester City fixtures including the match I'm looking for: Man City vs Bournemouth on May 20, 2025, with tickets starting from $42.
+  EVAL: Success - I've found the Man City vs Bournemouth match for May 20, 2025 on SeatPick, with tickets starting from $42. The tabs show I've already clicked on this match and opened the details page in tabs 1 and 2.
+  EVAL: Success - I successfully switched to the SeatPick ticket details page for the Man City vs Bournemouth match on May 20, 2025, and now need to select ticket options to view pricing.
+  EVAL: Success - I successfully switched to the SeatPick ticket details page for the Man City vs Bournemouth match on May 20, 2025, and now need to select ticket options to view pricing.
+  EVAL: Success - I've selected 'Any' for the number of tickets and now need to view all available tickets to find the cheapest option.
+  EVAL: Success - I clicked 'View Tickets' and now the system is searching for tickets from StubHub for the Man City vs Bournemouth match on May 20, 2025.
+  EVAL: Success - I have successfully accessed and reviewed the Man City vs Bournemouth ticket listings on SeatPick. The page shows multiple ticket options with the cheapest being $41 per ticket in sections 315, 317, and 318.
+  EVAL: Success - I successfully searched for multiple ticket resale websites to compare prices for the Man City vs Bournemouth match on May 20
+  EVAL: Success - I successfully searched for multiple ticket resale websites to compare prices for the Man City vs Bournemouth match on May 20
+  EVAL: Success - I've successfully accessed Viagogo to check their ticket prices for the Man City vs Bournemouth match on May 20, 2025
+  ... (36 more trace items)
+
+
 📱 MODEL ATTEMPT 2: ❌ Failed
   Model: google/gemini-2.5-pro-preview-03-25
   GIF ID: 09_05_2025_21_28_12_RJD.gif
   Log ID: 09_05_2025_21_28_12_RJD
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: Check all ticket touting websites and find the cheapest ticket I can get to Man City vs Bournemouth on the 20th of May
+  STEPS: Executed 5 steps
+  EVAL: Unknown
+  EVAL: Success
+  GOAL: Search for ticket touting websites on Google to identify potential sources for tickets.
+  GOAL: Navigate to TicketSwap website to search for tickets.
+  ACTION: search_anonymous LLM company
+  ACTION: click_element_by_index
+  SEARCH: ticket touting websites
+  CLICK: button with index 33: TicketSwap | Fast, safe & fa...
+  RESULT: Failed - stopping due to errors
 
 
+======================================================================
 INTERACTION 13
 Vote Type: leftvote
 User Task: List out the symptoms of Vitamin D deficiency from WebMd and any other medical website
+======================================================================
 
 📱 MODEL ATTEMPT 1: ✅ Success
   Model: deepseek/deepseek-r1
   GIF ID: 09_05_2025_21_40_30_XjR.gif
   Log ID: 09_05_2025_21_40_30_XjR
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: List out the symptoms of Vitamin D deficiency from WebMd and any other medical website
+  STEPS: Executed 8 steps
+  EVAL: Unknown - Browser just initialized at blank page without prior actions
+  EVAL: Success - Google search results for WebMD content displayed
+  EVAL: Success - Direct navigation to WebMD's Vitamin D deficiency page succeeded
+  EVAL: Success - Extracted 10 symptoms from WebMD article
+  EVAL: Success - Opened Google search for Mayo Clinic content
+  EVAL: Unknown - Mayo Clinic page content doesn't clearly list symptoms yet
+  EVAL: Success - Extracted 3 unique symptoms from Mayo Clinic after scrolling
+  GOAL: Perform Google search for WebMD content
+  GOAL: Navigate to WebMD's Vitamin D deficiency symptoms page
+  GOAL: Navigate directly to WebMD's Vitamin D deficiency symptoms page via URL
+  GOAL: Extract symptoms from WebMD content
+  GOAL: Open new tab and search for another medical website's Vitamin D deficiency symptoms
+  GOAL: Click Mayo Clinic result (index 45) to access symptoms list
+  ... (17 more trace items)
+
+
 📱 MODEL ATTEMPT 2: ❌ Failed
   Model: anthropic/claude-3.7-sonnet:thinking
   GIF ID: 09_05_2025_21_40_30_YEs.gif
   Log ID: 09_05_2025_21_40_30_YEs
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: List out the symptoms of Vitamin D deficiency from WebMd and any other medical website
+  STEPS: Executed 5 steps
+  EVAL: Unknown - I haven't performed any actions yet since this is the first step
+  EVAL: Success - I successfully searched for WebMD information on Vitamin D deficiency symptoms, and the search results show several relevant WebMD articles with symptom information.
+  GOAL: Search for WebMD's information on Vitamin D deficiency symptoms
+  GOAL: Click on the WebMD article 'Vitamin D Deficiency: Causes, Symptoms & Health Risks' to get comprehensive information
+  ACTION: search_anonymous LLM company
+  ACTION: {}...
+  SEARCH: WebMD vitamin D deficiency symptoms
+  RESULT: Failed - stopping due to errors
 
 
+======================================================================
 INTERACTION 14
 Vote Type: rightvote
 User Task: What is the best Arcade Fire albums listed from best to worst?
+======================================================================
 
 📱 MODEL ATTEMPT 1: ✅ Success
   Model: openai/o4-mini
   GIF ID: 09_05_2025_21_53_08_BHP.gif
   Log ID: 09_05_2025_21_53_08_BHP
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: What is the best Arcade Fire albums listed from best to worst?
+  STEPS: Executed 6 steps
+  EVAL: Unknown - starting the ultimate task
+  EVAL: Success - Search results displayed
+  EVAL: Success - Opened Best Ever Albums page for Arcade Fire and saw top 3 albums
+  GOAL: Search Google for best Arcade Fire albums ranking
+  GOAL: Click on the Best Ever Albums result to view their ranked list of Arcade Fire albums.
+  GOAL: Scroll down to load remaining albums then extract the ordered list of album titles.
+  ACTION: search_anonymous LLM company
+  ACTION: click_element_by_index
+  ACTION: scroll_down
+  ACTION: scroll_down
+  ACTION: extract_content
+  SEARCH: best Arcade Fire albums ranked
+  CLICK: button with index 110: ...
+  ... (2 more trace items)
+
+
 📱 MODEL ATTEMPT 2: ✅ Success
   Model: meta-llama/llama-4-maverick
   GIF ID: 09_05_2025_21_53_08_Zvg.gif
   Log ID: 09_05_2025_21_53_08_Zvg
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: What is the best Arcade Fire albums listed from best to worst?
+  STEPS: Executed 5 steps
+  EVAL: No previous goal to evaluate. Starting fresh.
+  EVAL: Success - Navigated to Google homepage
+  EVAL: Success - Input the search query 'best Arcade Fire albums ranked' into the Google search bar
+  EVAL: Success - Successfully submitted the search query. Now viewing the search results page.
+  EVAL: Success - Extracted relevant rankings of Arcade Fire albums from the search results
+  GOAL: Navigate to Google to search for the best Arcade Fire albums ranked.
+  GOAL: Search for 'best Arcade Fire albums ranked' on Google
+  GOAL: Submit the search query to get the search results
+  GOAL: Extract the relevant information from the search results to determine the best Arcade Fire albums ranked.
+  GOAL: Compile and analyze the extracted rankings to determine the best Arcade Fire albums listed from best to worst.
+  ACTION: go_to_url
+  ACTION: input_text
+  ACTION: click_element_by_index
+  ... (5 more trace items)
 
 
+======================================================================
 INTERACTION 15
 Vote Type: rightvote
 User Task: What is the best Arcade Fire albums listed from best to worst?
+======================================================================
 
 📱 MODEL ATTEMPT 1: ✅ Success
   Model: openai/o4-mini
   GIF ID: 09_05_2025_21_53_08_BHP.gif
   Log ID: 09_05_2025_21_53_08_BHP
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: What is the best Arcade Fire albums listed from best to worst?
+  STEPS: Executed 6 steps
+  EVAL: Unknown - starting the ultimate task
+  EVAL: Success - Search results displayed
+  EVAL: Success - Opened Best Ever Albums page for Arcade Fire and saw top 3 albums
+  GOAL: Search Google for best Arcade Fire albums ranking
+  GOAL: Click on the Best Ever Albums result to view their ranked list of Arcade Fire albums.
+  GOAL: Scroll down to load remaining albums then extract the ordered list of album titles.
+  ACTION: search_anonymous LLM company
+  ACTION: click_element_by_index
+  ACTION: scroll_down
+  ACTION: scroll_down
+  ACTION: extract_content
+  SEARCH: best Arcade Fire albums ranked
+  CLICK: button with index 110: ...
+  ... (2 more trace items)
+
+
 📱 MODEL ATTEMPT 2: ✅ Success
   Model: meta-llama/llama-4-maverick
   GIF ID: 09_05_2025_21_53_08_Zvg.gif
   Log ID: 09_05_2025_21_53_08_Zvg
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: What is the best Arcade Fire albums listed from best to worst?
+  STEPS: Executed 5 steps
+  EVAL: No previous goal to evaluate. Starting fresh.
+  EVAL: Success - Navigated to Google homepage
+  EVAL: Success - Input the search query 'best Arcade Fire albums ranked' into the Google search bar
+  EVAL: Success - Successfully submitted the search query. Now viewing the search results page.
+  EVAL: Success - Extracted relevant rankings of Arcade Fire albums from the search results
+  GOAL: Navigate to Google to search for the best Arcade Fire albums ranked.
+  GOAL: Search for 'best Arcade Fire albums ranked' on Google
+  GOAL: Submit the search query to get the search results
+  GOAL: Extract the relevant information from the search results to determine the best Arcade Fire albums ranked.
+  GOAL: Compile and analyze the extracted rankings to determine the best Arcade Fire albums listed from best to worst.
+  ACTION: go_to_url
+  ACTION: input_text
+  ACTION: click_element_by_index
+  ... (5 more trace items)
 
 
+======================================================================
 INTERACTION 16
 Vote Type: leftvote
 User Task: give me a recipe for making pasta with cheese from the top 3 cooking websites, make it environmentally sustainable.
+======================================================================
 
 📱 MODEL ATTEMPT 1: ❌ Failed
   Model: deepseek/deepseek-r1
   GIF ID: 09_05_2025_21_36_59_crp.gif
   Log ID: 09_05_2025_21_36_59_crp
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: give me a recipe for making pasta with cheese from the top 3 cooking websites, make it environmentally sustainable.
+  STEPS: Executed 5 steps
+  EVAL: Unknown - Starting fresh with a blank page
+  EVAL: Success - Google search yielded relevant results from BBC GoodFood
+  GOAL: Search Google for sustainable cheese pasta recipes targeting AllRecipes, Epicurious, and BBC GoodFood
+  GOAL: Access first recipe (Super-green mac 'n' cheese) to check sustainability aspects
+  ACTION: search_anonymous LLM company
+  ACTION: click_element_by_index
+  SEARCH: sustainable cheese pasta recipe site:allrecipes.com OR site:epicurious.com OR site:bbcgoodfood.com
+  CLICK: button with index 33: Super-green mac 'n' cheese r...
+  RESULT: Failed - stopping due to errors
+
+
 📱 MODEL ATTEMPT 2: ❌ Failed
   Model: google/gemini-2.5-pro-preview-03-25
   GIF ID: 09_05_2025_21_36_59_AvQ.gif
   Log ID: 09_05_2025_21_36_59_AvQ
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: give me a recipe for making pasta with cheese from the top 3 cooking websites, make it environmentally sustainable.
+  STEPS: Executed 3 steps
+  RESULT: Failed - stopping due to errors
 
 
+======================================================================
 INTERACTION 17
 Vote Type: leftvote
 User Task: Tell me different Plane ticket price from different websites for a one way trip from Ontario to Ottawa 
+======================================================================
 
 📱 MODEL ATTEMPT 1: ✅ Success
   Model: openai/o4-mini
   GIF ID: 09_05_2025_21_41_14_YwM.gif
   Log ID: 09_05_2025_21_41_14_YwM
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: Tell me different Plane ticket price from different websites for a one way trip from Ontario to Ottawa 
+  STEPS: Executed 15 steps
+  EVAL: Unknown - starting task
+  EVAL: Success - Performed Google search for flight prices
+  EVAL: Success - Returned to Google results after Expedia failure
+  EVAL: Success - Navigated to Kayak flight search for Ontario to Ottawa
+  EVAL: Success - Clicked the Search button to load flight results
+  EVAL: Unknown - needs extraction of the cheapest Kayak price
+  EVAL: Success - Kayak page loaded and cheapest fare element is visible
+  EVAL: Success - Extracted cheapest one-way flight price from Cheapoair
+  EVAL: Unknown - Google Flights page loaded without search parameters set
+  GOAL: Search Google for one-way flight prices from Ontario to Ottawa
+  GOAL: Click on the Expedia result to extract its one-way price
+  GOAL: Go back to Google results to click the Kayak link
+  GOAL: Click on the Kayak result to extract its one-way price
+  ... (47 more trace items)
+
+
 📱 MODEL ATTEMPT 2: ❌ Failed
   Model: google/gemini-2.5-pro-preview-03-25
   GIF ID: 09_05_2025_21_41_14_DvE.gif
   Log ID: 09_05_2025_21_41_14_DvE
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: Tell me different Plane ticket price from different websites for a one way trip from Ontario to Ottawa 
+  STEPS: Executed 10 steps
+  EVAL: Unknown - The previous steps resulted in an error, and I am starting from a blank page. I will now begin the task.
+  EVAL: Success - The Google search was successful, and I have a list of flight websites.
+  GOAL: Search on Google for flight comparison websites or airline websites.
+  GOAL: Click on the Expedia link to check flight prices.
+  GOAL: Go back to the Google search results page.
+  ACTION: search_anonymous LLM company
+  ACTION: click_element_by_index
+  ACTION: go_back
+  SEARCH: flights from Ontario to Ottawa one way
+  CLICK: button with index 32: ...
+  RESULT: Failed - stopping due to errors
 
 
+======================================================================
 INTERACTION 18
 Vote Type: leftvote
 User Task: Compare prices of HP laptop model across different online retailers
+======================================================================
 
 📱 MODEL ATTEMPT 1: ❌ Failed
   Model: anthropic/claude-3.7-sonnet:thinking
   GIF ID: 09_05_2025_22_23_29_cgB.gif
   Log ID: 09_05_2025_22_23_29_cgB
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: Compare prices of HP laptop model across different online retailers
+  STEPS: Executed 15 steps
+  EVAL: Unknown - This is the first step and I'm starting with a blank page.
+  EVAL: Success - I successfully searched for 'HP Pavilion 15 laptop price comparison' and now have search results from various retailers.
+  EVAL: Unknown - This is the first step of my current session. I can see I'm on a Google search results page for HP Pavilion 15 laptop price comparison.
+  EVAL: Success - I successfully clicked on the Klarna link and am now on their comparison page for HP Pavilion 15 laptops. The page shows over 100 products with different models and prices.
+  EVAL: Success - I successfully clicked on the HP Pavilion 15-eg0025nr model and now I can see its price and details from one seller (Abunda Financing).
+  EVAL: Success - I've returned to the Klarna comparison page showing multiple HP Pavilion 15 models. This provides a good starting point for my price comparison across retailers.
+  EVAL: Success - I've successfully accessed the detailed page for the HP Pavilion 15-eg0025nr on Klarna, which shows the price from one retailer (Abunda Financing) at $845.90.
+  EVAL: Success - I successfully opened a new tab with Amazon to search for the HP Pavilion 15-eg0025nr laptop for price comparison.
+  GOAL: Search for a popular HP laptop model on Google to begin price comparison
+  GOAL: Click on the Klarna comparison link to see multiple HP Pavilion 15 models and their prices across different retailers
+  GOAL: Click on the Klarna link to access their comparison of 94 HP Pavilion 15 products across different retailers
+  GOAL: Click on the HP Pavilion 15-eg0025nr model to see detailed price comparison across retailers
+  GOAL: Go back to Google search and search for this specific model (HP Pavilion 15-eg0025nr) to find its price on other retailers' websites
+  ... (18 more trace items)
+
+
 📱 MODEL ATTEMPT 2: ❌ Failed
   Model: google/gemini-2.5-pro-preview-03-25
   GIF ID: 09_05_2025_22_23_29_IXB.gif
   Log ID: 09_05_2025_22_23_29_IXB
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: Compare prices of HP laptop model across different online retailers
+  STEPS: Executed 3 steps
+  RESULT: Failed - stopping due to errors
 
 
+======================================================================
 INTERACTION 19
 Vote Type: rightvote
 User Task: get me online price details comparison of samsung qled 75 inch tv from 5 leading retailers in usa along with price from samsung website 
+======================================================================
 
 📱 MODEL ATTEMPT 1: ❌ Failed
   Model: meta-llama/llama-4-maverick
   GIF ID: 09_05_2025_22_44_26_YNT.gif
   Log ID: 09_05_2025_22_44_26_YNT
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: get me online price details comparison of samsung qled 75 inch tv from 5 leading retailers in usa along with price from samsung website 
+  STEPS: Executed 15 steps
+  EVAL: No previous goal to evaluate. Starting fresh.
+  EVAL: Success - I have searched for 'Samsung QLED 75 inch TV price comparison USA' on Google.
+  EVAL: Success - I have navigated to the Samsung website page for 75-inch TVs.
+  EVAL: Success - I have scrolled down the Samsung website page to view more products.
+  EVAL: Success - I have navigated back to the Google search results page.
+  EVAL: Success - I have navigated to the Best Buy page for QLED 75-Inch TVs.
+  EVAL: Success
+  EVAL: Success - Extracted prices for Samsung QLED 5-inch TVs on Best Buy.
+  EVAL: Success - Opened a new tab with Google
+  EVAL: Success - Successfully input the search query for Samsung QLED 75-inch TV price on Amazon
+  GOAL: Search for 'Samsung QLED 75 inch TV price comparison USA' on Google.
+  GOAL: Visit the Samsung website link to check the price of Samsung QLED 75 inch TV.
+  GOAL: Scroll down to find the price of the Samsung QLED 75 inch TV.
+  ... (29 more trace items)
+
+
 📱 MODEL ATTEMPT 2: ❌ Failed
   Model: anthropic/claude-3.7-sonnet:thinking
   GIF ID: 09_05_2025_22_44_26_xEk.gif
   Log ID: 09_05_2025_22_44_26_xEk
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: get me online price details comparison of samsung qled 75 inch tv from 5 leading retailers in usa along with price from samsung website 
+  STEPS: Executed 15 steps
+  EVAL: Unknown - This is the first step, so there's no previous goal to evaluate. I'm starting with a blank page.
+  EVAL: Success - I successfully performed a Google search for Samsung QLED 75-inch TV prices across major retailers. The search results show relevant information from Best Buy, Costco, and mentions of other retailers like Walmart and Target.
+  EVAL: Success - I performed a Google search for Samsung QLED 75-inch TV prices across major retailers and can now see results showing relevant information from retailers including Best Buy and Costco.
+  EVAL: Success - I successfully performed a Google search for Samsung QLED 75-inch TV prices across major retailers and now have search results showing information from various retailers.
+  EVAL: Success - I have successfully navigated to Best Buy's website and can see a listing of QLED 75-inch TVs. I'm now viewing various brands of QLED TVs including Insignia and Hisense, with their prices displayed.
+  EVAL: Success - I have scrolled down on Best Buy's website and can now see Samsung QLED 75-inch TVs along with other brands like TCL and Hisense. I can see one Samsung Q80D Series model with 'See price in cart' and other QLED TVs with specific prices.
+  EVAL: Success - I successfully filtered Best Buy's TV selection to show only Samsung QLED models. I can now see Samsung QLED 75-inch TVs with their prices and specifications.
+  EVAL: Success - I've scrolled down on Best Buy's website and can now see more Samsung QLED 75-inch TV models with their prices. I can see the Q7F Series ($999.99), Q70D Series ($899.99, save $400), and Q60D Series ($999.99).
+  EVAL: Success - I've scrolled down further on Best Buy's website and can now see two more Samsung QLED 75-inch TV models with their prices displayed: the Q8F Series at $1,399.99 and the LST7D The Terrace model at $6,499.99.
+  EVAL: Success - I have navigated to Best Buy's website and can see Samsung TV listings. I've found two 75-inch Samsung models (both Terrace outdoor models) priced at $6,499.99, but need to find more standard QLED models.
+  EVAL: Success - I've scrolled down and found several Samsung QLED 75-inch TVs on Best Buy. I can see The Frame models (refurbished) at $999.99 and $1,199.99, and The Terrace outdoor model at $9,999.99.
+  EVAL: Success - I scrolled down and found two Samsung QLED 75-inch TVs on Best Buy: 1) The Frame Disney Edition (2023) at $3,039.99 (clearance, save $160) and 2) The Terrace Outdoor (2021) at $9,999.99.
+  EVAL: Success - I've scrolled down to see more TVs at Best Buy, but I notice most visible TVs aren't Samsung QLED models despite being on a filtered search page. I can see Samsung Crystal UHD ($499.99), Insignia, Sony, LG, and TCL models.
+  ... (30 more trace items)
 
 
+======================================================================
 INTERACTION 20
 Vote Type: leftvote
 User Task: Give me a summary of this week's best-selling crypto coins.
+======================================================================
 
 📱 MODEL ATTEMPT 1: ✅ Success
   Model: deepseek/deepseek-r1
   GIF ID: 09_05_2025_22_39_53_FuI.gif
   Log ID: 09_05_2025_22_39_53_FuI
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: Give me a summary of this week's best-selling crypto coins.
+  STEPS: Executed 5 steps
+  EVAL: Unknown - Starting fresh session with blank page
+  EVAL: Success - Google search executed with relevant crypto market mover results
+  EVAL: Partial Success - Reached CoinMarketCap but viewing 24h data instead of weekly
+  EVAL: Partial Success - Timeframe filter clicked but 7d selection not confirmed
+  EVAL: Success - The 7-day filter was applied and top gainers extracted
+  GOAL: Execute search for cryptocurrency market data
+  GOAL: Analyze CoinMarketCap's weekly crypto performance data
+  GOAL: Change timeframe filter to 7 days
+  GOAL: Extract weekly top gainers after confirming 7d filter
+  GOAL: Complete task with gathered information
+  ACTION: search_anonymous LLM company
+  ACTION: click_element_by_index
+  ACTION: click_element_by_index
+  ... (12 more trace items)
+
+
 📱 MODEL ATTEMPT 2: ❌ Failed
   Model: google/gemini-2.5-pro-preview-03-25
   GIF ID: 09_05_2025_22_39_53_htb.gif
   Log ID: 09_05_2025_22_39_53_htb
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: Give me a summary of this week's best-selling crypto coins.
+  STEPS: Executed 3 steps
+  RESULT: Failed - stopping due to errors
 
 
+======================================================================
 INTERACTION 21
 Vote Type: leftvote
 User Task: how is the weather today
+======================================================================
 
 📱 MODEL ATTEMPT 1: ✅ Success
   Model: deepseek/deepseek-r1
   GIF ID: 09_05_2025_23_09_20_BUj.gif
   Log ID: 09_05_2025_23_09_20_BUj
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: how is the weather today
+  STEPS: Executed 3 steps
+  EVAL: Unknown - Starting fresh task with empty page
+  EVAL: Success - Weather search results loaded with localized forecast for Columbus, OH
+  EVAL: Success - Weather data extracted from Google's featured weather card
+  GOAL: Retrieve weather data from search results
+  GOAL: Extract weather data from visible search results
+  GOAL: Finalize task with collected information
+  ACTION: search_anonymous LLM company
+  ACTION: extract_content
+  ACTION: done
+  SEARCH: weather today
+  EXTRACT: Content extracted from page
+  RESULT: Success
+
+
 📱 MODEL ATTEMPT 2: ❌ Failed
   Model: google/gemini-2.5-pro-preview-03-25
   GIF ID: 09_05_2025_23_09_20_MfC.gif
   Log ID: 09_05_2025_23_09_20_MfC
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: how is the weather today
+  STEPS: Executed 5 steps
+  EVAL: Unknown
+  GOAL: Search Google for 'weather today'
+  ACTION: search_anonymous LLM company
+  SEARCH: weather today
+  RESULT: Failed - stopping due to errors
 
 
+======================================================================
 INTERACTION 22
 Vote Type: tievote
 User Task: What are today's top 10 most popular articles on buzzfeed?
+======================================================================
 
 📱 MODEL ATTEMPT 1: ✅ Success
   Model: openai/o4-mini
   GIF ID: 10_05_2025_00_00_27_IAX.gif
   Log ID: 10_05_2025_00_00_27_IAX
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: What are today's top 10 most popular articles on buzzfeed?
+  STEPS: Executed 8 steps
+  EVAL: Unknown - no actions taken yet
+  EVAL: Success - Google search executed for BuzzFeed trending articles
+  EVAL: Success - navigated to BuzzFeed Trending page
+  EVAL: Success - Scrolled down to load additional articles
+  EVAL: Success - page content loaded and visible
+  GOAL: Search Google for BuzzFeed top 10 most popular articles today
+  GOAL: Click the BuzzFeed Trending link from search results
+  GOAL: Scroll down to load the list of trending articles
+  GOAL: Extract the titles and URLs of the top 10 trending articles on the page
+  GOAL: Extract titles and URLs of the top 10 trending articles on BuzzFeed Trending page
+  ACTION: search_anonymous LLM company
+  ACTION: click_element_by_index
+  ACTION: scroll_down
+  ... (7 more trace items)
+
+
 📱 MODEL ATTEMPT 2: ❌ Failed
   Model: meta-llama/llama-4-maverick
   GIF ID: 10_05_2025_00_00_27_TVe.gif
   Log ID: 10_05_2025_00_00_27_TVe
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: What are today's top 10 most popular articles on buzzfeed?
+  STEPS: Executed 9 steps
+  EVAL: No previous goal to evaluate. Starting fresh.
+  EVAL: Success - I navigated to the BuzzFeed website
+  EVAL: Success - I scrolled down the page and found more articles
+  EVAL: Success - I scrolled down the page and found more articles
+  EVAL: Success - Scrolled down the page and found more articles
+  GOAL: Navigate to BuzzFeed website to find today's top 10 most popular articles
+  GOAL: Scroll down to see more articles and gather information about today's top 10 most popular articles
+  GOAL: Continue scrolling to gather more information about today's top 10 most popular articles
+  GOAL: Continue scrolling to gather more information about today's top 10 most popular articles
+  GOAL: Continue scrolling to gather more information about today's top 10 most popular articles
+  ACTION: go_to_url
+  ACTION: scroll_down
+  ACTION: scroll_down
+  ... (3 more trace items)
 
 
+======================================================================
 INTERACTION 23
 Vote Type: leftvote
 User Task: Find the titles and authors of the top 3 bestselling fiction books on Amazon's homepage today.
+======================================================================
 
 📱 MODEL ATTEMPT 1: ✅ Success
   Model: openai/o4-mini
   GIF ID: 10_05_2025_01_14_08_PHv.gif
   Log ID: 10_05_2025_01_14_08_PHv
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: Find the titles and authors of the top 3 bestselling fiction books on Amazon's homepage today.
+  STEPS: Executed 3 steps
+  EVAL: Unknown - Beginning the task, no prior actions yet
+  EVAL: Success - Identified the titles and authors for the top 3 books
+  GOAL: Navigate directly to Amazon’s Best Sellers in Fiction page
+  GOAL: Refresh the page to retry loading the Best Sellers list
+  GOAL: Complete task
+  ACTION: go_to_url
+  ACTION: wait
+  ACTION: go_to_url
+  ACTION: done
+  RESULT: Success
+
+
 📱 MODEL ATTEMPT 2: ✅ Success
   Model: deepseek/deepseek-r1
   GIF ID: 10_05_2025_01_14_08_RLX.gif
   Log ID: 10_05_2025_01_14_08_RLX
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: Find the titles and authors of the top 3 bestselling fiction books on Amazon's homepage today.
+  STEPS: Executed 7 steps
+  EVAL: Unknown - Starting fresh session with empty page
+  EVAL: Success - Google search for 'amazon' returned relevant results
+  EVAL: Success - Successfully navigated to Amazon's homepage
+  EVAL: Partial Success - Search results show mixed categories (books and non-books)
+  EVAL: Success - Extracted 3 fiction bestsellers from filtered Books category
+  GOAL: Search Google to navigate to Amazon's main site
+  GOAL: Click the official Amazon.com link to access homepage
+  GOAL: Scroll down to find 'Best Sellers' book section in homepage content
+  GOAL: Scroll upwards to access Amazon's main navigation menu
+  GOAL: Search for 'Best Sellers' using Amazon's search bar
+  GOAL: Filter results to Books department to isolate fiction bestsellers
+  GOAL: Finalize task with collected data
+  ACTION: search_anonymous LLM company
+  ... (15 more trace items)
 
 
+======================================================================
 INTERACTION 24
 Vote Type: leftvote
 User Task: What are the names of the top 20 most frequently visited lakes in the world currently?
+======================================================================
 
 📱 MODEL ATTEMPT 1: ✅ Success
   Model: meta-llama/llama-4-maverick
   GIF ID: 10_05_2025_01_25_04_TAY.gif
   Log ID: 10_05_2025_01_25_04_TAY
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: What are the names of the top 20 most frequently visited lakes in the world currently?
+  STEPS: Executed 15 steps
+  EVAL: No previous goal to evaluate
+  EVAL: Success - I have searched for the top 20 most frequently visited lakes in the world on Google
+  EVAL: Success - I have navigated to a page that lists the top 20 lakes to visit in the world
+  EVAL: Success - I have found the start of the list of top lakes to visit in the world
+  EVAL: Success - I have found more lakes on the list: Lake Geneva, Lake Zurich, and Lake Lucerne
+  EVAL: Success - I have found more lakes on the list: Lake Michigan and Loch Ness
+  EVAL: Success - I have found more lakes on the list: Lake Constance, Lake Maggiore, and Lake Bled
+  EVAL: Success - I have found more lakes on the list: Plitvice Lakes and Lake Tahoe
+  EVAL: Success - I have found more lakes on the list: Lake Ontario and Loch Lomond
+  EVAL: Success - I scrolled down the page and more content loaded
+  EVAL: Success - I have scrolled down the page and found information about lakes 18 and 19
+  EVAL: Success - I have now gathered information about all top 20 lakes.
+  EVAL: Success - I have extracted the names of the top 20 most frequently visited lakes in the world from the webpage.
+  ... (30 more trace items)
+
+
 📱 MODEL ATTEMPT 2: ✅ Success
   Model: deepseek/deepseek-r1
   GIF ID: 10_05_2025_01_25_04_TTJ.gif
   Log ID: 10_05_2025_01_25_04_TTJ
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: What are the names of the top 20 most frequently visited lakes in the world currently?
+  STEPS: Executed 6 steps
+  EVAL: Unknown - Starting fresh session with an empty page
+  EVAL: Success - Google search revealed partial list of lakes (Gardar, Como, Geneva, Zurich, Lucerne) but full list not visible in snippets
+  EVAL: Success - Accessed target page but full list requires interaction
+  EVAL: Success - Scrolling revealed full list of lakes despite persistent 'Unlock' button
+  GOAL: Search Google for authoritative list of top visited lakes
+  GOAL: Access complete list by clicking first relevant search result
+  GOAL: Reveal complete list by interacting with unlock element
+  GOAL: Extract visible content to capture partial list and identify access barriers
+  GOAL: Validate extracted data completeness against task requirements
+  ACTION: search_anonymous LLM company
+  ACTION: click_element_by_index
+  ACTION: click_element_by_index
+  ACTION: extract_content
+  ... (7 more trace items)
 
 
+======================================================================
 INTERACTION 25
 Vote Type: rightvote
 User Task: Go to the New York Times website and find the most recent op-ed article related to climate change. Summarize the main argument of the piece.
+======================================================================
 
 📱 MODEL ATTEMPT 1: ❌ Failed
   Model: openai/o4-mini
   GIF ID: 10_05_2025_01_37_05_xIM.gif
   Log ID: 10_05_2025_01_37_05_xIM
 
+  Agent Trace:
+  --------------------------------------------------
+  TASK: Go to the New York Times website and find the most recent op-ed article related to climate change. Summarize the main argument of the piece.
+  STEPS: Executed 15 steps
+  EVAL: Unknown - starting the task
+  EVAL: Success - Search results page loaded with climate change op-ed results
+  EVAL: Success - Navigated to the NYTimes opinion article, but encounter CAPTCHA slider
+  EVAL: Success - Navigated to the Climate and Environment section
+  EVAL: Success - Identified the most recent climate change op-ed titled 'The Stench of Climate Change Denial' (May 27, 2024)
+  EVAL: Success - Search results loaded with the NYT opinion article 'The Stench of Climate Change Denial' visible
+  EVAL: Success - Search results page displays relevant climate change opinion articles
+  GOAL: Search for the latest NYTimes climate change op-ed via Google
+  GOAL: Click the most recent op-ed result titled 'Opinion | Climate Science Is 'Unstoppable'"
+  GOAL: Solve the slider CAPTCHA by clicking and dragging the puzzle handle to the right
+  GOAL: Load the article via Google's cache to bypass the CAPTCHA
+  GOAL: Go to the New York Times climate section to find recent opinion articles
+  GOAL: Navigate to the NYTimes Opinion climate section to locate the most recent climate change op-ed
+  ... (32 more trace items)
+
+
 📱 MODEL ATTEMPT 2: ❌ Failed
   Model: deepseek/deepseek-r1
   GIF ID: 10_05_2025_01_37_05_jxR.gif
   Log ID: 10_05_2025_01_37_05_jxR
 
---------------------------------------------------------------------------------
+  Agent Trace:
+  --------------------------------------------------
+  TASK: Go to the New York Times website and find the most recent op-ed article related to climate change. Summarize the main argument of the piece.
+  STEPS: Executed 14 steps
+  EVAL: Unknown - Starting fresh session at about:blank
+  EVAL: Success - Successfully navigated to NYT homepage
+  EVAL: Success - Climate opinion filter applied, showing 2 recent Guest Essays
+  EVAL: Success - Returned to filtered Environment opinion list with May 4th article visible
+  EVAL: Success - Found April 23 op-ed via Google search bypass
+  EVAL: Partial Success - Found promising search result 'The World Seems to Be Surrendering to Climate Change' (April 2025) but not yet accessed
+  EVAL: Partial Success - Accessed Environment Opinion section but current articles lack explicit climate focus
+  GOAL: Navigate to NYT homepage
+  GOAL: Navigate to Opinion section
+  GOAL: Filter opinion articles to show climate-related content
+  GOAL: Open and analyze the May 5 op-ed for climate connection
+  GOAL: Extract content to confirm climate relevance or identify backup article
+  GOAL: Return to filtered Opinion list and select May 4th article
+  ... (42 more trace items)
 

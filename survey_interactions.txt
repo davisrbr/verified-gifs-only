@@ -4,6 +4,7 @@ Total interactions: 25 (subset with all GIFs available)
 
 ======================================================================
 INTERACTION 1
+Date/Time: 2025-05-12 00:04:48
 Vote Type: leftvote
 User Task: How many nonstop flights to Las Vegas depart from Portland, Oregon every day and what airlines operate them?
 ======================================================================
@@ -88,6 +89,7 @@ User Task: How many nonstop flights to Las Vegas depart from Portland, Oregon ev
 
 ======================================================================
 INTERACTION 2
+Date/Time: 2025-05-12 00:08:19
 Vote Type: leftvote
 User Task: Create a summary for the wikipedia article about Manchester Metrolink
 ======================================================================
@@ -163,6 +165,7 @@ User Task: Create a summary for the wikipedia article about Manchester Metrolink
 
 ======================================================================
 INTERACTION 3
+Date/Time: 2025-05-12 00:09:34
 Vote Type: leftvote
 User Task: Go to Etsy.com, browse the trending home décor category, and list the top 5 most popular items including their titles and prices.
 ======================================================================
@@ -346,6 +349,7 @@ User Task: Go to Etsy.com, browse the trending home décor category, and list th
 
 ======================================================================
 INTERACTION 4
+Date/Time: 2025-05-12 01:30:49
 Vote Type: leftvote
 User Task: N/A
 ======================================================================
@@ -528,6 +532,7 @@ User Task: N/A
 
 ======================================================================
 INTERACTION 5
+Date/Time: 2025-05-07 11:27:49
 Vote Type: leftvote
 User Task: visit the New York Times homepage and summarize the main story currently featured at the top of the page
 ======================================================================
@@ -606,6 +611,7 @@ User Task: visit the New York Times homepage and summarize the main story curren
 
 ======================================================================
 INTERACTION 6
+Date/Time: 2025-05-09 16:03:26
 Vote Type: leftvote
 User Task: N/A
 ======================================================================
@@ -710,6 +716,7 @@ User Task: N/A
 
 ======================================================================
 INTERACTION 7
+Date/Time: 2025-05-09 16:25:22
 Vote Type: leftvote
 User Task: What are the today's top headlines from Fox News?
 ======================================================================
@@ -817,6 +824,7 @@ User Task: What are the today's top headlines from Fox News?
 
 ======================================================================
 INTERACTION 8
+Date/Time: 2025-05-09 16:27:56
 Vote Type: leftvote
 User Task: Please provide a list of the types of boats that can be rented at Piney Run Park in Eldersburg, Maryland and include the hourly rate. 
 ======================================================================
@@ -925,6 +933,7 @@ User Task: Please provide a list of the types of boats that can be rented at Pin
 
 ======================================================================
 INTERACTION 9
+Date/Time: 2025-05-09 17:13:23
 Vote Type: leftvote
 User Task: create a list of the top 20 best selling nintendo switch games
 ======================================================================
@@ -1076,6 +1085,7 @@ User Task: create a list of the top 20 best selling nintendo switch games
 
 ======================================================================
 INTERACTION 10
+Date/Time: 2025-05-09 17:35:15
 Vote Type: leftvote
 User Task: a list of top 10 churches 
 ======================================================================
@@ -1165,6 +1175,7 @@ User Task: a list of top 10 churches
 
 ======================================================================
 INTERACTION 11
+Date/Time: 2025-05-09 17:37:41
 Vote Type: leftvote
 User Task: What are the top video titles on youtube homepage?
 ======================================================================
@@ -1304,6 +1315,7 @@ User Task: What are the top video titles on youtube homepage?
 
 ======================================================================
 INTERACTION 12
+Date/Time: 2025-05-09 17:49:58
 Vote Type: leftvote
 User Task: Check all ticket touting websites and find the cheapest ticket I can get to Man City vs Bournemouth on the 20th of May
 ======================================================================
@@ -1460,6 +1472,7 @@ User Task: Check all ticket touting websites and find the cheapest ticket I can 
 
 ======================================================================
 INTERACTION 13
+Date/Time: 2025-05-09 17:50:38
 Vote Type: leftvote
 User Task: List out the symptoms of Vitamin D deficiency from WebMd and any other medical website
 ======================================================================
@@ -1581,6 +1594,7 @@ User Task: List out the symptoms of Vitamin D deficiency from WebMd and any othe
 
 ======================================================================
 INTERACTION 14
+Date/Time: 2025-05-09 17:57:47
 Vote Type: rightvote
 User Task: What is the best Arcade Fire albums listed from best to worst?
 ======================================================================
@@ -1688,6 +1702,7 @@ User Task: What is the best Arcade Fire albums listed from best to worst?
 
 ======================================================================
 INTERACTION 15
+Date/Time: 2025-05-09 17:57:47
 Vote Type: rightvote
 User Task: What is the best Arcade Fire albums listed from best to worst?
 ======================================================================
@@ -1795,6 +1810,7 @@ User Task: What is the best Arcade Fire albums listed from best to worst?
 
 ======================================================================
 INTERACTION 16
+Date/Time: 2025-05-09 18:09:04
 Vote Type: leftvote
 User Task: give me a recipe for making pasta with cheese from the top 3 cooking websites, make it environmentally sustainable.
 ======================================================================
@@ -1865,6 +1881,7 @@ User Task: give me a recipe for making pasta with cheese from the top 3 cooking 
 
 ======================================================================
 INTERACTION 17
+Date/Time: 2025-05-09 18:20:54
 Vote Type: leftvote
 User Task: Tell me different Plane ticket price from different websites for a one way trip from Ontario to Ottawa 
 ======================================================================
@@ -2042,6 +2059,7 @@ User Task: Tell me different Plane ticket price from different websites for a on
 
 ======================================================================
 INTERACTION 18
+Date/Time: 2025-05-09 18:46:15
 Vote Type: leftvote
 User Task: Compare prices of HP laptop model across different online retailers
 ======================================================================
@@ -2171,6 +2189,7 @@ User Task: Compare prices of HP laptop model across different online retailers
 
 ======================================================================
 INTERACTION 19
+Date/Time: 2025-05-09 18:53:17
 Vote Type: rightvote
 User Task: get me online price details comparison of samsung qled 75 inch tv from 5 leading retailers in usa along with price from samsung website 
 ======================================================================
@@ -2396,6 +2415,7 @@ User Task: get me online price details comparison of samsung qled 75 inch tv fro
 
 ======================================================================
 INTERACTION 20
+Date/Time: 2025-05-09 19:10:56
 Vote Type: leftvote
 User Task: Give me a summary of this week's best-selling crypto coins.
 ======================================================================
@@ -2481,6 +2501,7 @@ User Task: Give me a summary of this week's best-selling crypto coins.
 
 ======================================================================
 INTERACTION 21
+Date/Time: 2025-05-09 19:20:46
 Vote Type: leftvote
 User Task: how is the weather today
 ======================================================================
@@ -2560,6 +2581,7 @@ User Task: how is the weather today
 
 ======================================================================
 INTERACTION 22
+Date/Time: 2025-05-09 20:15:49
 Vote Type: tievote
 User Task: What are today's top 10 most popular articles on buzzfeed?
 ======================================================================
@@ -2689,6 +2711,7 @@ User Task: What are today's top 10 most popular articles on buzzfeed?
 
 ======================================================================
 INTERACTION 23
+Date/Time: 2025-05-09 21:31:41
 Vote Type: leftvote
 User Task: Find the titles and authors of the top 3 bestselling fiction books on Amazon's homepage today.
 ======================================================================
@@ -2798,6 +2821,7 @@ User Task: Find the titles and authors of the top 3 bestselling fiction books on
 
 ======================================================================
 INTERACTION 24
+Date/Time: 2025-05-09 21:50:31
 Vote Type: leftvote
 User Task: What are the names of the top 20 most frequently visited lakes in the world currently?
 ======================================================================
@@ -2969,6 +2993,7 @@ User Task: What are the names of the top 20 most frequently visited lakes in the
 
 ======================================================================
 INTERACTION 25
+Date/Time: 2025-05-09 22:03:40
 Vote Type: rightvote
 User Task: Go to the New York Times website and find the most recent op-ed article related to climate change. Summarize the main argument of the piece.
 ======================================================================

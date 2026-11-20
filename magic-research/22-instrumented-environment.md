@@ -338,12 +338,15 @@ NFC antenna face up: something laid on top of it is read or powered with no scre
 
 ### 2.19 History and the trust problem
 
-Robert-Houdin dressed his stage as a Louis XV drawing room [50] and "suppress[ed] the
-suspiciously-draped tables of his predecessors", using light undraped tables and gueridons [50].
+Robert-Houdin dressed his stage as a Louis XV drawing room [50] and did away with the
+floor-length draped tables of his predecessors in favour of
+light undraped tables and gueridons [50] (the second point from a search summary of Hopkins and
+the theatre's Wikipedia entry; I could not open the primary text).
 His Light and Heavy Chest (mid-1840s) put an electromagnet under the floorboards, switched by an
 offstage assistant, with an iron plate in the box [51]: the first instrumented environment, with
 a nearly passive prop. Séance tables were moved by pins and slotted rings, hooks, extended boot
-soles, knees and feet; Faraday's 1853 apparatus showed sitters pushing unconsciously [52]. The
+soles, knees and feet; Faraday's roller-board apparatus (reported in 1853) showed sitters pushing
+unconsciously [52]. The
 Losander floating table (about 1997) descends from Karson's 1940s work via Tommy Wonder [52].
 
 Lessons. A surface is trusted while it has an innocent function and never appears to cause

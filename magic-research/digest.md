@@ -2870,15 +2870,142 @@ shuffles and sealed-ness. See open leads (section 5).
 
 
 ## Summary (23)
-
+- **Magic uses about 1950s coding theory; the literature has moved a long way.** Cheney's trick,
+  binary de Bruijn stacks and Gilbreath are in the magic canon. Codes for a channel whose state
+  only the sender knows, error-correcting permutation codes, group testing, position-coding
+  surfaces, liar-game codes and non-committing commitments are not, and each one maps onto a
+  method primitive.
+- **The Cheney family has three fresh results (2024 to November 2026)** that change how it can be
+  staged: the volunteer may choose the hidden card (deck limit (K-1)!+K-1, which one extra bit
+  lifts to a full deck), the cards may be face down or sideways (3-card and 4-card versions for a
+  full deck), and the display can be made immune to a heckler swapping two cards (29-card and
+  14-card limits).
+- **The "impossible chessboard" generalises into something stronger than the puzzle.** With
+  2^k - 1 coins the audience can forbid the assistant from touching almost half of them (any
+  2^(k-1) - 1), and the assistant still sends k bits by turning at most two of the rest (checked
+  by script). This is the "wet paper code" idea from steganography and I found no magic use of it.
+- **Liar-tolerant identification is cheap and mechanical.** One of 52 cards with one permitted lie
+  takes 10 yes/no answers (optimal), two lies 13 to 15, and one of 4,096 items with three lies
+  takes 23 (Golay code). A stack of tinted transparencies decodes any of these with no
+  electronics, and also shows which answers were the lies.
+- **Group testing gives a two-thinker (or three-thinker) version of the 21-card trick.** Two
+  people think of cards and answer jointly, never saying whose card is in which pile. Three deals
+  into seven piles identify both cards; four deals identify three thinkers' cards (checked by
+  script).
+- **Commitments can be made equivocal without breaking any cryptography.** A genuine SHA-256
+  Bitcoin timestamp can cover hundreds of millions of predictions through one Merkle root. A
+  ciphertext can open to different plaintexts under different keys. Given one visual-cryptography
+  share, the other can be made afterwards to reveal any image. The MD5 "Nostradamus" demonstration
+  (12 PDFs with one hash, 2007) is the canonical precedent.
+- **A zero-knowledge simulator is a magician.** The proof that a protocol leaks nothing is a
+  recipe for faking the proof when you control the "random" choices. Card-based secure-computation
+  protocols (den Boer's five-card trick and the large literature since) rest on three physical
+  assumptions (identical backs, a truly random cut, no peeking), and each is something a card
+  worker can secretly break. One identifiable card is enough to break the five-card trick.
+- **Covert channels through honest-looking actions are high-capacity and, when keyed, provably
+  undetectable.** A deck's order holds 225.6 bits. A world-class bridge pair ran a one-bit
+  card-orientation channel under expert scrutiny for years, and it was caught only by statistics
+  over recorded hands. A shared rolling key (the minute on two watches) makes the visible action
+  statistically independent of the secret, which removes even that attack.
+- **Position-coding patterns (Anoto) and universal cycles for objects other than binary strings**
+  let any small fragment of a printed surface, or any few consecutive items of a sequence, identify
+  where it came from, including which way round it is being read. An MIT-licensed encoder/decoder
+  exists. Order-pattern cycles allow a reveal channel that carries no card names: five people
+  stand in order of their cards.
+- **What computation adds:** every scheme here was once limited by what a person could compute on
+  stage. With a hidden computer and a cue, or a printed overlay, decoding cost is zero, so
+  two-lie and three-lie games, large-n Cheney, adaptive group tests, slip-proof Kruskal texts
+  found by search, and keyed spoken codes all become practical.
 
 
 ## 3. Capability primitives (23)
-
+1. *Now possible:* a performer can **transmit** one of 52 cards when the volunteer, not the
+   assistant, chooses the hidden card. *Because:* (K-1)!+K-1 bound plus one extra bit. *Before:*
+   the assistant had to choose. *Primitives:* tell.
+2. *Now possible:* **transmit** a hidden card with three cards, two shown, face up or down and
+   upright or sideways, 54-card deck. *Because:* Chen et al. 2024. *Before:* five cards.
+   *Primitives:* tell.
+3. *Now possible:* **transmit** through a display a heckler may alter by one neighbouring swap
+   (29 cards) or any swap (14). *Because:* rank-modulation codes. *Before:* any tampering broke
+   it. *Primitives:* tell, prove ordinariness.
+4. *Now possible:* **transmit** k bits on 2^k - 1 coins when the audience freezes any 2^(k-1) - 1
+   of them, turning at most two. *Because:* wet-paper / Hamming syndrome coding. *Before:* the
+   sender needed free access to every coin. *Primitives:* tell.
+5. *Now possible:* **transmit** with cues statistically independent of the secret. *Because:*
+   one-time pad from shared time (TOTP idea). *Before:* fixed code books, learnable by
+   repetition. *Primitives:* tell, erase the evidence.
+6. *Now possible:* **transmit** 20 bits in a 200-token natural paragraph that survives about 17
+   edits. *Because:* robust multi-bit LLM watermarking. *Before:* fixed phrases. *Primitives:*
+   tell.
+7. *Now possible:* **transmit** 225 bits (a whole deck order) or 12 bits (five cards by order and
+   orientation). *Because:* permutation ranking by computer. *Before:* mental ranking limited to
+   3 or 4 cards. *Primitives:* tell.
+8. *Now possible:* **converse in public** so that a listener who knows the system learns nothing.
+   *Because:* Russian-cards protocols. *Before:* codes relied on secrecy of the system.
+   *Primitives:* tell.
+9. *Now possible:* **identify** one of 52 with one permitted lie in 10 answers, two lies in about
+   14, or one of 4,096 with three lies in 23, naming the lies. *Because:* Hamming, BCH, Golay
+   codes. *Before:* one lie among 16 (Ehrenborg). *Primitives:* know.
+10. *Now possible:* **decode** any such code with a stack of tinted transparencies. *Because:*
+    darkness equals Hamming distance. *Before:* mental syndrome arithmetic. *Primitives:* know.
+11. *Now possible:* **identify** two thinkers' cards from joint answers in three deals, three
+    thinkers in four. *Because:* 2- and 3-disjunct designs from Reed-Solomon codes. *Before:*
+    one thinker per round. *Primitives:* know.
+12. *Now possible:* **identify** up to c removed cards from a c-number running sketch.
+    *Because:* PinSketch. *Before:* one card by clocking. *Primitives:* know.
+13. *Now possible:* **identify** five consecutive cards from how five people rank themselves.
+    *Because:* order-pattern universal cycles found by search. *Before:* colours or suits had to
+    be stated. *Primitives:* know.
+14. *Now possible:* **identify** position and reading direction from a short window of a strip.
+    *Because:* orientable sequences. *Before:* de Bruijn stacks assumed a direction.
+    *Primitives:* know.
+15. *Now possible:* **identify** where any 2 mm patch of a printed surface came from, with
+    rotation. *Because:* Anoto-type codes and py-microdots. *Before:* one mark at one place.
+    *Primitives:* know, prove ordinariness.
+16. *Now possible:* **identify** a hidden Dobble card from two matches with visible cards.
+    *Because:* projective-plane duality. *Before:* a marked deck. *Primitives:* know, prove
+    ordinariness.
+17. *Now possible:* **commit** to hundreds of millions of outcomes under one genuine SHA-256
+    Bitcoin timestamp and open only one. *Because:* Merkle aggregation. *Before:* an index of
+    envelopes. *Primitives:* control chance, delay.
+18. *Now possible:* **commit** to a ciphertext that opens to different messages under different
+    short keys. *Because:* non-committing AEAD; the one-time pad. *Before:* a physical switch.
+    *Primitives:* swap, delay.
+19. *Now possible:* **commit** by giving away half of an image days early, then make the other
+    half reveal anything. *Because:* visual cryptography. *Before:* the prediction had to be
+    switched. *Primitives:* delay, swap, prove ordinariness.
+20. *Now possible:* **prove** a match between two hidden choices with an honest, explainable
+    protocol while secretly knowing one of them. *Because:* card-based equality protocols plus
+    marked backs. *Before:* the proof step did not exist. *Primitives:* prove ordinariness.
+21. *Now possible:* **prove** knowledge you lack, or **extract** a spectator's secret, by
+    controlling the randomness of a zero-knowledge procedure. *Because:* simulators and
+    extractors. *Before:* not framed this way. *Primitives:* control chance, know.
+22. *Now possible:* **learn** who said no in the five-card trick with one identifiable card.
+    *Because:* rotation tracking. *Before:* not applicable. *Primitives:* know.
+23. *Now possible:* **guarantee** a 31% group success with one secret swap. *Because:* cycle
+    structure of permutations. *Before:* luck. *Primitives:* control chance.
+24. *Now possible:* **guarantee** a Kruskal convergence from every start, including after a
+    one-step miscount. *Because:* computer search over arrangements or texts. *Before:* about
+    90% for a deck. *Primitives:* control chance.
+25. *Now possible:* **verify** a self-working procedure for every input before printing it.
+    *Because:* model checking. *Before:* testing by hand. *Primitives:* control chance.
+26. *Now possible:* **size** an index of outs for "all but one right" exactly. *Because:*
+    covering codes. *Before:* one out per outcome. *Primitives:* control chance.
 
 
 ## Effect concept titles (23)
-
+- 1. Her choice (level 2)
+- 2. The frozen board (level 3)
+- 3. Two lies allowed (level 2 to 3)
+- 4. Certified match (level 2, subverting a secure protocol)
+- 5. The timestamped prophecy (level 3)
+- 6. Your half was always the answer (level 2 to 3)
+- 7. Every scrap knows where it came from (level 3)
+- 8. Just stand in order (level 2)
+- 9. A letter that always ends on the same word (level 3)
+- 10. The greeting that means something different every minute (level 2 to 3)
+- 11. Either of you (level 2)
+- 12. Ten boxes, one swap (level 2)
 
 
 
@@ -3164,15 +3291,155 @@ shuffles and sealed-ness. See open leads (section 5).
 
 
 ## Summary (26)
-(pending)
+- **The most transferable idea in this slice is "design for what the examiner will do, not what
+  they will think."** MI9's left-hand-threaded compass buttons and Fraser-Smith's left-hand screw
+  caps survived searches because a searcher's hands only test one direction. A modern car "trap"
+  opened only when four innocent conditions were true at once. Magic's examinable props mostly
+  hide the seam; these fields hid the *action that opens it*.
+- **Intelligence services solved "prove ordinariness" with mass, sound and backstory, not only
+  looks.** The Hollow Nickel was caught because it "felt too light" and popped open when dropped.
+  Later coins carried lead rings to match weight. Operation Mincemeat proved a fictional man with
+  dated ticket stubs, a jeweller's receipt and an overdraft letter. Tungsten, thermal receipt
+  printers and on-demand print make both cheap now.
+- **The CIA's "Jack-in-the-Box" is the cleanest statement of a principle magic uses loosely:**
+  create a short gap in observation by route, do the big move in the gap, and fill the vacancy
+  with a decoy so the *count* the watcher is tracking stays correct. Magic's Asrah form (1902) is
+  the same idea. Soft robotics lets the decoy be warm, moving and hand-held.
+- **Whaley's taxonomy adds a planning grid magic's effect lists lack**: three ways to hide the
+  real (masking, repackaging, dazzling), three ways to show the false (mimicking, inventing,
+  decoying), plus maxims that are directly usable as design rules: reinforce a belief the target
+  already holds, control the target's channels, never hand over a windfall, and deceive about an
+  attribute (size, location, identity, *time*) the target is not yet watching.
+- **Deception about time is under-used in magic and well developed in military practice.**
+  Operation Bertram built a dummy pipeline at a visible five miles a day so the enemy could read
+  the date of the attack off it. A visibly unfinished process is a lie about *when*.
+- **Camouflage science quantifies things magic only asserts.** Outline-breaking contrast beats
+  background matching (Cuthill 2005); a thing can be seen and still dismissed if the observer
+  knows the innocent model (masquerade, Skelhorn 2010); high-contrast concealment is learned
+  fastest on repeat viewing (Troscianko 2013); nothing hides a lone moving object, but similar
+  moving distractors slow identification (Hall 2013); small eyespots pull strikes toward
+  themselves (Kjernsmo 2013).
+- **Inspection is a search task, and search for rare things on a fixed list fails in measurable
+  ways.** Radiologists hunting nodules missed a gorilla 48 times nodule size 83% of the time
+  (Drew 2013); rare targets are missed far more often (Wolfe 2005); TSA red teams got prohibited
+  items through in 95% of 2015 trials. An examination with an assigned task is weaker than a free
+  one, and this is engineerable.
+- **Adaptive camouflage skins are mostly a dead end at prop scale**, with two exceptions: the
+  silicone-and-mesh texture membranes of Pikul et al. (flat sheet to programmed 3D relief, hobby
+  materials), and photocell-matched counter-illumination (the Yehudi lights cut detection range
+  from about 12 miles to 3,000 yards for under 500 W on a bomber).
+- **Con-game structure is a routine-construction manual.** The six-stage short con (foundation,
+  approach, build-up, convincer, "hurrah", in-and-in) and Stajano and Wilson's seven principles
+  describe how to stage independent confirmation and how to end so the audience leaves with a
+  story that is not the method.
+- **Variable-data tradecraft (canary traps, microdots, Stanhope lenses) points at an
+  architecture magic has barely touched:** every "identical" printed thing in the room is unique,
+  and a thousand outs fit inside a full stop.
 
 
 ## 3. Capability primitives (26)
-(pending)
+1. *Field:* MI9 and SOE hid compartments behind left-hand threads that searchers never tried.
+   *Today:* resin-printed or tapped left-hand threads, about $0 to $20. *Before:* magic hid the
+   seam, not the opening action. *Primitives:* conceal, prove ordinariness.
+2. *Field:* KGB and CIA hollow coins matched weight with lead rings. *Today:* tungsten restores
+   exact mass with 54% of the excavated volume left free; about $15 of tungsten putty or sheet
+   (estimate). *Before:* shells and hollow coins are light and ring wrong. *Primitives:* hold,
+   prove ordinariness.
+3. *Field:* a smuggler's compartment opened only on four simultaneous innocent conditions.
+   *Today:* reed switches in series, or a $3 microcontroller with an accelerometer, give
+   AND-locks and gesture-sequence locks with no keyhole. *Before:* puzzle boxes, visible locks.
+   *Primitives:* hold/release, prove ordinariness.
+4. *Field:* agencies hid radios in working-looking batteries. *Today:* a small cell in a custom
+   sleeve gives a battery that powers the device and is 50 to 80% cavity; about $2 plus
+   printing. *Before:* dummy batteries that do not work. *Primitives:* conceal, prove
+   ordinariness.
+5. *Field:* services put a page in a 1 mm dot; Dagron sold 12,000 lens-and-dot viewers a day.
+   *Today:* a phone macro lens reads it; hundreds of alternatives fit in one square centimetre.
+   *Before:* index wallets and pocket indexes hold 52 outs in a wallet's volume. *Primitives:*
+   conceal, control chance (outs), prove priority.
+6. *Field:* MI9 laminated maps in playing cards, opened only by soaking. *Today:* split cards,
+   inkjet tissue, water-release gum; about $10 a deck in materials. *Before:* cards carry
+   secrets on faces and backs. *Primitives:* conceal, duplicate (52 outs), erase evidence.
+7. *Field:* MI9 made a razor blade a compass by magnetising it. *Today:* any steel object (UK
+   1p and 2p since 1992 are copper-plated steel) can carry a hidden bit as remanent
+   magnetisation, read by a $1 magnetometer chip. *Before:* marks, nicks, daub. *Primitives:*
+   know, prove ordinariness. (Speculative; remanence in mild steel is weak.)
+8. *Field:* the CIA kept a watcher's head-count correct with a pop-up torso. *Today:* a
+   spring-steel or inflatable decoy with a servo and a 33 C heater pad for about $40 (estimate).
+   *Before:* static wire forms, false hands. *Primitives:* swap, conceal, delay.
+9. *Field:* case officers created a few seconds unobserved by route planning. *Today:* same,
+   no technology: build the occlusion into the furniture and blocking in advance. *Before:*
+   flourish-based cover. *Primitives:* conceal, delay.
+10. *Field:* agents exchanged thousands of characters in a seconds-long burst with no visible
+    link. *Today:* $5 radio modules (agent 10). *Primitives:* tell, know.
+11. *Field:* stations broadcast dummy traffic so the real message could not be spotted.
+    *Today:* a prop that always ticks, blinks or buzzes hides the one meaningful tick, for free.
+    *Before:* performers suppress tells instead of flooding them. *Primitives:* tell, conceal.
+12. *Field:* agents signalled with a chalk mark, a parked car, a window blind. *Today:* same, or
+    any phone-controllable household object. *Before:* stooge codes. *Primitives:* tell.
+13. *Field:* Mincemeat proved a fictional life with dated pocket litter. *Today:* thermal
+    receipts, tickets and labels printed for tonight's date and venue for cents each.
+    *Before:* "examine this ordinary object". *Primitives:* prove ordinariness, delay.
+14. *Field:* the CIA backstopped a cover with a real office and phone line. *Today:* a phone
+    number, a web page and a voice bot for about $15 a month (estimate; agent 24). *Before:*
+    stooges. *Primitives:* prove ordinariness, control choice.
+15. *Field:* leak-hunters gave each recipient a unique copy. *Today:* variable-data printing
+    makes 500 unique programmes, coasters or billets at no extra cost. *Before:* marked decks of
+    52. *Primitives:* know (identify), duplicate.
+16. *Field:* Bertram's dummy pipeline told the enemy the date. *Today:* any slow visible process
+    (instant film developing in about 90 s, wax cooling, a print in progress) can be staged to
+    misdate an event. *Before:* time misdirection by patter. *Primitives:* delay.
+17. *Field:* the Ghost Army made an absent division audible at 15 miles. *Today:* a 20 mm
+    exciter, a $3 audio module and a motion sensor make an empty box rattle and thud in step
+    with the hand shaking it. *Before:* rattle boxes with one sound. *Primitives:* prove
+    presence (ordinariness), conceal, delay.
+18. *Field:* Yehudi lights erased a dark silhouette against bright sky with a photocell loop.
+    *Today:* LED, photodiode and op-amp for about $5. *Before:* matte black and distance.
+    *Primitives:* conceal.
+19. *Field:* soft robotics labs turn a flat silicone sheet into a programmed relief by air.
+    *Today:* silicone, mesh and a syringe for about $30 (estimate). *Before:* flaps and rising
+    panels. *Primitives:* transform, conceal.
+20. *Field:* camouflage science showed outline-crossing contrast hides edges and that known
+    innocent models cause misidentification. *Today:* full-colour UV print or hydro-dip on any
+    gimmick (agents 6 and 13). *Before:* card-back lore. *Primitives:* conceal.
+21. *Field:* vision labs find optimal concealment colours by observer trials plus a network.
+    *Today:* a phone, a vision model and an evening. *Before:* trial and error. *Primitives:*
+    conceal (method by search).
+22. *Field:* prey deflect strikes to small eyespots; lizards leave a wriggling tail. *Today:* a
+    printed false seam, or a discard that keeps moving on a $1 vibration motor. *Before:* the
+    sucker gag. *Primitives:* control attention, erase evidence.
+23. *Field:* screeners given a list miss off-list anomalies (83% missed a gorilla; 95% red-team
+    failure). *Today:* script the examination as a task. Free. *Primitives:* prove ordinariness.
+24. *Field:* con crews staged independent confirmation with shills and an "in-and-in". *Today:*
+    backstopped channels (item 14) replace people. *Primitives:* prove ordinariness, control
+    choice.
+25. *Field:* monte crews let the mark "secretly" mark the winner, then moved the mark. *Today:*
+    a mark made in ink that fades in minutes while a twin develops elsewhere (agent 8), or a
+    shape-memory crimp that relaxes at hand temperature. *Before:* the bent-corner move by
+    sleight. *Primitives:* swap (the identifier, not the object).
+26. *Field:* mediums defeated hand-holding controls with false limbs and rods. *Today:* a
+    carbon tube or tape-spring boom reaches 1 to 2 m from a palm-sized reel (reach figures
+    unverified). *Before:* telescopic reaching rods. *Primitives:* move.
+27. *Field:* Price caught a plate switch by X-ray-marking plates. *Today:* instant-film printers
+    put any image on genuine, signable instant film (unverified product detail). *Before:*
+    double exposure, plate switches. *Primitives:* transform, prove ordinariness.
+28. *Field:* bunraku and kabuki train audiences to ignore declared infrastructure. *Today:* the
+    phone on the table, the camera operator, the venue's own signage. Free. *Primitives:*
+    conceal, tell.
 
 
 ## Effect concept titles (26)
-
+- 4.1 The honest torch (level 3: working, weight-true concealment locked by habit).
+- 4.2 The escape deck (level 3: brute-force outs inside the lamination).
+- 4.3 A thousand outs in a full stop (level 3: microdot index).
+- 4.4 Every programme is a fingerprint (level 3: canary-trap audience).
+- 4.5 The control hand (level 2/3: Jack-in-the-Box for theatrical séance).
+- 4.6 Still developing (level 2: a progress bar that lies about when).
+- 4.7 The lightning-rod box (level 3: decoy seam plus searched camouflage).
+- 4.8 The mark that moves (level 2: identity transfer of the cue).
+- 4.9 Virtual contents (level 3: Ghost Army in a matchbox).
+- 4.10 The wallet of a stranger (level 3: pocket-litter prediction, personalised overnight).
+- 4.11 The coin with no mark (level 3, speculative: information as material state).
 
 
 

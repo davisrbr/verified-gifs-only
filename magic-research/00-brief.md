@@ -50,6 +50,57 @@ people), stage, walk-around/street, installation or unattended object (no perfor
 - Buildable by one hobbyist for roughly $10 to $500, with consumer 3D printing, ordered PCBs, and
   off-the-shelf parts. Flag anything that needs a lab.
 
+## Course correction (added mid-project; this overrides anything below that conflicts)
+
+Early output leaned on "published result -> direct effect": find a phenomenon that already looks
+like a trick (acoustic levitation, a colour-change reaction, an aerial image) and show it. That is
+the least interesting kind of transfer. A science demo presented as magic reads as a science demo,
+and those phenomena are the first thing an audience guesses.
+
+The question to ask of every technology, material, process, component or service is instead:
+
+> **What does this let a builder do that used to be impossible, expensive, slow, bulky, unreliable
+> or detectable?**
+
+Rules that follow from that:
+
+- **Capability first.** Describe each item as an abstract capability with numbers, not as a
+  spectacle. "Hold 2 N with zero power and release on a 5 ms pulse", "bond two surfaces so the bond
+  disappears by itself in 40 minutes leaving no residue", "know the full order of a shuffled deck
+  within 1 s", "make 500 different one-off printed objects for $0.30 each", "duplicate the outside
+  of a borrowed-looking object to 30 micron fidelity overnight".
+- **Unglamorous technology counts as much as spectacular technology**, usually more. Adhesives,
+  tolerances, batteries, packaging, coatings, timing, cheap duplication, logistics, data and
+  search are where new methods come from. Do not filter for things that look "illusion-like".
+- **Three levels of use**, in rising order of interest:
+  1. the phenomenon is the effect (lowest value; keep these brief),
+  2. a small hidden input to a traditional method, removing one of its known weaknesses,
+  3. an entirely new mechanism or method architecture that could not have existed before, where
+     the audience never sees or suspects the technology at all.
+- **Think in method primitives.** Nearly every method is built from a few secret operations:
+  secretly *hold / release*, *move*, *swap*, *duplicate*, *conceal*, *transform*, *know* (sense),
+  *tell* (signal), *delay* (separate cause from effect in time), *control chance or choice*,
+  *erase the evidence*, and *prove ordinariness* (survive examination, look factory-made, look
+  sealed, look borrowed). Say which primitives an item makes cheaper, and by how much.
+- **New architectures, not only new parts.** Cheapness changes what structures are possible:
+  covering every outcome by brute-force fabrication (a thousand outs for cents each); methods that
+  do their work hours before or after the performer is present; gimmicks that destroy or erase
+  themselves so the final object is honest; props personalised to one audience overnight; systems
+  that watch and adapt in real time; methods found by computer search rather than by a person.
+- **Combine with classical magic.** The strongest ideas pair a new capability with an old
+  principle so each covers the other's weakness: sleight of hand cancels the "it's electronic"
+  theory, and the technology cancels the "they must have switched it" theory.
+- Be inventive and specific. Odd, half-formed mechanism ideas are wanted, labelled as speculative
+  where they are; a list of safe obvious ones is not.
+
+Every report therefore carries an extra section, placed before "Effect concepts":
+
+**Capability primitives** - 15 to 30 one-line entries of the form
+"*Now possible:* <capability with numbers>. *Because:* <tech>. *Before:* <how magic did this, or
+could not>. *Primitives:* <hold/move/swap/know/delay/...>."
+
+And in "Effect concepts", at least two thirds of the ideas must be level 2 or level 3 above.
+
 ## How to research
 
 - Use web search and page fetches heavily (WebSearch / WebFetch; if they are not in your tool

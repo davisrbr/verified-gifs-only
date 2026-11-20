@@ -19,8 +19,8 @@ bench test before anything is built around them.
   print-plus-paper microstructure fingerprints work on offset-printed stock. This is the most valuable
   open experiment in this slice and costs nothing but a flatbed scan.
 - **Hobby metal-detector physics moves into the table.** Phase-sensitive eddy-current sensing (vending
-  acceptors at 1 to 3 mm; TI LDC1612-class chips at about one coil diameter; hobby VLF detectors with
-  target-ID at 15 cm and more) can tell that a borrowed coin or ring is present, roughly where, and
+  acceptors at 1 to 3 mm; TI LDC1612-class chips at up to about one coil diameter; hobby VLF detectors
+  with target-ID at 15 cm and more; the two range figures are unverified) can tell that a borrowed coin or ring is present, roughly where, and
   which alloy family it is, through a tabletop or a closed fist. Existing magic "which hand" products
   all require a magnetic coin; the non-magnetic version appears to be unbuilt.
 - **Currency metallurgy gives free information and free actuation.** UK 1p/2p since 1992 and 5p/10p
@@ -43,6 +43,9 @@ bench test before anything is built around them.
   already sells. Phones leak presence passively over BLE. The ethical line is clear and is stated in
   the catalog: presence and position are fine with consent; names, identifiers and payment data are
   not.
+- **Coins of the same denomination have individual voices.** A 2022 coin-validation paper measured
+  thirty genuine coins of one type ringing anywhere from 16.92 to 17.45 kHz while one coin repeats to
+  about 12 Hz. That is an unmarked identity readable by any microphone.
 - **Thermal, acoustic and weight side channels identify "the one they touched".** Residual heat is
   readable for 30 to 60 s on plastic and longer on coins; a tap or a set-down has an object-specific
   sound (Knocker: 98% in the lab on 23 objects); a four-corner load-cell table knows the weight and
@@ -233,7 +236,8 @@ IR-contrast zones that a $5 UV LED or an IR-pass camera reads, and all the A1 fi
 **A7. What spectators' own devices give away (and the line not to cross).**
 - *Magnets they already carry.* Every iPhone from the 12 onward (except SE and 16e) has a ring of
   rare-earth magnets in its back; so do the charging cases of AirPods 3 and AirPods Pro (not AirPods
-  4), and many Android phones and cases now follow with Qi2 (unverified). Magnetic watch bands and
+  4), the Google Pixel 10 range (2025) and any phone in a magnetic Qi2 case (Samsung's S25 is
+  "Qi2 ready" only with such a case). Magnetic watch bands and
   bag clasps add more. The magnetometer gimmicks magic already sells will therefore detect "the phone
   is in the left pocket" or "the earbud case is under the middle cup" with no magnetic prop
   (field strengths not found; expect 5 to 20 cm depending on the item, to be measured).
@@ -279,11 +283,16 @@ sphere, enough for 6-DOF manipulation with four to six sources, with follow-ups 
   sliding-friction torque of about 1.3e-4 N m: it should spin at 10 to 20 mm and stall at 30 mm.
   Tangential drag on the same coin is about 0.01 to 0.05 N against 0.017 N of friction. Power
   dissipated in the coin is about 0.1 W, a few kelvin per minute, harmless.
-- Which objects respond: copper-cored US dime, quarter, half; pre-1982 cents; zinc cents (half as
-  well); silver rings and coins (best); 14 to 18 carat gold rings (3 to 5 times weaker than silver);
-  aluminium cans, foil, tea-light cups, laptop lids (large area, tiny mass: easiest of all).
-  Poor: cupronickel (US nickel, UK 20p/50p), platinum, titanium, tungsten carbide, stainless
-  steel, brass keys (moderate). Conductivities are textbook values (unverified here).
+- Which objects respond. Force scales with conductivity (S/m at 20 C, Wikipedia table): silver 63e6,
+  copper 60e6, pure gold 41e6, aluminium 36e6, tungsten 18e6, zinc 17e6, cartridge brass 17e6,
+  platinum 9.4e6, titanium 2.4e6, stainless steel 1.5e6, constantan-like copper-nickel about 2e6.
+  So: silver rings and coins, copper-cored US dimes, quarters and halves and pre-1982 cents are best;
+  zinc cents and brass keys about a third as good; euro 10/20/50 cent (Nordic gold, 89% copper with
+  aluminium, zinc and tin) moderate (alloy conductivity unverified); aluminium cans, foil, tea-light
+  cups and laptop lids are the easiest of all because the area is large and the mass tiny. Jewellery
+  gold is an alloy and conducts several times worse than pure gold (unverified), so expect 14 to 18
+  carat rings to be sluggish. Poor: cupronickel (US nickel, UK 20p and 50p), platinum, titanium,
+  stainless steel, tungsten carbide.
 - Hardware: brushless drone motor ($15) carrying two to four N52 magnets, or a three-phase stator
   from a ceiling fan or hoverboard motor driven by a $10 ESC for a silent, no-moving-parts
   travelling field. Concealment: under a thin (3 to 10 mm) tabletop, in a book, in a close-up case.
@@ -312,9 +321,12 @@ magnets for timing.
 **B3. Controlled vibration: moving anything on a surface.**
 Reznik and Canny's Universal Planar Manipulator moves several objects along independent paths on one
 flat plate driven horizontally by four voice coils, using sliding friction and time-varying local
-"jet" fields (WAFR 1998, IROS 2001). Vose, Umbanhowar and Lynch (IJRR 2009) showed that small periodic
-six-axis motions of a rigid plate produce programmable velocity fields with sinks, sources and
-circulation, so parts gather, line up or orbit with no sensing. Zhou, Sariola, Latifi and Liimatainen
+"jet" fields (WAFR 1998, IROS 2001). Their second prototype is a 6 mm Corian sheet with a 15 x 15 inch
+workspace on nylon-rod springs, pushed by four industrial voice coils from a 4 x 75 W consumer audio
+amplifier, with two accelerometers for feedback: 1990s lab hardware that a hobbyist can now shrink
+to a close-up pad with $10 exciters. Vose, Umbanhowar and Lynch (IJRR 2009; recalled, unverified)
+showed that small periodic six-axis motions of a rigid plate produce programmable velocity fields with
+sinks, sources and circulation, so parts gather, line up or orbit with no sensing. Zhou, Sariola, Latifi and Liimatainen
 (Nature Communications 2016) steer up to six objects at once on a centre-driven Chladni plate by
 choosing which of 59 notes (1 to 30 kHz) to play for 0.1 to 0.5 s, with camera feedback; their plate is
 a 50 x 50 x 0.5 mm silicon wafer with one small piezo, the objects are millimetre-scale (solder balls,
@@ -402,6 +414,37 @@ carriers of 40 to 60 kHz; hobby transducer-array boards $50 to $150 (price unver
 empty glass, the object seems to whisper. Separately, an audio-frequency electromagnet under the
 table will make an aluminium can or a coin buzz by eddy-current forces (the EMAT principle, A3).
 
+### C. Object-by-object quick reference
+
+What an honest specimen of each object offers. "Read" is passive sensing, "act" is a force or change
+applied without contact. Section letters point to the entries above.
+
+| Object | Read without touching it | Act on it without modifying it |
+|---|---|---|
+| Coins | alloy family and date bracket by inductive phase or weight (A3); individual identity by ring pitch (A3) or macro image; warmth of the one that was held (A5) | spin, drag, roll if copper-cored or silver (B1); attract if plated steel (B2); warm by induction, on the table only (B6) |
+| Banknotes | serial by OCR; denomination by magnetic pattern at contact range; fibre fingerprint (A1, A4) | US notes swing to a magnet (B2); tissue-light notes lift electrostatically only when dry and uncreased (B4) |
+| New sealed deck | back offset and print texture per card (A2, speculative); packet size by weight | air jet or electrostatic lift of a single card (B4, B5) |
+| Used borrowed deck | wear, stains and dog-ears per card: easy for a camera after one enrolment (A2) | as above |
+| Finger rings | presence and rough alloy through a fist (A3) but they also confound coin sensing | silver spins well, gold moderately, platinum, titanium and tungsten hardly (B1); induction heating is a burn hazard (B6) |
+| Keys and key rings | metal presence; clink signature (A5) | split rings and steel keys answer a magnet; brass keys drag weakly (B1, B2) |
+| Pens | steel clip and spring detectable magnetically | a balanced pen turns toward a magnet at the clip or spring (B2) |
+| Phones | built-in magnets locate them (A7); passive BLE gives coarse events only | compass app steered by a hidden magnet (A7); breath-figure image on the screen (B8) |
+| Watches | metal presence; magnets in some bands | mechanical watches can be magnetised by strong fields: keep N52 rotors away (hazard to the object) |
+| Earbuds and cases | case magnets; lid-open events over BLE (A7) | none worth using |
+| Bank and transit cards | do not read (A7) | none |
+| Drink cans | fill by weight or tap pitch (A5); steel or aluminium by magnet | empty aluminium can rolls by eddy drag or static (B1, B4); buzzes over an audio-frequency coil (B10) |
+| Bottles and crown caps | fill by weight; cap is steel | cap jumps and slides to a magnet (B2) |
+| Glass of liquid | which glass holds liquid, through the table, by capacitance, radar or weight (A6); pitch gives level | breath-figure image (B8); floating objects are the only place diamagnetic forces show (dead end) |
+| Cutlery | knife blades and cheap ferritic pieces are magnetic; good forks and spoons are not | magnetic ones move (B2); stainless is too resistive for eddy drag |
+| Napkins, tissue, straw wrappers | fibre fingerprint | electrostatic lift and crawl (B4); air jet (B5) |
+| Sugar packets, business cards | fibre and print fingerprint (A1); count by weight | vibration transport (B3) |
+| Cigarettes, lighters | lighter hood and wheel are steel | smoke attracted or collapsed electrostatically (B4); flame bent by jet (B5); lighter slides to a magnet (B2) |
+| Dice | which face is up needs a camera; no usable weight or acoustic signature of the face | slide by vibration, cannot be turned over (B3) |
+| Newspaper or book | page-level OCR from a glimpse (agent 12); sheet fingerprint | none (UV or laser marking is a dead end) |
+| Till receipt | fingerprint; printed text by OCR | written on by heat or friction (B7) |
+| Spectacles | whether lenses are photochromic is unknown until tried | darken under UV off the face (B9); breath figure on lens (B8) |
+| Spectator's hand | presence and approach through a table (A6); warmth pattern (A5); a fist holding metal (A3) | nothing should be aimed at it beyond air; no heat, UV, high voltage or strong RF |
+
 ## 3. Capability primitives
 
 1. *Now possible:* re-identify any one of about 100 pieces of unmarked paper or card from a single
@@ -464,8 +507,10 @@ table will make an aluminium can or a coin buzz by eddy-current forces (the EMAT
     seldom engineered. *Primitives:* delay, erase the evidence.
 21. *Now possible:* steer the compass in a spectator's own phone from 25 cm. *Because:* compact N52
     magnets on a servo. *Before:* gimmicked compasses. *Primitives:* tell, move.
-22. *Now possible:* excite and read a coin's acoustic resonance with no contact. *Because:* EMAT
-    coils. *Before:* flicking it. *Primitives:* know.
+22. *Now possible:* tell apart individual coins of the same denomination by pitch: about 0.07%
+    repeatability against a 3% spread between coins, read in 22 ms. *Because:* EMAT pulse or any
+    clean ring plus an FFT. *Before:* nicking or marking the coin. *Primitives:* know, prove
+    ordinariness.
 23. *Now possible:* tell coarse device events at a table (an earbud case opened, a phone woke) from
     passive BLE. *Because:* $5 BLE sniffers. *Before:* not possible. *Primitives:* know (with strict
     privacy limits).
@@ -595,6 +640,21 @@ Nothing is added to any object.
 *BOM:* magnetometer array or FDC1004 with electrodes under a mat: $30. *Difficulty:* low.
 *Novelty:* medium (the object needs no magnet because it already has one).
 
+**E13. The coin that keeps its name (level 3).**
+*Effect:* six spectators each lend a coin of the same denomination and remember its date. Each spins
+or drops their coin on the table once "to wake it up". The coins are mixed in a bag by a spectator.
+The performer tips them out one at a time, lets each ring on the table, and hands every coin back to
+its owner without looking at the dates.
+*Method:* A3. A microphone in the pad records each coin's ring during the first spin (enrolment) and
+again at the end; the lowest clean mode frequency, measured to about 0.1%, is the coin's name. The
+EMAT paper's numbers (3% spread between genuine coins, 0.07% repeatability) say six coins will almost
+always be separable; software warns if two enrolled coins are too close so the performer can ask for
+"a different one, perhaps older". Classical cover: the performer appears to be reading the owners.
+*BOM:* MEMS microphone, ESP32 or phone, cue device: $20 to $40. *Difficulty:* low-medium (signal
+processing; a hard, consistent table surface). *Risks:* noisy rooms, coins landing damped on cloth
+(use a glass coaster or plate as the "sounding" surface). *Novelty:* high; nothing is marked and no
+camera is involved.
+
 ## 5. Dead ends and overhyped items
 
 - **Diamagnetic or paramagnetic forces on water, fruit, wood, pencil lead.** Real, but micronewtons;
@@ -621,12 +681,18 @@ Nothing is added to any object.
 
 ## 6. Open leads
 
+Research note: web search was cut off part-way through this slice (shared search budget exhausted
+after about 45 queries), so the later verification was done by opening known primary pages directly.
+Topics that got no search at all are listed last below and everything from memory is marked
+"(unverified)" in the text.
+
 - Scan three new decks at 1,200 dpi and measure back-offset vectors: within-deck spread, and
   whether offsets repeat by card identity across decks of the same run (A2).
 - Bench-test eddy-current torque and drag versus gap for common coins and ring alloys; map which
   currencies are worth routining (B1).
-- Whether same-denomination coins can be separated by precise ring frequencies, and whether an EMAT
-  under a tabletop can ring a coin at 5 to 10 mm lift-off (A3).
+- Repeat the EMAT paper's spread-versus-repeatability measurement for US, UK and euro coins rung by
+  a drop or spin and heard by a cheap microphone; and test whether a larger pulsed coil can ring a
+  coin at 5 to 10 mm lift-off instead of 0.5 mm (A3, E13).
 - A minimal two-axis vibratory pad: what waveform gives visible motion with inaudible, sub-100 Hz
   drive, and how to stop ripples in drinks (B3).
 - Soli-style radar counting of cards through a tabletop; verify the original paper's accuracy (A6).
@@ -663,6 +729,10 @@ Coins and banknotes
 - https://www.royalmint.com/stories/collect/why-are-some-uk-coins-magnetic/ - UK plated-steel dates.
 - https://economy-finance.ec.europa.eu/euro/euro-coins-and-notes/euro-coins/types-euro-coins_sv - euro coin composition and magnetic centre.
 - https://learn.apmex.com/learning-guide/coin-collecting/why-are-some-canadian-coins-magnetic/ - Canadian steel and nickel coins.
+- https://en.wikipedia.org/wiki/Euro_coins - euro coin compositions and masses, Nordic gold.
+- https://en.wikipedia.org/wiki/Penny_(United_States_coin) - US cent composition and mass change in 1982.
+- https://en.wikipedia.org/wiki/Metal_detector - phase-response discrimination of metals.
+- https://research-portal.st-andrews.ac.uk/en/publications/exploring-tangible-interactions-with-radar-sensing - Yeo et al. 2018, radar counting and ordering of flat objects.
 - https://wiki.seeedstudio.com/Grove-2_Channel_Inductive_Sensor-LDC1612/ - LDC1612 board and coin distance demo.
 - https://community.element14.com/challenges-projects/design-challenges/experimenting-with-magnetic-components/b/blog/posts/smart-coin-sorter-by-inductive-sensing-01-how-coins-change-coil-impedance - inductive coin sorter build log.
 - https://patents.google.com/patent/US4488116A/en - multi-parameter inductive coin sensor.
@@ -693,6 +763,10 @@ Spectators' devices
 - https://caniuse.com/mdn-api_magnetometer - browser support table.
 - https://developer.chrome.com/docs/capabilities/nfc - Web NFC on Chrome for Android.
 - https://caniuse.com/webnfc - Web NFC support table.
+- https://en.wikipedia.org/wiki/MagSafe_(wireless_charger) - which phones and earbud cases contain magnet rings.
+- https://en.wikipedia.org/wiki/Qi_(standard) - Qi2 magnetic profile, Android models with magnets, operating frequencies.
+- https://developer.apple.com/documentation/corenfc/adding-support-for-background-tag-reading - Apple background NFC tag reading (page body not retrievable; details unverified).
+- https://en.wikipedia.org/wiki/Face_ID - infrared flood illuminator and dot projector.
 - https://vanishingincmagic.com/close-up-magic/sixth-sense-3 - Sixth Sense 3 product page.
 - https://www.vanishingincmagic.com/close-up-magic/espionage-iarvel - ESPionage product page.
 
@@ -707,6 +781,11 @@ Forces on unmodified objects
 - https://www.kjmagnetics.com/blog/diy-induction-stove - heating by spinning magnets.
 - https://people.eecs.berkeley.edu/~jfc/dreznik/UPM2000/ - Universal Planar Manipulator.
 - https://people.eecs.berkeley.edu/~jfc/dreznik/Pubs/wafr98.pdf - Reznik and Canny, WAFR 1998.
+- https://people.eecs.berkeley.edu/~jfc/dreznik/UPM2000/proto_2nd.htm - UPM second prototype hardware.
+- https://en.wikipedia.org/wiki/Electrical_resistivity_and_conductivity - conductivity table used for eddy-current ranking.
+- https://www.murata.com/en-us/products/mechatronics/fluid/overview/lineup/microblower_mzb1001t02 - piezo microblower specifications.
+- https://en.wikipedia.org/wiki/Thermal_paper - thermal paper chemistry, friction and heat marking.
+- https://en.wikipedia.org/wiki/Sound_from_ultrasound - parametric arrays and virtual sources on surfaces.
 - https://pmc.ncbi.nlm.nih.gov/articles/PMC5023966 - Zhou et al. 2016, multiple objects on a Chladni plate.
 - https://www.asiaresearchnews.com/node/21622 - squeeze-film levitation transport device.
 - https://www.mdpi.com/1996-1073/14/9/2517 - electroadhesive attraction of paper.

@@ -561,6 +561,15 @@ numbers (all my own estimates):
     *Because:* volumetric printing. *Before:* impossible. *Primitives:* transform.
 22. *Now possible:* print on primed skin in 3 s with day-long cosmetic ink. *Because:* Prinker
     class devices. *Before:* soap-and-ash arm writing, fixed in advance. *Primitives:* transform.
+23. *Now possible:* keep an index of 100 outs in plain sight because every out looks like the
+    same sheet of noise. *Because:* computed visual-cryptography partners, $0.30 transparencies.
+    *Before:* indexes had to be hidden in pockets. *Primitives:* conceal, swap, prove ordinariness.
+24. *Now possible:* print an etch-resist stencil of any word in seconds. *Because:* $22 thermal
+    stencil tape for label printers. *Before:* photo-resist or hand-cut stencils made days
+    ahead. *Primitives:* transform.
+25. *Now possible:* run a 48 mm thermal head from one lithium cell with no boost converter.
+    *Because:* 3.0 to 4.2 V low-energy heads. *Before:* 2-cell packs or mains. *Primitives:*
+    conceal (smaller, thinner gimmicks).
 
 ## 4. Effect concepts
 
@@ -760,19 +769,33 @@ new method architecture. Noise budgets are estimates until measured.
   solvent smell.
 - *Novelty*: uses the audience's own belief that such codes are applied in a factory. High.
 
-### 11. The shuffler that deals fair and stacks anyway (level 2)
-- *Effect*: at a home card table the host's battery shuffler shuffles a borrowed, spectator-mixed
-  deck; the host then calls every hand before it is turned.
-- *Method*: an open-source camera shuffler re-skinned as a consumer shuffler reads each card and
-  bins it to a planned order while appearing to randomise.
-- *Budget*: about 30 x 20 x 15 cm; 60 to 120 s; 55 to 65 dB, which is what people expect of a
-  shuffler.
-- *BOM*: about $200 in printed parts, three steppers, Pi Zero and camera. Difficulty: hard
-  (reliable single-card feeding of worn cards).
-- *Risks*: the machine is the obvious suspect. It only works where a shuffler is socially normal
-  and the magic happens later and elsewhere. Gambling use would be cheating; this is for
-  demonstration only.
-- *Novelty*: known in the maker and casino-security worlds, not as a magic prop. Medium.
+### 11. The static index (level 3; brute force with nothing hidden)
+- *Effect*: a week before the show the booker receives a card covered in television static, signs
+  it and keeps it. On the night a word is freely chosen. The performer tears the top sheet off a
+  pad of clear "static" films and lays it on the signed card: the two noises cancel into the
+  chosen word.
+- *Method*: two-sheet visual cryptography run backwards. Sheet A is fixed, random and sent in
+  advance. For each of N possible outcomes software computes the partner sheet that turns A into
+  that message. All N partners are noise and look alike, so the pad lies in the open; the only
+  secret is which leaf comes off (a thumb count, edge-marked leaves, or a motorised or stepped
+  index from section 2.3). With a transparent deck of 52 noise-printed cards the spectator's
+  own freely chosen card is the partner, and nothing is indexed at all.
+- *Budget*: no device; cycle time is the tear; silent. A pad of 100 laser-printed transparencies
+  at roughly $0.30 a sheet (unverified price) is $30.
+- *BOM*: laser transparencies, a short script to generate partners, a registration frame so the
+  sheets align to a fraction of a cell. Difficulty: easy to make, moderate to handle.
+- *Risks*: the image is grey-on-grey at half contrast, so use cells of 0.5 to 1 mm and short
+  words; misalignment by half a cell kills it; an inquisitive spectator who tries a second leaf
+  finds a different word, so the pad must not be left behind. The audience theory "the clear
+  sheet had the word in it" is half right; the advance-signed sheet A is the convincer against
+  it, because by itself the clear sheet shows nothing.
+- *Novelty*: visual cryptography is a known puzzle and has appeared as a novelty reveal
+  (unverified); using the computed-partner property as an index of indistinguishable outs is, as
+  far as I can tell, new.
+
+(An "honest shuffler that stacks" was considered for this slot and dropped: the open-source
+camera shuffler in section 2.3 does it at shoebox size in a minute or two, but the machine is
+the obvious suspect and it only suits a setting where a shuffler is normal.)
 
 ### 12. Six-answer card (level 2; no mechanism)
 - *Effect*: one printed card has been in the spectator's pocket all evening. Whichever of six
@@ -814,13 +837,15 @@ new method architecture. Noise budgets are estimates until measured.
 
 ## 6. Open leads
 
-- **Sources I could not collect because web search was rate-limited part-way through**: pill
-  carousels and capsule vendors, SMD tape feeders, coin hoppers, micro pick-and-place gantries
-  with N20 motors, DIY card dealers with measured cards per second, penny-press force figures,
-  electro-etch stencil tapes and etch pens, carbonless paper sensitivity, Boogie Board film,
-  condensation displays in HCI (I recall a Peltier-array "Ketsuro-Graffiti" project, unverified),
-  laser-markable NIR coatings (DataLase-type, unverified), handheld edible-ink printers, measured
-  noise of plotters on silent drivers, thermal ticket stock suppliers, mono LCD prices.
+- **Sources I could not collect.** Web search was rate-limited and then capped after about 45
+  queries, so the dispensing side of the slice rests on first-principles estimates. Still
+  needed: pill carousels and capsule vendors, SMD tape feeders, coin hoppers, micro
+  pick-and-place gantries with N20 motors, DIY card dealers with measured cards per second,
+  penny-press force figures, electro-etch voltages and times, stylus force for carbonless paper,
+  Boogie Board film, condensation displays in HCI (I recall a Peltier-array "Ketsuro-Graffiti"
+  project, unverified), the wavelengths DataLase-type coatings respond to, handheld edible-ink
+  printers, measured noise of plotters on silent drivers, thermal ticket stock suppliers, mono
+  LCD prices, and any prior magic use of visual cryptography.
 - **Bench tests worth a weekend each**: (1) minimum 405 nm power to mark thermal paper through
   3 mm glass; (2) pull-to-print thermal with an encoder-clocked strobe; (3) stylus force needed
   to mark self-contained carbonless paper through a 100 gsm envelope without embossing it;
@@ -951,3 +976,19 @@ Brute-force media
 - https://uspto.report/patent/grant/10889141 - multiple hidden images by polariser
 - https://phys.org/news/2016-12-hidden-images-commercial-inkjet-printers.pdf - hidden images with commercial inkjets
 - https://erikdemaine.org/fonts/ , https://erikdemaine.org/fonts/hinged/ , https://erikdemaine.org/fonts/dissect , https://erikdemaine.org/papers/PuzzleFonts_G4G14/paper.pdf - Demaine puzzle fonts
+- https://en.wikipedia.org/wiki/Microform - microfiche and ultrafiche capacities
+- https://en.wikipedia.org/wiki/Microdot - microdot size and density
+- https://en.wikipedia.org/wiki/Visual_cryptography - two-sheet scheme and counterfeit partner shares
+- https://en.wikipedia.org/wiki/Flexagon - flexagon face counts
+- https://en.wikipedia.org/wiki/De_Bruijn_sequence - de Bruijn sequences and tori
+
+Added after the first draft (opened directly)
+- https://en.wikipedia.org/wiki/Nail_writer - swami gimmick / nail writer
+- https://en.wikipedia.org/wiki/Thermal_paper - thermal paper chemistry and sensitivity
+- https://en.wikipedia.org/wiki/Carbonless_copy_paper - carbonless and self-contained paper
+- https://en.wikipedia.org/wiki/Electroetching - electroetching principle
+- https://www.brother-usa.com/products/ste151 - Brother STe-151 stencil tape, $22
+- https://en.wikipedia.org/wiki/Elongated_coin - penny presses and coin-defacement law
+- https://en.wikipedia.org/wiki/Magna_Doodle - magnetophoretic drawing board
+- https://www.datalase.com/ - laser-reactive coding coatings
+- https://github.com/DDeGonge/Shuffle-o-matic - open-source camera card shuffler repository

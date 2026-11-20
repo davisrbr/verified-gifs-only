@@ -366,8 +366,8 @@ minute of stall is available.
   https://www.tomshardware.com/news/raspberry-pi-enables-security-researchers-to-hijack-casino-card-shuffling-machine).
 - History and bridge: batch shufflers date from 1878; Hammond's 1932 electric table shuffled a
   deck "in a few seconds"; computer-linked bridge dealers such as the PlayBridge Dealer 4 deal
-  specified hands (https://en.wikipedia.org/wiki/Shuffling_machine). Dealing to a specified
-  layout is the commercially solved half of the problem.
+  computer-generated hands (https://en.wikipedia.org/wiki/Shuffling_machine). Dealing to a
+  layout held in software is the commercially solved half of the problem.
 - *Assessment*: "stack a shuffled deck in about a minute" is real at shoebox size and 55 dB plus.
   It does not fit a card case. Its honest home in magic is (a) an openly present automatic
   shuffler, which already has a reason to whir, or (b) offstage preparation of many decks.

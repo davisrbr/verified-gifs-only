@@ -345,8 +345,9 @@ scope and not to be attempted: duplicating keys or anything else that opens, pay
   printers give 2 x 3 inch prints with optional adhesive backing and no ink.
   https://en.wikipedia.org/wiki/Zink_(technology) . Handheld thermal-inkjet printers print a
   12.7 mm band at 600 dpi from a 2 to 12.7 mm stand-off onto card, wood, plastic, metal or fabric
-  with quick-dry solvent ink, at about $240. https://www.newegg.com/p/2D5-00K7-01FC3 (seen in
-  search results).
+  with quick-dry solvent ink; one marketplace listing was about $240. Generic units, for example
+  https://www.newegg.com/p/2D5-00K7-01FC3 (seen in search results; I could not tie the price to
+  one specific listing).
 - UV printing and UV DTF: desktop UV printers with real raised texture start near $2,100 (eufyMake
   E1) to $2,500 (xTool O1 Omni); UV DTF prints onto film, laminates, and transfers as a tough
   textured decal onto glass, metal, plastic, wood and ceramics but not flexible fabric; the
@@ -528,7 +529,7 @@ priorities; halftone structure is irrelevant unless a camera close-up is involve
 ## 4. Effect concepts
 
 Level 1 means the phenomenon is the effect, level 2 a hidden input to a classical method, level 3
-a new method architecture. Ten of the eleven below are level 2 or 3. Concepts 1, 4, 5, 6, 8, 10
+a new method architecture. All eleven below are level 2 or 3. Concepts 1, 4, 5, 6, 8, 10
 and 11 rest on capabilities that did not exist, or were not affordable, ten years ago.
 
 **1. Computed shells for the venue's own objects (level 3).**

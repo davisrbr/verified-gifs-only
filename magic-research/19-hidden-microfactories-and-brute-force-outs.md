@@ -40,7 +40,8 @@ confirmed in a page I opened or a search result I saw is marked **(unverified)**
   swami gimmick with no thumb. Limit: own handwriting and playing cards only, never third-party
   signatures or documents.
 - **A new medium for the nail writer: metal.** Electrochemical etch marking (a wet pad or wick,
-  12 to 24 V, a few seconds) blackens steel and nickel alloys permanently. A thumb-worn etch
+  low voltage, a few seconds; figures unverified) darkens steel and nickel alloys permanently,
+  and Brother sells $22 thermal stencil tape that turns a label printer into the stencil maker. A thumb-worn etch
   stylus or a thermally printed stencil would put a chosen word on a borrowed key or coin
   (speculative as a magic gimmick; the industrial process is standard).
 - **Brute force has a clear crossover point.** Up to 52 outs, a manual index wins (Dex: 52 cards
@@ -278,8 +279,10 @@ https://patents.google.com/patent/US10534254), and a later Cu-doped TiO2 system 
 under 20 s to print, more than three days legible, more than 50 cycles and 90 micron resolution
 (Wang, Yin and colleagues, as summarised in my search results; primary URL not opened,
 https://www.escholarship.org/content/qt2wb412nw/qt2wb412nw.pdf?t=p1z7dt). Commercial photochromic
-("sun-activated") inks and papers darken in seconds under 365 to 405 nm and fade in minutes
-(unverified numbers; agent 8 covers chromic inks).
+dyes in inks, labels and textiles "develop color within seconds of UV exposure" and revert
+"within minutes" in the dark, faster in soft matrices than rigid ones; diarylethenes and fulgides
+are the thermally stable classes whose image stays until erased by other light
+(https://en.wikipedia.org/wiki/Photochromism; agent 8 covers chromic inks).
 - *Magic relevance*: silent, flat, no head, no paper motion; exposure works through a clear cover
   sheet, a photo-frame glass or a plastic sleeve. Fading photochromic images give a prediction
   that *erases its own evidence*; Yin-type papers give days of legibility.
@@ -361,6 +364,10 @@ minute of stall is available.
   deck order and that its firmware can be hijacked through a USB port
   (https://ioactive.com/article/internal-camera-hacked-casino-card-shuffler-lets-you-look-at-the-cards/,
   https://www.tomshardware.com/news/raspberry-pi-enables-security-researchers-to-hijack-casino-card-shuffling-machine).
+- History and bridge: batch shufflers date from 1878; Hammond's 1932 electric table shuffled a
+  deck "in a few seconds"; computer-linked bridge dealers such as the PlayBridge Dealer 4 deal
+  specified hands (https://en.wikipedia.org/wiki/Shuffling_machine). Dealing to a specified
+  layout is the commercially solved half of the problem.
 - *Assessment*: "stack a shuffled deck in about a minute" is real at shoebox size and 55 dB plus.
   It does not fit a card case. Its honest home in magic is (a) an openly present automatic
   shuffler, which already has a reason to whir, or (b) offstage preparation of many decks.
@@ -992,3 +999,5 @@ Added after the first draft (opened directly)
 - https://en.wikipedia.org/wiki/Magna_Doodle - magnetophoretic drawing board
 - https://www.datalase.com/ - laser-reactive coding coatings
 - https://github.com/DDeGonge/Shuffle-o-matic - open-source camera card shuffler repository
+- https://en.wikipedia.org/wiki/Shuffling_machine - shuffler history and bridge dealing machines
+- https://en.wikipedia.org/wiki/Photochromism - photochromic dye classes and response times

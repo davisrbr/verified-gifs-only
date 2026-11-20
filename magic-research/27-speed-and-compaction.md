@@ -200,8 +200,8 @@ found no magic source that uses the latch-design literature.
   Sources: https://scienceportal.tecnalia.com/en/publications/energy-density-and-hysteresis-comparison-in-natural-rubber-tube-s/ ,
   https://dercuano.github.io/notes/spring-energy-density.html
 - **Snap-through shells.** A toy rubber popper sits inverted for about 70 ms, then snaps in under
-  5 ms. Snap time scales as L squared over (sound speed times thickness), so a 30 mm, 1 mm thick
-  polymer cap snaps in a few milliseconds. The Venus flytrap closes in about 100 ms by the same
+  5 ms. Snap time scales as L squared over (sound speed in the material times thickness), so a
+  30 mm, 1 mm thick cap snaps in about 5 ms in stiff TPU and about 20 ms in soft rubber (derived). The Venus flytrap closes in about 100 ms by the same
   instability. Shells are their own latch: bistable, no parts, printable in TPU or cut from a ball.
   Sources: https://www.bu.edu/moss/files/2014/10/EPL_2014_Pandey.pdf , https://arxiv.org/pdf/1807.05978
 - **Stretched membranes.** A crack in an inflated latex balloon runs at about 570 m/s; a
@@ -747,8 +747,9 @@ version: glass or carbon braid and epoxy, $40, or a purchased bistable tube.
 
 *Difficulty.* Low for the tape version, medium to high for composite.
 
-*Risks.* Blade edges are sharp until sleeved; buckling if side-loaded near mid-span; coil mass
-(about 300 g for steel) in the hand before production.
+*Risks.* Blade edges are sharp until sleeved; buckling if side-loaded near mid-span. Derived
+figures: a 25 mm blade weighs about 23 g/m, so a 2 m pole is about 100 g, and it rolls to a coil
+about 50 mm across on a 30 mm hub. That is light for a staff, so the weight has to be acted.
 
 *Novelty.* The appearing cane and appearing pole are the benchmarks; a load-bearing, handable pole
 is the improvement. No magic use of reeled booms found. Unverified.
@@ -843,7 +844,8 @@ as I found. Unverified.
 of water is placed. Afterwards it is a scarf again.
 
 *Method.* A 40 x 50 cm drop-stitch panel 25 mm thick has a volume of 5 L. A 16 g CO2 bulb gives
-about 8.7 L at room pressure, enough for about 0.7 bar gauge, where drop-stitch is board-stiff. A
+about 8.7 L at room pressure, enough for about 0.7 bar gauge (10 psi). That is below the 15 to
+25 psi used for paddleboards, so stiffness at this size needs testing; a second bulb doubles it. A
 pierce valve in one hem fires it in well under a second; a dump valve returns it to cloth. The
 printed outer fabric and a square "hem" of foam cord disguise the rounded edge.
 
@@ -862,12 +864,185 @@ could not find in use in magic. All twelve are level 2 or 3.
 
 ## 5. Dead ends and overhyped items
 
-(pending)
+- **Raw speed as a goal.** Table 4 shows 10 g is enough. Mechanisms at 100 g and above (jumping
+  robot springs, Thomson coils, coil launchers) add hazard, noise and bulk for no perceptual gain,
+  except where the aim is to beat 240 fps video.
+- **Coil and reluctance launchers.** 1 to 3.5% efficient at hobby scale, need charged capacitors,
+  and a 6 g coin at 18 m/s is an eye hazard.
+- **Shape-memory alloy as the fast element.** Seconds to reset, tenths of a second at best to
+  act. Use it to trip a latch.
+- **Piezo stacks.** Microsecond response, micrometre stroke. Only useful through a half-pitch
+  mask or a bender.
+- **Electrochromic and e-paper surfaces for "instant" change.** Seconds, and 120 to 250 ms with a
+  visible flash, respectively.
+- **Flip-dot and split-flap elements as hidden changers.** 60 to 70 ms and audible. They are
+  honest displays.
+- **Memory foam for productions.** It is engineered to recover slowly, and tight packing makes
+  it slower (a mattress needs 24 to 72 hours). Use high-resilience foam and accept about 10:1 at
+  most (unverified ratio).
+- **Aerogel.** Light but brittle and dusty; no deployment use.
+- **Origami flashers and Miura sheets as visible objects.** The 9:1 figure needs engineered thick
+  panels and hinges, and the crease pattern announces the method. Use them only under a skin.
+- **Hoberman-type scissor structures.** 5:1, many pivots, rattle, and everyone has seen the toy.
+- **Superabsorbent "snow" and expanding foams.** 30 to 60 times by volume for the polymer and up
+  to 1000 times for fan-made foam are real, but they need water, a blower or time, leave a mess,
+  and read as chemistry (level 1). Ingestion hazard for children with the polymer.
+- **CO2 as a silent inflator.** It is the loudest and coldest option. Micro-blowers are silent
+  but take a minute per litre.
+- **Welding filters as general shutters.** They go dark green-black, not opaque, and leak light
+  at angles.
+- **Filming.** A change that is perfect to the eye can show as a tear line or an in-between
+  frame on a phone. If the piece will circulate as video, design for the camera thresholds in
+  Table 3 or put a natural occlusion over the change.
+
+**Safety, stated plainly.** Do not point anything moving above about 10 m/s toward a face; a 6 g
+coin at 10 m/s carries 0.3 J on a small area and can injure an eye. Spring-steel coils and tape
+blades cut. CO2 bulbs frost skin at the nozzle and can burst if heated. Thomson coils and coil
+launchers involve hundreds of volts and stored joules. Flash paper and flash cotton are
+nitrocellulose: fire risk in use and in storage. Strong magnets near pacemakers and phones.
+Latex allergy for membrane skins. Thin film near open flame.
 
 ## 6. Open leads
 
-(pending)
+- **Measure noise.** No decibel figures were found for shutter units, snap shells, appearing
+  canes, membrane tears or CO2 inflators. A phone sound meter at 0.5 m would settle which need
+  cover.
+- **Confirm novelty** for reeled-boom poles, jammed "rigid" props, translated interlace surfaces
+  and shutter-blade changers against the magic patent and catalogue record (agents 2 and 3 may
+  already have this).
+- **Laminar jamming numbers**: stiffness ratio against layer count and vacuum level, and how
+  long a sealed sleeve holds. The Narang, Vlassak and Howe paper has the model; the full text was
+  rate-limited.
+- **Sun et al. 2018 parameters**: saccade-detection velocity threshold, tracker latency, and
+  the gain applied per frame. The PDF exceeded the fetch size limit.
+- **Meyer, Lasker and Robinson 1985** for the pursuit ceiling, and Morgan and Benton 1989 for
+  motion deblurring, to firm up Table 2 with measured streak thresholds.
+- **Bistable composite layup at hobby scale**: published recipes for plus/minus 45 degree
+  glass-polypropylene or carbon-epoxy tape springs, and RolaTube's consumer-goods line.
+- **Tommy Wonder's "The Well-Tempered Birdcage"** (Books of Wonder) as the best classical text on
+  engineering a collapse: snag testing with a loop of string, double-action pull.
+- **Electrowetting panels** as a 10 ms reflective surface: whether any bare module is purchasable.
+- **Compressing printed nonwovens at home**: required pressure and binder, opening time.
+- **Classical benchmarks not verified**: cane deploy times, Walsh cane history, appearing pole
+  and ladder dimensions, bowling-ball production loads, spring-flower stack thickness, feather
+  bouquet packing.
+- **Kirigami and heat-sealed inflatables** (pointer to agent 6) as another shape-from-flat route.
 
 ## 7. Sources
 
-(pending)
+Vision and timing
+
+- https://en.wikipedia.org/wiki/Smooth_pursuit - pursuit latency 90 to 150 ms; catch-up saccades above about 30 deg/s
+- https://scilit.com/publications/8e0b8b93c644e759c750f6d1ed6d7e1a - Meyer, Lasker, Robinson 1985, upper limit of pursuit velocity (record only)
+- https://en.wikipedia.org/wiki/Saccade - saccade velocity, duration, latency, rate
+- https://arxiv.org/pdf/1906.07183 - main-sequence fit: duration about 2.2 x amplitude + 21 ms
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC3704127 - saccadic suppression timing
+- https://elifesciences.org/articles/49700 - saccade suppression depends on context
+- https://www2.psych.ubc.ca/~rensink/publications/abs.00.9.html - O'Regan et al. 2000, picture changes during blinks
+- https://www.ndsu.edu/fileadmin/lthomas/Thomas_Irwin_2006_.pdf - blink duration and suppression (via search summary)
+- https://www.nature.com/articles/284164a0.pdf - Burr 1980, motion smear, 120 ms summation
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC1688277 - Burr and Morgan 1997, motion deblurring
+- https://webvision.med.utah.edu/?p=159 - temporal resolution, flicker fusion, Bloch's law
+- https://philarchive.org/archive/RENTAS - Kuhn, Amlani, Rensink: towards a science of magic; speed myth
+- https://www.bps.org.uk/research-digest/magic-trick-reveals-gaze-direction-and-attention-are-not-always-linked - gaze versus attention in misdirection
+- https://peerj.com/articles/1873 - Wiseman and Nakano 2016, blink synchrony in magic audiences (read via the Hertfordshire repository PDF)
+- https://uhra.herts.ac.uk/id/eprint/5476/1/peerj_1873.pdf - same paper, full text
+- https://resou.osaka-u.ac.jp/en/research/2016/20160404_1 - Osaka University release on the same study
+- https://www.psypost.org/study-suggests-magicians-unconsciously-blink-their-eyes-to-manipulate-the-audience-during-difficult-tricks/ - Barnhart et al. 2022, tactical blinking
+- https://research.nvidia.com/publication/2018-08_Towards-Virtual-Reality - Sun et al. 2018, saccadic redirection
+- https://www.inf.uni-hamburg.de/en/inst/ab/hci/projects/in-the-blink-of-an-eye.html - Langbehn et al. 2018, blink redirection thresholds
+- https://www.microsoft.com/en-us/research/?p=615969 - Marwecki et al. 2019, Mise-Unseen
+- https://www-live.dfki.de/fileadmin/user_upload/import/14956_zenner-saccadic-blink-suppressed-hand-redirection-chi-24-pre-print.pdf - Zenner et al. 2024, saccade and blink hand redirection
+
+Fast mechanisms
+
+- https://ri.cmu.edu/publications/the-principles-of-cascading-power-limits-in-small-fast-biological-and-engineered-systems - Ilton et al. 2018, Science
+- https://scholars.duke.edu/publication/1404324 - Longo et al. 2019, LaMSA review
+- https://pateklab.biology.duke.edu/research/mechanics-of-ultrafast-movement/latch-mediated-spring-actuation-lamsa/ - Patek lab LaMSA page
+- https://www.nature.com/articles/s41586-022-04606-3 - Hawkes et al. 2022, engineered jumpers
+- https://spectrum.ieee.org/record-breaking-jumping-robot - jumper numbers: 30 g, 28 m/s in 9 ms
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC8379920 - Steinhardt et al. 2021, mantis shrimp striker
+- https://www.bu.edu/moss/files/2014/10/EPL_2014_Pandey.pdf - Pandey et al. 2014, dynamics of snapping
+- https://arxiv.org/pdf/1807.05978 - dynamics of viscoelastic snap-through; popper delay and snap time
+- https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.115.184301 - Moulinet and Adda-Bedia 2015, popping balloons
+- https://physicsworld.com/?p=15869 - balloon crack speed about 570 m/s
+- https://scienceportal.tecnalia.com/en/publications/energy-density-and-hysteresis-comparison-in-natural-rubber-tube-s/ - rubber versus steel springs
+- https://dercuano.github.io/notes/spring-energy-density.html - informal spring energy density estimates
+- https://cindyli-13.github.io/FYDP-design-log/jekyll/update/2023/11/16/solenoid-characterization.html - measured hobby solenoid response
+- https://news.thomasnet.com/fullstory/linear-actuators-produce-more-than-20-g-acceleration-13419 - voice coil acceleration and settle time
+- https://mdpi.com/2076-0825/11/6/154 - review of fast mechanical switch actuators, Thomson coil
+- https://www.nature.com/articles/s41598-022-27022-z - multi-stage reluctance coilgun for small projectiles
+- https://dspace.mit.edu/handle/1721.1/60151 - Knaian thesis, electropermanent magnets
+- https://hizook.com/electropermanent-magnets-programmable-magnets-zero-static-power-consumption-enable-s/ - summary of the thesis
+- https://en.wikipedia.org/wiki/Electropermanent_magnet - EPM principle and products
+- https://en.helite.com/?p=81196 - wearable airbag inflation 60 to 100 ms
+- https://www.thedrive.com/reviews/30248/best-motorcycle-airbag-vest - airbag vest inflation times and cartridge sizes
+- https://www.murata.com/products/mechatronics/fluid/overview/lineup/microblower_mzb1001t02 - piezo micro-blower specifications
+
+Shutters and surfaces
+
+- https://en.wikipedia.org/wiki/Focal-plane_shutter - shutter travel and sync
+- https://mhohner.de/newsitem2/myths/7 - blade speed arithmetic
+- https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/5751258 - LC welding lens driver, sub-millisecond darkening
+- https://opticalengineering.spiedigitallibrary.org/conference-proceedings-of-spie/958/0000/Temperature-Dependent-Electro-Optic-Performance-Of-Polymer-Dispersed-Liquid-Crystal/10.1117/12.947723.full - PDLC rise and decay versus temperature
+- https://mdpi-res.com/d_attachment/molecules/molecules-31-01402/article_deploy/molecules-31-01402.pdf - low-voltage PDLC, 4.2 ms rise
+- https://displaydaily.com/?p=37324 - e-paper update times
+- https://phys.org/news/2010-07-oil-based-pixels-videos-e-paper.html - electrowetting at video rate
+- https://hackaday.com/2023/03/03/a-close-look-at-how-flip-dot-displays-really-work - flip-dot pulse and flip times
+- https://edu.rsc.org/exhibition-chemistry/the-production-and-combustion-of-nitrocellulose/4015917.article - nitrocellulose combustion
+
+Deployables
+
+- https://www.rolatube.com/ - bistable reeled composite masts, 32 to 100 mm
+- https://ntrs.nasa.gov/api/citations/20170001569/downloads/20170001569.pdf - NASA deployable composite booms for small satellites
+- https://technology.nasa.gov/patent/LAR-TOPS-268 - SHEARLESS composite booms
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10255148/ - roll-out deployment of a composite tape-spring boom
+- https://www.jpl.nasa.gov/nmp/st8/tech/sailmast_tech3.html - coilable mast: under 1% stowed length, under 35 g/m
+- https://roadmaps.mit.edu/en/roadmaps/Space_Booms - history of space booms
+- https://www.cs.cmu.edu/~christoy/Projects/Telescopes.html - Yu, Crane, Coros 2017, telescoping structures
+- https://github.com/icethrush/telescoping-structures - code for the above
+- https://tsubakimoto.com/power-transmission/linear-actuator/zip-chain-actuator/ - zip chain actuator
+- https://en.wikipedia.org/wiki/Rigid_chain_actuator - rigid chain principle
+- https://langorigami.com/publication/accommodating-thickness-in-origami-based-deployable-arrays/ - flasher array, 9.2:1
+- https://ntrs.nasa.gov/citations/20150008719 - NASA record for the same work
+- https://research-information.bris.ac.uk/en/studentTheses/geometry-and-modelling-of-multi-stable-origami-bellows/ - Miura and Kresling bellows volume ratios
+- https://arxiv.org/pdf/2003.10411 - dynamics of Kresling deployment
+- https://en.wikipedia.org/wiki/Hoberman_sphere - toy dimensions
+- https://www.eng.yale.edu/Faboratory/publications/conference/2024/Woodman%20-%202024%20-%20Deployable%20Cuboctahedrons%20for%20Adaptive%20Space%20Infrastructure.pdf - scissor voxel contraction figures
+- https://www.ri.cmu.edu/publications/rapid-deployment-of-curved-surfaces-via-programmable-auxetics - programmable auxetics
+- https://infoscience.epfl.ch/record/296487 - umbrella meshes
+- https://www.nature.com/articles/ncomms2311 - overcurvature and ring folding
+- https://groups.seas.harvard.edu/hutchinson/papers/2023-2T-SGPRingstability.pdf - stability of one-loop and three-loop rings
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC5740677 - Li et al. 2017, vacuum origami muscles
+- https://pubmed.ncbi.nlm.nih.gov/33883736/ - Melancon et al. 2021, multistable inflatable origami
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10650755/ - drop-stitch panel mechanics
+- https://softroboticstoolkit.com/publications/mechanically-versatile-soft-machines-through-laminar-jamming - laminar jamming
+- https://www.seas.harvard.edu/news/2018/05/robot-transitions-from-soft-to-rigid - laminar jamming, press summary
+
+Materials
+
+- https://ripstopbytheroll.com/products/0-56-oz-membrane-7-ripstop-nylon - 7D nylon, 19 g/m2, $18.50 per yard
+- https://www.rockywoods.com/7D-Ultralight-Coated-Ripstop-Nylon-Fabric - 7D nylon thickness 0.00125 in
+- https://en.wikipedia.org/wiki/Habutai - silk weights, momme conversion
+- https://prod-8babe12b-be845633-ssb7vc4z.app.devpanel.com/article/covering-materials-ff - indoor-model films, 1.4 and 0.68 micron (mirror of a Model Aviation article)
+- https://en.wikipedia.org/wiki/Towel_tablet - compressed towels
+- https://goodthings.com.au/products/giveaways/sports/towels-sports/compressed-towel-small - promotional compressed towel
+- https://www.cmu.edu/gelfand/k12-educational-resources/polymers/polymer-and-absorption/super-absorb-powder.html - sodium polyacrylate absorbency
+- https://chemed.chem.purdue.edu/genchem/demosheets/25.5.html - superabsorbent demonstration
+- https://www.naffco.com/portable-high-expansion-generator - high-expansion foam ratios
+- https://www.tomsguide.com/wellness/mattresses/how-long-does-a-mattress-in-a-box-take-to-expand-and-when-can-you-sleep-on-it - memory foam recovery times
+
+Magic prior art
+
+- https://en.wikipedia.org/wiki/Vanishing_bird_cage - de Kolta cage, method outline
+- https://www.conjuringarchive.com/list/category/419 - birdcage vanish bibliography, including Wonder
+- https://www.magicshow.tips/tag/wrist-to-wrist-pull - notes on Wonder's pull
+- https://www.themagicdetective.com/2011/02/vanishing-bird-cage-history.html?m=1 - birdcage history
+- https://www.desertcart.ni/products/13557530 - appearing wand, 2.5 in to 14 in
+- https://shop.52kards.com/products/appearing-cane-plastic-red-by-jl-magic - plastic appearing cane, 6 cm to 100 to 110 cm
+- https://vanishingincmagic.com/mouth-coils/90ft-mouth-coil - mouth coil lengths
+- https://vanishingincmagic.com/mouth-coils/thumb-tip-streamer-12-pack-1-68 - thumb-tip streamer sizes
+- https://www.funinc.com/spring-flower-25/dr00150p/ - spring flowers
+- https://magicgizmo.com/home/articles-miscellaneous-topics/71-magic-workshop/314-how-to-restore-pop-and-spread-of-spring-flowers - spring flower set and recovery
+- https://en.wikipedia.org/wiki/Zombie_ball - Zombie, Karson, 1940s
+- https://www.penguinmagic.com/reviewcomments.php?rid=161674 - Zombie gimmick length

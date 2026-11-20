@@ -56,6 +56,10 @@ confirmed in a page I opened or a search result I saw is marked **(unverified)**
 - **One surface can carry roughly 4 to 6 practical independent messages** (visible, UV
   fluorescent, heat, wet, viewing angle, polariser, breath), and in principle 10 or more; the
   cost is that unused channels stay on the object the spectator keeps.
+- **An index can sit in full view if its outs are indistinguishable.** In two-sheet visual
+  cryptography, one fixed noise sheet can be paired with a computed "partner" noise sheet for any
+  message at all. A hundred partner sheets look identical, so the index needs no hiding, only a
+  way to count to the right one.
 - **Card re-ordering machines exist but are shoebox-sized.** Open-source camera shufflers
   (about $200, eight bins) and commercial sorters (60 to 100 cards per minute) can stack a
   shuffled deck in one to two minutes; nothing found fits a card case. The casino Deckmate 2
@@ -69,8 +73,10 @@ confirmed in a page I opened or a search result I saw is marked **(unverified)**
 ### 2.1 Prior art inside magic (what already exists)
 
 **Nail writers, swami gimmicks, Boon writers.** A pencil lead, grease point or ink tip on the
-thumb writes a short prediction after the fact. Limits: a few characters, shaky hand, cover
-needed for the thumb. This is the manual ancestor of every engine below.
+thumb writes a short prediction after the fact; modern versions write in ink or marker, and the
+standard reference is Corinda's Thirteen Steps to Mentalism
+(https://en.wikipedia.org/wiki/Nail_writer). Limits: a few characters, shaky hand, cover needed
+for the thumb. This is the manual ancestor of every engine below.
 
 **Pocket and wallet indexes.** Classic two-pocket card indexes hold 26 cards each. The current
 state of the art is a thin single-pocket index: Dex (Lloyd Barnes and Javier Fuenmayor) holds all
@@ -136,8 +142,10 @@ cover a whole audience.
 | Zink | 313 x 512 dpi | about 50 s per 2 x 3 inch | motor | product about 120 x 80 x 20 mm (unverified) | Zink sheets | $80 to $130 |
 
 **Thermal print mechanisms.** A 2-inch (58 mm paper, 48 mm print width, 384 dots) mechanism is the
-smallest mass-market line printer. Seiko's LTP02-245 class is 67.3 x 18.1 x 30 mm, about 28 g and
-up to 100 mm/s; older Seiko LTPU245 units are 30 g and 75 mm/s; Chinese PRT equivalents are 68 x
+smallest mass-market line printer. Seiko's LTP02-245 is 67.3 x 18.1 x 30 mm, about 28 g, 203 dpi,
+up to 100 mm/s on 5.5 to 9.5 V, with a low-energy variant that runs at 85 mm/s directly from
+3.0 to 4.2 V (one lithium cell); head peak current is 2.64 A, motor peak 0.6 A, and head life is
+100 million pulses or 50 km of paper. Older Seiko LTPU245 units are 30 g and 75 mm/s; Chinese PRT equivalents are 68 x
 24 x 26 mm at 90 mm/s; Citizen's MLT4281 adds an auto-cutter at 80 mm/s
 (https://sii-thermalprinters.com/mechanisms-and-components/low-voltage-thermal-printer-mechanisms/ltp02-245/,
 https://sii.co.jp/sps/eg/product/oldproduct/ltpu245.html,
@@ -147,7 +155,11 @@ https://www.aps-printers.com/product-category/mini-printer-mechanisms/). I did n
 Published noise: Epson's mobile TM-P20 and TM-P80II list 52.9 dB(A) in operation
 (https://epson.eu/en_EU/products/retail/pos-printers/mobile-printers/tm-p20-series/p/14345);
 Phomemo claims under 55 dB. A wallet or box wall should take 10 dB or more off that (unverified),
-which is inaudible in a bar and audible in a silent living room.
+which is inaudible in a bar and audible in a silent living room. Thermal paper itself is a
+leuco dye plus acid developer that colours when the sensitiser melts, with about 100 C as the
+practical lower limit; a fast fingernail stroke or a hot coffee cup is enough to mark it
+(https://en.wikipedia.org/wiki/Thermal_paper). That sensitivity is why any modest heat source,
+not only a print head, can be the "printer".
 - *Accessibility*: off the shelf. "Cat printers" (GB01, GB02, GT01, MX05, MX06, MX08 and
   relatives) cost about $20 or 16 pounds, have an internal battery and an openly documented BLE
   protocol with Python, JavaScript and Go drivers (https://github.com/rbaron/catprinter,
@@ -176,7 +188,10 @@ https://www.homofaciens.de/technics-machines-printhead-hp6602_en.htm). Open hard
 https://makezine.com/2011/06/01/diy-open-source-inkjet-printer/) and the PrintSpider module for
 the higher-resolution HP 63/302 cartridges on ESP32 and Raspberry Pi
 (https://hackaday.io/project/176931-hp-printer-cartridge-control-module,
-https://www.github.com/lichnost/PrintSpider_Arduino, the latter self-described as untested).
+https://www.github.com/lichnost/PrintSpider_Arduino, the latter self-described as untested). The
+PrintSpider electronics are a 23 x 38 mm level-shifter board (16 V clock and trigger lines, 9 V
+data lines); the project log stops in January 2022 with unresolved protection-circuit problems,
+so the 12-nozzle C6602 route remains the dependable one.
 Consumer swipe printers package the same idea: PrinCube/MBrush is 72 x 51 x 68 mm, 110 to 160 g,
 tri-colour, 14.29 mm swath, launched at $99 to $199 with clones at $24 to $79 wholesale
 (https://www.cnx-software.com/2019/11/01/princube-smallest-handheld-smartphone-color-inkjet-printer-prints-on-anything/,
@@ -199,8 +214,10 @@ https://stacksocial.com/sales/prinker-m-mobile-digital-temporary-tattoo-printer)
 
 **Pen plotters and handwriting synthesis.** AxiDraw MiniKit 2: 160 x 101 mm travel, up to 25 cm/s,
 36 x 23.5 x 11 cm overall (https://shop.pimoroni.com/products/axidraw-minikit-2,
-https://shop.evilmadscientist.com/924). Smaller open designs: Lingdong Huang's Plotlet
-(https://github.com/LingDong-/plotlet), Bart Dring's palm-sized ESP32 plotter
+https://shop.evilmadscientist.com/924). Smaller open designs: Lingdong Huang's Plotlet, a
+postcard-area (6 x 4 inch) plotter with a $20.30 bill of materials built from three 28BYJ-48
+geared steppers, an SG90 pen-lift servo, about 150 g of filament and an Arduino Nano or ESP32-S3
+with BLE (https://github.com/LingDong-/plotlet); Bart Dring's tiny single-belt ESP32/Grbl plotter
 (https://hackaday.com/2019/07/27/lack-of-space-is-no-longer-an-excuse-for-not-having-a-pen-plotter),
 the "almost fits on your hand" drawing machine
 (https://www.hackster.io/news/miniature-drawing-machine-almost-fits-on-your-hand-c0da2da8c28a) and
@@ -232,12 +249,16 @@ LaserPecker LP2 is a 5 W diode galvo unit with a 100 x 100 mm field at 6 to 600 
 Dutch start-up Tocano showed "inkless" printing by carbonising the top layer of ordinary paper
 with a 24 micron infrared spot (https://techcrunch.com/?p=1621213,
 https://patents.google.com/patent/US9393804B2), which is a reminder that char on plain paper can
-look like print.
+look like print. For packaging, DataLase sells laser-reactive coatings for paper, board, films
+and foils that turn into high-contrast codes "instantly" under a laser with no ink
+(https://www.datalase.com/; the page does not state wavelengths).
 - *Capability*: non-contact marking of paper, card, wood, leather, fruit skin, toast, and (with
   the infrared source) bare metal; and the beam passes through glass and clear plastic.
 - *Give-aways*: charring makes smoke and a campfire smell; fans are loud; galvo units are
-  kilogram-scale. Marking *thermal* paper instead of charring plain paper needs far less energy
-  and makes no smoke (unverified; needs a bench test).
+  kilogram-scale. Marking *thermal* paper instead of charring plain paper only has to reach
+  about 100 C rather than several hundred, so it should need far less energy and make no smoke
+  (inference from the thermal-paper chemistry above; needs a bench test, since white coatings
+  absorb visible light poorly).
 - *Safety*: these are Class 4 sources once out of their enclosure. A hidden laser pointing up
   through a table toward faces is unacceptable without a full light-tight beam path, interlocks
   and a beam dump. Infrared beams are invisible and worse. Treat any open-beam idea as
@@ -265,11 +286,17 @@ https://www.escholarship.org/content/qt2wb412nw/qt2wb412nw.pdf?t=p1z7dt). Commer
 - *Limits*: cyanotype is too slow and needs a rinse; lab papers are not purchasable; stray
   daylight fogs the sheet.
 
-**Electrochemical marking of metal.** Industrial "electro-etch" marking presses an
-electrolyte-soaked pad through a stencil onto steel with low-voltage AC or DC for a few seconds
-and leaves a black oxide or frosted mark; knife makers do it with a 12 V supply and salt water,
-and label-printer stencil tapes exist for the purpose (all unverified in this session; see Open
-leads). Old electrosensitive printers (the Sinclair ZX Printer burned aluminium off coated paper
+**Electrochemical marking of metal.** In electroetching the workpiece is the anode of a DC
+circuit and dissolves where electrolyte touches it (https://en.wikipedia.org/wiki/Electroetching).
+Industrial "electro-etch" marking presses an electrolyte-soaked pad through a stencil onto steel
+for a few seconds and leaves a black oxide or frosted mark; knife makers do it with a 12 V supply
+and salt water (voltages and times unverified in this session). The stencil can be printed on
+demand: Brother's STe-151 is a 24 mm x 3 m non-adhesive stencil tape with a thermally sensitive
+layer, sold for $22 for P-touch label printers, described as a mask for "ink or special fluids"
+in direct part marking (https://www.brother-usa.com/products/ste151). On coins: US law
+(18 U.S.C. 331) is read as prohibiting only fraudulent alteration and the UK Coinage Act 1971
+s.10 covers melting or breaking up, which is why penny presses are lawful in both; some
+countries such as Canada differ (https://en.wikipedia.org/wiki/Elongated_coin). Old electrosensitive printers (the Sinclair ZX Printer burned aluminium off coated paper
 with a stylus, https://en.wikipedia.org/wiki/ZX_Printer) show the paper version; it is noisy,
 smelly and obsolete.
 - *Magic relevance*: the only pocket-scale way found to put a permanent, chosen mark on a
@@ -284,12 +311,17 @@ Useful when the out must be a colour photograph (a "polaroid" of the chosen card
 minute of stall is available.
 
 **Other marking channels (brief).**
-- *Pressure*: carbonless (NCR) sets and "self-contained" carbonless sheets mark under stylus
-  pressure with no ink on the stylus (unverified product details). Cholesteric "Boogie Board"
-  film is written by pressure and erased electrically (unverified). Both let a blunt stylus write
-  through a flexible cover.
-- *Magnetism*: magnetophoretic drawing boards and magnetic viewing film can be written from
-  behind through a non-ferrous wall; resolution is millimetres; the look is a toy.
+- *Pressure*: carbonless paper carries micro-encapsulated dye on the back of one sheet and
+  reactive clay on the front of the next; pen pressure bursts the capsules. A "self-contained"
+  grade has dye and clay on the same face, so a single sheet marks itself under pressure with no
+  ink on the stylus (https://en.wikipedia.org/wiki/Carbonless_copy_paper; the same page notes
+  occasional skin irritation and a high bisphenol A content). Cholesteric "Boogie Board" film is
+  written by pressure and erased electrically (unverified). Both let a blunt stylus write through
+  a flexible cover.
+- *Magnetism*: magnetophoretic boards (Magna Doodle: dark magnetic particles in honeycomb cells
+  of opaque white liquid, pulled to the front by a magnet and to the back by the eraser bar,
+  https://en.wikipedia.org/wiki/Magna_Doodle) and magnetic viewing film can be addressed through
+  a non-ferrous wall; resolution is millimetres; the look is a toy.
 - *Heat by conduction*: a resistor or PCB-trace matrix behind thin thermal paper, a thermochromic
   panel or a mirror (for condensation) is a display with no moving parts and 5 to 15 mm pixels
   (speculative; concept 4).
@@ -307,8 +339,12 @@ minute of stall is available.
   it can deal a truly random shuffle or a rigged order
   (https://www.hackster.io/news/rig-the-deck-so-you-always-win-with-this-card-shuffler-5db782b1b15f,
   https://www.tomshardware.com/news/rig-your-next-card-game-with-the-help-of-a-raspberry-pi,
-  https://hackaday.com/2020/07/20/raspberry-pi-shuffler-is-computerized-card-shark). No throughput
-  figure is published. With b bins a full sort needs ceil(log_b 52) passes: two passes with eight
+  https://hackaday.com/2020/07/20/raspberry-pi-shuffler-is-computerized-card-shark). The
+  repository (MIT licence, https://github.com/DDeGonge/Shuffle-o-matic) lists three NEMA 17
+  steppers, an MG90S servo, a 600 rpm N20 gearmotor, three MGN9 rails of 95 to 135 mm, a
+  Raspberry Pi, an Adafruit Feather and a custom PCB, and warns that it is poorly documented and
+  "not a project for beginners". No throughput figure is published; a Hackaday commenter calls it
+  "rather slow". With b bins a full sort needs ceil(log_b 52) passes: two passes with eight
   bins, so 104 card moves; at 1 to 2 cards per second that is one to two minutes (my estimate).
 - Purdue "Smart Card Shuffler" (camera under the deck, phone-selected target order,
   https://engineering.purdue.edu/477grp10), Adelaide robot-arm sorters with a "new deck order"
@@ -401,6 +437,21 @@ numbers (all my own estimates):
   handful of craftspeople (https://en.wikipedia.org/wiki/Stanhope_(optical_bijou),
   https://www.cpbj.com/mechanicsburg-man-a-global-source-for-stanhope-lenses/). It is the
   historical "one frame of microfilm in a charm".
+- **Microfiche and microdots as upper bounds.** Standard fiche hold 98 pages at 24x on a
+  105 x 148 mm sheet; ultrafiche at 150x held 2,380 page images on a 3 x 5 inch sheet; silver
+  film lasts centuries (https://en.wikipedia.org/wiki/Microform). A microdot is about 1 mm
+  across, and Goldberg's 1925 process put a legible page in 0.01 mm2
+  (https://en.wikipedia.org/wiki/Microdot). A thousand one-line outs is therefore a trivial load
+  for a film chip the size of a lentil; the engineering problem is the viewer, not the storage.
+- **Visual-cryptography overlays (the camouflaged index).** In the two-sheet scheme each sheet
+  is random-looking noise and the stack shows the image at reduced contrast. Wikipedia notes
+  that given one sheet, a "counterfeit" partner can be computed that combines with it "to
+  produce any image at all" (https://en.wikipedia.org/wiki/Visual_cryptography). For a
+  brute-force method that is the useful property: fix sheet A in advance, compute partners
+  B1..BN for N messages, and every partner is indistinguishable noise.
+- **Flexagons.** A hexahexaflexagon has six faces (15 reachable states on the ordinary one) and
+  hexaflexagons exist "with any number of faces" (https://en.wikipedia.org/wiki/Flexagon), so one
+  folded strip can hold a handful of messages reached by different flex sequences.
 - **Lenticular and multi-condition printing.** Lenticular prints carry 2 to 5 clean flips (up to
   about 20 frames for animation) (https://en.wikipedia.org/wiki/Lenticular_printing,
   https://www.4over4.com/faqs/general/how-many-images-can-i-combine-in-a-single-lenticular-print,
@@ -423,8 +474,11 @@ numbers (all my own estimates):
   https://erikdemaine.org/fonts/hinged/, https://erikdemaine.org/fonts/dissect,
   https://erikdemaine.org/papers/PuzzleFonts_G4G14/paper.pdf). This is a proof that "the same
   examinable pieces spell any outcome" is achievable by computation.
-- **De Bruijn windows.** A de Bruijn sequence B(10,3) is 1,000 digits long and contains every
-  three-digit number exactly once as a run of consecutive digits. Printed as a strip, a window
+- **De Bruijn windows.** A de Bruijn sequence B(10,3) is 1,000 digits long (cyclically) and
+  contains every three-digit string exactly once as a run of consecutive digits; the
+  two-dimensional analogue is the de Bruijn torus, used for position encoding in the Anoto
+  digital pen (https://en.wikipedia.org/wiki/De_Bruijn_sequence). Diaconis and Graham built card
+  tricks on these sequences (unverified in this session). Printed as a strip, a window
   three digits wide shows a different number at every one-digit step, so 1,000 outs need 1,000
   digit pitches of travel rather than 3,000. At 1 mm digit pitch that is a 1 m tape (a tape
   measure, a ribbon, a lanyard) or a 40 x 25 grid of window positions over a 40 x 75 mm area.
@@ -525,8 +579,10 @@ new method architecture. Noise budgets are estimates until measured.
 - *Budget*: head-and-roller bar about 60 x 20 x 9 mm (estimate); cycle time zero beyond the pull;
   noise is card-on-leather. Pull speed must stay under roughly 100 mm/s, which is a normal
   withdrawal.
-- *BOM*: head and roller from a $15 to $20 cat printer, AS5600-class encoder, ESP32-C3, two
-  MOSFET strobe banks, 2S 300 mAh LiPo, thermal ticket stock. About $40. Difficulty: medium
+- *BOM*: head and roller from a $15 to $20 cat printer (or a Seiko low-energy head, which runs
+  from a single 3.0 to 4.2 V cell but pulls up to 6 A peak, so strobe the 384 dots in blocks),
+  AS5600-class encoder, ESP32-C3, MOSFET strobe drivers, a small high-discharge LiPo, thermal
+  ticket stock. About $40. Difficulty: medium
   (strobe timing versus speed, contact pressure).
 - *Risks*: uneven pull gives stretched print (the encoder corrects this); too little pressure
   gives grey print; a stalled pull over-burns a line. Because the object is a boarding pass,
@@ -537,8 +593,8 @@ new method architecture. Noise budgets are estimates until measured.
 - *Effect*: a spectator checks a blank card, seals it in an envelope and signs across the flap.
   The envelope sits on the performer's clipboard or close-up pad. After the choice the spectator
   tears it open: the card now bears the choice in handwriting.
-- *Method*: the card is a self-contained carbonless sheet (or a coated-back/coated-front pair
-  disguised as one card). A two-axis stylus plotter under the pad surface, or in the clipboard
+- *Method*: the card is self-contained carbonless stock, which has dye capsules and developer on
+  the same face (or a coated-back/coated-front pair disguised as one card). A two-axis stylus plotter under the pad surface, or in the clipboard
   body, writes on the outside of the envelope with a 1.5 mm ball stylus through a thin flexible
   skin. Pressure develops the line on the card inside. No ink ever touches the envelope.
 - *Budget*: plotter cavity about 80 x 50 x 15 mm; 8 to 15 s per word; noise under about 35 dB with
@@ -598,12 +654,14 @@ new method architecture. Noise budgets are estimates until measured.
 - *Method*: a thumb-tip gimmick holds a felt wick wetted with a benign salt electrolyte and wired
   to a 9 to 12 V stack (for example an A23 cell); the borrowed object is the other electrode
   through a finger clip or a second pad. Writing with the wick leaves a dark oxide line wherever
-  it dwells. A higher-quality variant prints a stencil on a 12 mm label printer after the choice
-  and etches through it in one 3 s press.
-- *Budget*: thumb-tip size; 5 to 10 s for two or three characters freehand, 3 s for a stencilled
-  word plus about 2 s to print the stencil; silent; a wipe on a hidden pad removes electrolyte.
-- *BOM*: thumb tip, wick, A23 cell, fine wire; optional Niimbot-class printer and stencil tape.
-  $10 to $60. Difficulty: easy electrically, hard as sleight.
+  it dwells. A higher-quality variant prints a stencil after the choice on Brother STe stencil
+  tape in a P-touch printer (table or case scale, not pocket) and etches through it in one press
+  of a few seconds.
+- *Budget*: thumb-tip size for the freehand version; 5 to 10 s for two or three characters
+  freehand; a few seconds per press plus a few seconds to print for the stencil version (all
+  estimates); silent; a wipe on a hidden pad removes electrolyte.
+- *BOM*: thumb tip, wick, A23 cell, fine wire ($10); optional P-touch printer and $22 stencil
+  tape. Difficulty: easy electrically, hard as sleight.
 - *Risks*: works on steel, nickel and cupronickel, poorly on brass and aluminium; leaves moisture;
   permanently marking someone's key needs their consent after the fact, so frame it as a souvenir;
   check local law on marking coins.

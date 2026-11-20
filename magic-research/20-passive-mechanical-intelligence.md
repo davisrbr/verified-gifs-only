@@ -4,9 +4,10 @@ Slice: objects that can be sawn in half and shown to be plain plastic, rubber, w
 perhaps a steel ball, and that have nevertheless done something conditional. Prices are as of
 late 2026 and come from the pages cited.
 
-**Research-method note.** The shared web-search allowance cut out twice during this work. About
-45 searches and 15 page opens were completed. Everything with a URL in section 6 was seen in a
-search result or opened. Anything recalled from memory and not confirmed is marked
+**Research-method note.** The shared web-search allowance cut out twice during this work and
+then ran out for good. About 44 searches and 35 page opens were completed; after the cap, known
+primary and reference pages were opened directly. Everything with a URL in section 7 was seen in
+a search result or opened. Anything recalled from memory and not confirmed is marked
 "(unverified)". Numbers labelled "my estimate" are my own back-of-envelope physics, shown with
 the inputs so they can be checked; they are not from a source. Coverage of the internal workings
 of specific commercial magic props (Tenyo, trick locks by named makers) is thin, because makers
@@ -135,12 +136,18 @@ three thicknesses respond to three squeeze depths (A = 7.8%, B = 8.9%, C = 9.9%)
 of four small counters reaches one unique state only for the sequence B, A, C: a mechanical lock
 whose key is an ordered sequence of squeezes. A scaled-down hand-held four-cell counter works
 under manual squeezing. A follow-up shows that coupled "hysterons" in series behave as finite
-state machines and can parse strings of inputs.
+state machines and can parse strings of inputs. Kwakernaak's 2025 thesis adds a second design,
+the "twistbuckler", whose elements twist clockwise or anticlockwise as they buckle and which
+returns to its starting state after the maximum count, so it cycles without a reset; the thesis
+abstract says the beam counter "can count to arbitrary large numbers" and that the memory "can
+easily be read out".
 - Refs: Kwakernaak and van Hecke, Phys. Rev. Lett. 130, 268204 (2023),
   https://arxiv.org/abs/2302.06947 (full text read at https://ar5iv.labs.arxiv.org/html/2302.06947);
   Liu, Teunisse, Korovin, Vermaire, Jin, Bense, van Hecke, PNAS 121 (2024),
-  https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11145188/; background on "pathways":
-  https://arxiv.org/pdf/2204.06488 and https://arxiv.org/pdf/2106.14441.
+  https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11145188/; thesis record,
+  https://scholarlypublications.universiteitleiden.nl/access/item%3A4247676/view (chapter 3 is
+  an Extreme Mechanics Letters paper, doi 10.1016/j.eml.2024.102160, not opened); background on
+  "pathways": https://arxiv.org/pdf/2204.06488 and https://arxiv.org/pdf/2106.14441.
 - Accessibility: hobbyist-buildable. A printed mould plus two-part platinum silicone is about
   $30 to $40 of material for many samples (my estimate). Tolerance is the difficulty: the three
   thresholds are only about 1% strain apart, so amplitude must be set by hard stops, not by feel.
@@ -171,14 +178,16 @@ switches have been assembled into memory boards.
 The Nature Perspective frames information processing as a material property and surveys
 bistable-bit architectures. Turing Tumble (a consumer marble-and-flip-flop board) is
 Turing-complete in an idealised unbounded form, and its bit is a gravity-driven rocker that each
-ball flips. These are existence proofs: a falling ball plus a rocker is a 1-bit counter, and any
-finite conditional behaviour can in principle be built from them.
+ball flips. The 1965 Digi-Comp II toy did the same with half-inch marbles and plastic cams:
+each marble flips the cam it passes and is routed by the cam's position. These are existence
+proofs: a falling ball plus a rocker is a 1-bit counter, and any finite conditional behaviour
+can in principle be built from them.
 - Refs: Yasuda, Buskohl, Gillman, Murphey, Stepney, Vaia, Raney, Nature 598, 39 (2021),
   https://raney.seas.upenn.edu/wp-content/uploads/2022/01/Yasuda-2021-Mechanical-computing.pdf;
   Pitt, "Turing Tumble is Turing-Complete", https://arxiv.org/abs/2110.09343;
-  https://en.wikipedia.org/wiki/Turing_Tumble.
+  https://en.wikipedia.org/wiki/Turing_Tumble; https://en.wikipedia.org/wiki/Digi-Comp_II.
 - Magic relevance: a rocker that alternates left and right on successive balls or coins is a
-  one-part "every second time" mechanism (see concept 5).
+  one-part "every second time" mechanism (see concept 4.5).
 
 **G. Mechanical neural networks.** A lattice of beams whose stiffnesses are tuned so the lattice
 "learns" several input-to-output shape behaviours. The demonstrator is the size of a microwave
@@ -207,18 +216,29 @@ straws-and-balloons logic element costs $0.45 and takes a novice five minutes.
   https://www.eurekalert.org/news-releases/997028 with files at https://zenodo.org/record/8127332;
   Conrad et al., Science Robotics (2024), doi 10.1126/scirobotics.adh4060, summary at
   https://www.hackster.io/news/these-3d-printed-pneumatic-logic-gates-make-for-robust-electronics-free-soft-robotics-1e0448a85961;
-  tube-balloon logic and other printed fluidic circuits via https://par.nsf.gov/biblio/10279902
-  and https://par.nsf.gov/biblio/10556530. The Harvard Octobot (Wehner et al., Nature 2016) is the
-  well-known ancestor (unverified in this session).
+  Hubbard et al., "Fully 3D-printed soft robots with integrated fluidic circuitry", Science
+  Advances 7 (2021), PolyJet-printed fluidic diodes and transistors in one print run,
+  https://par.nsf.gov/biblio/10279902; an NSF record titled "FDM-printed CMOS logic gates from
+  flexing beam mechanisms control soft robotic systems" appeared in search results at
+  https://par.nsf.gov/biblio/10556530 but would not open; the $0.45 tube-balloon logic element
+  was reported in a search summary of an NSF-hosted paper whose URL I could not pin down. The Harvard Octobot (Nature, 2016) is the well-known
+  ancestor: a 3D-printed silicone body with a microfluidic logic circuit, fuelled by hydrogen
+  peroxide decomposing over platinum, with no battery,
+  https://en.wikipedia.org/wiki/Octobot_(robot).
 - Accessibility: hobbyist-buildable, $5 to $30 of TPU and tubing. Needs a pressure source.
 - Magic relevance: *hold/release*, *delay*, *move* inside soft props (a glove, a balloon animal,
   a rubber chicken, a squeezed bulb) where rigid mechanism would be felt. A ring oscillator turns
   one squeeze of a bulb into a timed sequence of events. Weaknesses: hiss, the visible bulb or
   tube, and spread between printed valves.
-- Wall-attachment fluidics: 1960s "fluidic amplifiers" are bistable switches with no moving
-  parts at all, in which a jet attaches to one of two walls and a puff at a side port flips it
-  (unverified in this session; recalled from the fluidics literature). They are pure channel
-  geometry, so they print trivially. See concept 9.
+- No-moving-part fluidics: in a fluidic amplifier (conceived by Billy Horton at Harry Diamond
+  Laboratories in 1957) a weak control stream at a side port deflects a strong main stream to
+  one of two outlets, giving gain with no moving parts; amplifiers combine into flip-flops and
+  oscillators, and 3D-printable fluidic-oscillator emergency ventilators were designed during
+  the COVID-19 pandemic, which shows the devices work at breathing pressures.
+  https://en.wikipedia.org/wiki/Fluidics. The bistable "wall-attachment" form, in which the jet
+  clings to one wall until a puff flips it, is recalled from the fluidics literature and was not
+  confirmed on a page in this session (unverified). These devices are pure channel geometry, so
+  they print trivially. See concept 4.9.
 
 **I. Capillary and paper timers.** Paper-fluidic devices delay a liquid front with dissolvable
 sugar barriers (seconds to hours), wax (about 1 min to 2 h) or dissolvable films in channels
@@ -233,8 +253,8 @@ Steel balls or sliding latches sit in radial channels and block the lid. Spinnin
 on a table throws them outward and frees it. Hobby examples: a 2014 Make write-up; a Shapeways
 box using four 6 mm ball bearings; a printable "spin-to-open" box with four floating latches
 that must all move outward at once; a spin box in which spinning both ways moves pins and "a
-little shake" re-locks them. A 2023 US patent describes the same ball-channel arrangement for a
-storage box. My estimate of the threshold: a ball at radius r behind a ramp of angle theta
+little shake" re-locks them. US patent 11,612,807 describes the same ball-channel arrangement
+for a storage box. My estimate of the threshold: a ball at radius r behind a ramp of angle theta
 releases when (spin rate)^2 x r exceeds g x tan(theta); for r = 20 mm and a 30 degree ramp that
 is about 2.7 revolutions per second, and 3.5 rev/s for 45 degrees. Carrying, shaking and
 turning in the hands does not reach this in all channels at once; a table spin does.
@@ -244,47 +264,57 @@ turning in the hands does not reach this in all channels at once; a table spin d
 - Accessibility: off-the-shelf models; $2 of filament plus ball bearings.
 - Magic relevance: *hold/release* keyed to an action that has an innocent meaning (spinning a
   bottle, a coin, a top, a lazy Susan). L2 as a lock; L3 when spin *direction* or spin *rate*
-  selects one of several outcomes (concept 2).
+  selects one of several outcomes (concept 4.2).
 
 **K. Gravity pins and tilt-sequence locks.**
 Pins or balls fall into or out of a blocking position according to orientation. A 1929 patent
 describes a lock in which the box must be tilted through a sequence of orientations so the
-locking balls clear their keepers; a later patent is titled "Sequential attitude-responsive
-enclosure puzzle". A ball in a hidden labyrinth is a state machine whose input alphabet is "which
-way is down".
+locking balls clear their keepers. A 1999 patent, "Sequential attitude-responsive enclosure
+puzzle" (Hartzell), uses internal pendulums as gates: rods are freed one after another only by
+tilting the puzzle through a set sequence of orientations, "with no force or striking
+required". A ball in a hidden labyrinth, or a set of pendulum gates, is a state machine whose
+input alphabet is "which way is down".
 - Refs: https://patents.google.com/patent/US1733772; US 5,944,311 at
+  https://patents.google.com/patent/US5944311 and
   https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/5944311;
   https://brainvoyage.blog/puzzle-box-mechanisms; https://en.wikipedia.org/wiki/Lock_puzzle.
 - Magic relevance: the same hardware run in reverse is a *recorder*: a one-way trap makes the
-  ball remember the first orientation after arming (concept 4). FDM printing can seal a steel
+  ball remember the first orientation after arming (concept 4.4). FDM printing can seal a steel
   ball inside a part by pausing the print, so there is no lid or plug to find.
 
 **L. Inertia and tap locks.** A mass on a spring or detent that moves only above an
 acceleration threshold. My estimate: a 2 g steel ball held by a 0.2 N detent releases at about
 10 g, which a rap on a table exceeds easily and normal handling (under about 3 g) does not.
 Puzzle guides also describe weak-magnet catches that a precise tap dislodges. The vehicle seat
-belt is the mass-produced example of the opposite logic: a pawl that locks the reel above a set
-acceleration and leaves it free below (thresholds near 0.45 g for the vehicle sensor and about
-1 to 2 g for the webbing sensor; unverified, recalled from seat-belt regulations).
+belt is the mass-produced example of the opposite logic, and it comes in two passive forms: a
+webbing-sensitive centrifugal clutch that lets the belt pay out on a slow pull and locks the
+reel on a sudden one, and a vehicle-sensitive pendulum that swings a pawl into the reel under
+deceleration or tilt. (Thresholds near 0.45 g for the vehicle sensor and 1 to 2 g for the
+webbing sensor are recalled from seat-belt regulations; unverified.)
 - Refs: https://brainvoyage.blog/puzzle-box-mechanisms;
-  https://www.firgelliauto.com/es/blogs/mechanisms/curious-padlock.
+  https://www.firgelliauto.com/es/blogs/mechanisms/curious-padlock;
+  https://en.wikipedia.org/wiki/Seat_belt.
 - Magic relevance: direction-sensitive tap release is a *hold/release* trigger that reads as a
-  gesture. The seat-belt logic gives *spectator failure* by speed (concept 7).
+  gesture. The seat-belt logic gives *spectator failure* by speed (concept 4.7).
 
 **M. Hidden-compartment furniture and trick locks.** Roentgen's 18th-century cabinets coordinate
 "hidden springs, lead weights, mechanisms and locks" so drawers open to reveal further drawers
 at the touch of a button. Trick padlocks hide the real release behind a false interface or need
-a multi-stage sequence. In magic, Vanishing Inc. sells a gimmicked lock that advertises that it
-does *not* rely on gravity, which implies that gravity locks are the known earlier method.
+a multi-stage sequence. The modern puzzle-box makers to study are Akio Kamei and the Karakuri
+Group in Japan, Robert Yarger and Kagen Sound in the US, Trevor Wood and Frank Chambers; their
+boxes range from "a simple move" to "a series of discoveries". In magic, Vanishing Inc. sells a
+gimmicked lock that advertises that it does *not* rely on gravity, which implies that gravity
+locks are the known earlier method.
 - Refs: https://www.metmuseum.org/press-releases/extravagant-inventions-2012-exhibitions;
   https://www.metmuseum.org/es/essays/abraham-and-david-roentgen;
+  https://en.wikipedia.org/wiki/Puzzle_box;
   https://vanishingincmagic.com/close-up-magic/the-larry-lock.
 
 **N. One-time mechanisms.** Shear tabs, snap-off whiskers and one-way barbs that make a
 mechanism work once and then become a solid, honest object. This is ordinary packaging
 engineering (tamper-evident caps, cable ties, snap rivets); no magic-specific source was found.
 In FDM a 0.4 mm single-wall tab breaks at a few newtons (my estimate), and a barbed snap-fit
-cannot be reopened without breaking the part. See concept 3.
+cannot be reopened without breaking the part. See concept 4.3.
 
 ### 2.4 Time: delays without clocks
 
@@ -331,7 +361,7 @@ further one to two orders of magnitude. Silicone oil viscosity moves by roughly 
 - Accessibility: silicone oil in a sealed printed cavity; about $10 to $20 for 100 ml of a
   high-viscosity grade (my estimate of hobby prices; check supplier).
 - Magic relevance: silent, repeatable *delay*; also a slow hidden *move* of the centre of mass
-  (concept 8). The historical ancestor is the "tapper" die: mercury and oil in a dumbbell
+  (concept 4.8). The historical ancestor is the "tapper" die: mercury and oil in a dumbbell
   cavity, shifted to one end by tapping the die on the table and back again by a reverse tap;
   period accounts call them unreliable and say the tapping drew suspicion.
 - Refs for tappers: https://www.inventionandtech.com/node/86011;
@@ -357,7 +387,7 @@ L = 40 mm gives about 135 Hz, and L = 30 mm about 240 Hz; with a quality factor 
   https://stevespangler.com/experiments/swinging-pendulum-stop-go-trick/.
 - Magic relevance: *move* and *control* addressed to one of N identical objects with no contact
   and no line of sight. L1 as a demo, L2 or L3 when the responding object releases something
-  (concept 6).
+  (concept 4.6).
 
 **R. Vibration ratchets.** Slanted bristles or pillars turn vibration into one-way travel by
 alternating stick and slip; the direction of a bristle-bot can even reverse with drive
@@ -367,17 +397,18 @@ frequency. On a vibrating surface the physics is the same as for a self-vibratin
 - Magic relevance: an object with a printed slanted-fibre sole walks one way across a table that
   is being drummed on, sung at through a speaker elsewhere, or sitting on a running fridge. It
   is also the missing link that turns a small resonant vibration into a large one-way latch
-  travel (concept 6). L2.
+  travel (concept 4.6). L2.
 
 **S. Rattlebacks, tippe tops, self-righting shapes.** A rattleback spun the "wrong" way
 wobbles and reverses; printable designs use either a skewed base or a symmetric base with offset
-end weights. The tippe top inverts only above a spin threshold; Gomboc-type shapes right
-themselves (both unverified here; well known). These are L1 curiosities. The transferable idea is
+end weights. The tippe top (patented by Helene Sperl in 1891) turns over onto its stem only
+when spun fast, driven by sliding friction at the contact point; Gomboc-type shapes right
+themselves (the latter unverified here; well known). These are L1 curiosities. The transferable idea is
 narrower: an object that behaves identically to its twin except under one input (spin sense,
 spin rate), which lets a performer and a spectator get different results from "the same" object
 with the same visible action. Chance and dice physics belong to another agent.
 - Refs: https://en.wikipedia.org/wiki/Rattleback; https://ar5iv.labs.arxiv.org/html/1202.6506;
-  https://arxiv.org/pdf/1112.4913.
+  https://arxiv.org/pdf/1112.4913; https://en.wikipedia.org/wiki/Tippe_top.
 
 **T. Trajectoids.** Given a periodic path, an algorithm computes the shape that rolls along it
 down a gentle slope. The test bodies are printed shells of 15.875 mm outer radius around a
@@ -399,14 +430,16 @@ by what I found. The passive route is stored vacuum: a vacuum-packed brick is ri
 pinhole lets air in.
 - Refs: Brown et al., https://arxiv.org/pdf/1009.4444; https://www.arxiv.org/abs/2212.06498.
 - Magic relevance: *transform* rigid to limp once, silently, on a pin prick or a peeled sticker
-  (concept 10). Limp to rigid needs a vacuum reservoir, which is bulkier.
+  (concept 4.11). Limp to rigid needs a vacuum reservoir, which is bulkier.
 
-**V. Rate-dependent materials and latches.** Shear-thickening fills (cornstarch and water is the
-kitchen example) resist fast motion and yield to slow motion; dashpots do the same with a
-defined law; viscoelastic foams and putties are soft to slow loads and stiff to impact. No
-single primary source was opened for these in this session (unverified; textbook behaviour).
+**V. Rate-dependent materials and latches.** Shear-thickening (dilatant) suspensions increase
+in viscosity with shear rate: a mix of 1 part water to 1.25 parts cornstarch "acts as a solid
+and resists the force" when struck and flows when moved slowly. The same behaviour is sold in
+impact-stiffening armour gels (D3O, Armourgel) and used in viscous couplings that pass more
+torque the faster they slip. Dashpots give the same slow-yes, fast-no behaviour with a defined
+law. https://en.wikipedia.org/wiki/Dilatant.
 - Magic relevance: an object that passes a fast test (rap it, tug it, shake it) and fails a slow
-  one, or the reverse. See concept 7.
+  one, or the reverse. See concept 4.7.
 
 ### 2.6 Inverse design: from wanted behaviour to geometry
 
@@ -422,7 +455,12 @@ single primary source was opened for these in this session (unverified; textbook
 - **Morphology co-design for multistable grippers.** https://arxiv.org/html/2407.08111v1.
 - **Trajectoid code** (2.5 T) is the cleanest example of "behaviour in, STL out" a hobbyist can
   run today.
-- **General tools a hobbyist can run** (all unverified in this session; recalled): the BYU
+- **Standard compliant-mechanism methods.** The pseudo-rigid-body model (flexures replaced by
+  rigid links, pin joints and torsion springs), constraint-based synthesis (FACT) and topology
+  optimisation are the three textbook routes; the stated drawbacks are limited range, stress
+  concentration and fatigue. https://en.wikipedia.org/wiki/Compliant_mechanism.
+- **General tools a hobbyist can run** (unverified in this session; recalled, and the BYU site
+  refused the fetch): the BYU
   Compliant Mechanisms Research group's design library and Howell's handbook formulas; the
   Qiu-Lang-Slocum curved-beam bistable formulas (bistable when apex height exceeds about 2.3
   times beam thickness; peak force about 740 E I h / L^3); Sigmund-style 99-line topology
@@ -448,16 +486,24 @@ published and are described only in general terms.
   the "it's electric" explanation this slice tries to escape.
   https://jimsteinmeyer.com/2022/04/14/what-we-hide-problems-in-algeria-part-two/;
   https://gutenberg.org/files/77917/77917-h/77917-h.htm.
-- **Okito box (about 1909) and Lippincott box ("Quarter Go", about 1949).** Small rigid boxes
-  with a concealed second way in. The Lippincott box is locked by a spectator with a padlock and
+- **Okito box (about 1909) and Lippincott box ("Quarter Go", 1949).** Small rigid boxes
+  with a concealed second way in. (Magicpedia credits Mal Lippincott and shows a September 1949
+  Linking Ring advertisement; one dealer page says Jack Lippincott.) The Lippincott box is
+  locked by a spectator with a padlock and
   a marked coin is later found inside. Later makers changed the mechanism so the box can be
   examined before and after (Porper's Strong Box), and one lookalike drops the mechanism
   entirely. The recurring weakness is the seam of the secret panel and the need to keep the box
   away from determined hands.
+  https://wiki.geniimagazine.com/index.php?title=Lippincott_Box;
   https://www.martinsmagic.com/allmagic/close-up/the-lippinkito-by-douglas-wayne-illusioneering;
   https://stevensmagic.com/blogs/gemini/1995-mike-rogers-all-magicians-do-it;
   https://www.penguinmagic.com/tricks/tagged/coin-to.
-- **Tenyo.** The reference for injection-moulded mechanical props. The company's own account of
+- **Tenyo.** The reference for injection-moulded mechanical props: a Tokyo company founded by
+  Akira Yamada, with a numbered catalogue running to about T-255 and a small in-house design
+  team (Shigeru Sugawara from 1967, Hiroshi Kondo, Toru Suzuki, Tomoyuki Shimomura, Hideo Kato)
+  plus outside inventors such as Lubor Fiedler. Dated examples: Black Hole (1980), Telestar and
+  Excalibur (1985), Mirage (1987), Lancelot (1989), Clean Cut (1990), Money Shredder (1999).
+  https://wiki.geniimagazine.com/index.php?title=Tenyo. The company's own account of
   its process shows the pattern: Zig-Zag Cig (1981) began with a mirror method and was replaced
   by a mechanical one; Vault Vision became a product once Shigeru Sugawara "created a new
   mechanism to display the marks"; Mystery China Box (2001) relocated a hidden pocket and added a
@@ -472,13 +518,28 @@ published and are described only in general terms.
   https://www.vanishingincmagic.com/close-up-magic/crystal-cleaver/;
   https://www.vanishingincmagic.com/blog/talking-tenyo-toy-tricks/;
   https://boingboing.net/2017/03/08/i-am-oz-the-great-and-powerful.html.
+- **Lock-and-key routines.** "Seven Keys to Baldpate" (Annemann, 1931, with Magicpedia also
+  crediting Kolar): several keys, one lock, only one key opens it, and the performer knows who
+  holds it. The entry lists a long line of commercial versions "that use gimmicked or
+  ungimmicked padlocks" (Keys of Judah 1955, Lock of Gibraltar 1958, Key-R-Rect 1963, Lots o'
+  Lock 1981, Hemingway Lock 1984, Key to the Future 1997). This is the main existing family of
+  props whose behaviour is secretly conditional.
+  https://wiki.geniimagazine.com/index.php?title=Seven_Keys_to_Baldpate.
+- **Chinese sticks** (in Hoffmann's Modern Magic, 1876, descended from the "Pillars of
+  Solomon"): two separate sticks whose tassels rise and fall in sympathy.
+  https://wiki.geniimagazine.com/index.php?title=Chinese_Sticks. The usual modern method is a
+  sliding weight inside each stick, set by tilt (unverified; recalled), which makes it a
+  gravity state machine of the kind in 2.3 K.
+- **Mystery clocks and watches.** Hands that turn with no visible connection to a movement, in
+  one type driven through a transparent toothed crystal wheel; attributed variously to Hugues
+  Rime and to Robert-Houdin. https://en.wikipedia.org/wiki/Mystery_clock. The principle (the
+  drive is in plain sight but is not recognised as a part) is the same one a layer-line seam
+  uses.
 - **Other mechanical classics** (unverified in this session; recalled from the general
-  literature): the imp bottle and Chinese sticks (a hidden sliding or removable weight makes the
-  object behave differently for the performer); the die box (a sliding weight supplies a false
-  sound); locking card boxes and mechanical decks (a flap or shutter switches a face);
-  "Seven Keys to Baldpate" lock routines (only one key works, by a concealed setting); Himber
-  ring (a locking linking ring); Robert-Houdin's mystery clock (hands driven through transparent
-  parts); Hofzinser's mechanical card props.
+  literature): the imp bottle (a removable hidden weight makes the object lie down only for the
+  performer); the die box (a sliding weight supplies a false sound); locking card boxes and
+  mechanical decks (a flap or shutter switches a face); Himber ring (a locking linking ring);
+  Hofzinser's mechanical card props.
 - **What printed and compliant methods add that these could not do:**
   1. One piece. No pin, screw, glued panel or parting line that differs from the layer lines
      all over the part.
@@ -522,10 +583,15 @@ published and are described only in general terms.
   0.7 N at about 0.6% peak strain; at 0.6 mm thick and 2 mm apex it is about 4 N but 1.5% strain,
   which is too much for PLA and marginal for PETG. Print flexures lying in the XY plane so the
   filament runs along the beam.
-- **Print-in-place clearances.** Common hobby guidance is 0.2 to 0.3 mm between moving faces on
-  a tuned FDM machine and 0.1 mm or less on resin (unverified in this session). A 0.2 mm gap that
-  lies along a layer boundary is visually identical to every other layer line on the part; a
-  gap that crosses layers is visible. "Fuzzy skin" slicer texture hides the rest.
+- **Clearances and thin walls.** Prusa's modelling guide says its printers are accurate to about
+  0.2 mm and that "an initial good measurement for movable parts is at least 0.3 mm", to be
+  tuned by test prints. One perimeter from a 0.4 mm nozzle is about 0.45 mm; walls thinner than
+  one perimeter do not print, and walls between one and two perimeters wide are also flagged as
+  unprintable, so flexures should be designed as exactly one (0.45 mm) or two (about 0.86 mm)
+  perimeters. https://help.prusa3d.com/article/modeling-with-3d-printing-in-mind_164135. A
+  horizontal gap of one layer (0.2 mm) that lies along a layer boundary looks like every other
+  layer line on the part; a gap that crosses layers is visible. "Fuzzy skin" slicer texture
+  hides the rest (my judgement; resin printers hold tighter gaps but were not checked).
 - **Noise.** A snapping PLA or PETG bistable clicks audibly (the toy "clicker" is a snap dome);
   TPU and silicone snaps are dull thuds; dashpots, gravity pins in oil and centrifugal balls on
   felt are silent. Loose steel balls rattle, which is either a tell or, in a rattle or a shaker,
@@ -594,8 +660,8 @@ published and are described only in general terms.
     *Because:* printed soft-valve ring oscillators and latches. *Before:* clockwork or
     electronics. *Primitives:* delay, move.
 19. *Now possible:* a breath is steered to one of two outlets with no moving part. *Because:*
-    printed wall-attachment fluidic switch (unverified). *Before:* a finger over a hole, or a
-    valve. *Primitives:* control, move.
+    a printed fluidic amplifier, where a weak side stream deflects the main jet. *Before:* a
+    finger over a hole, or a valve. *Primitives:* control, move.
 20. *Now possible:* a rigid bar goes limp silently on a pin prick. *Because:* stored-vacuum
     granular or layer jamming. *Before:* jointed "stiff rope" props with internal mechanics.
     *Primitives:* transform.
@@ -695,7 +761,8 @@ open or kept. None has been built; each is labelled with how speculative it is.
   (2.1 D counts to ten). On the Nth cycle the counter frees a false floor. N is set beforehand by
   where the counter starts; with a quick dial under the base it can be set after the number is
   named. The alternating rocker of a marble computer (2.1 F) gives the "every second person"
-  version with one moving part.
+  version with one moving part, and the cyclic "twistbuckler" counter would give a box that
+  delivers on every Nth opening and needs no reset between shows.
 - **BOM and cost.** PLA or wood-fill print, one steel pin: $2.
 - **Difficulty.** Medium.
 - **Risks.** Someone opens it twice or only half closes it. Make the lid snap shut over-centre so
@@ -760,13 +827,14 @@ open or kept. None has been built; each is labelled with how speculative it is.
   stage prop.
 - **Novelty.** Medium. A direct descendant of tappers with a time constant in place of a tap.
 
-### 4.9 The Honest Breath (L2 to L3, control; speculative, fluidic part unverified)
+### 4.9 The Honest Breath (L2 to L3, control; speculative)
 - **Effect.** A spectator answers yes-or-no questions by blowing through a carved wooden pipe
   with two small pinwheels or whistles on top. For true answers one spins, for lies the other.
   The pipe is then split lengthwise: only smooth channels.
-- **Method.** A wall-attachment fluidic switch (2.2 H): the jet clings to one of two diverging
-  walls and exits by that branch. A pinhole control port under the performer's thumb, or a
-  squeezed pulse from the hand holding the pipe, flips it. No moving part exists to find. The
+- **Method.** A fluidic amplifier (2.2 H): the main jet leaves by one of two branches, and a
+  weak side stream decides which. The side stream is the spectator's own breath, bled through a
+  pinhole that the performer's thumb covers or uncovers; in the bistable form the jet then stays
+  on that branch until flipped back. No moving part exists to find. The
   performer knows the truth by ordinary means (a force or a peek); the prop only removes the
   "there's a valve" theory.
 - **BOM and cost.** One print, $1. Channel dimensions need experiment; breath jets are slow and
@@ -843,8 +911,12 @@ open or kept. None has been built; each is labelled with how speculative it is.
 - Named puzzle-lock and puzzle-box designers (Popp, Strijbos, Stickman, Karakuri group) publish
   little, but reviewers describe mechanisms in general terms; a puzzle-collector forum trawl
   would turn up more condition types (temperature, two-hand, blow-to-open).
-- Wall-attachment fluidic switches at breath flow rates: needs a primary source and a test
-  print.
+- Wall-attachment fluidic switches at breath flow rates: the COVID-era printed fluidic
+  ventilators are the place to look for channel dimensions that work at lung pressures.
+- Seat-belt retractor thresholds and the Qiu-Lang-Slocum bistable-beam formulas need checking
+  against primary sources before being relied on; both are recalled.
+- The BYU compliant-mechanisms site (fetch refused) is believed to host downloadable bistable
+  and flexure designs.
 - Whether a printed slanted-tooth ratchet can be driven by a resonant reed at 0.1 mm amplitude;
   a resin printer or a strip of needle file may be needed.
 - Temperature and humidity as secret inputs (wax pellets, bimetal, moisture-swelling wood or
@@ -874,6 +946,9 @@ Mechanical logic, memory and counting
 - https://arxiv.org/abs/2110.09343 - Pitt, Turing Tumble is Turing-complete.
 - https://en.wikipedia.org/wiki/Turing_Tumble - Turing Tumble overview.
 - https://www.eurekalert.org/news-releases/968328 - mechanical neural networks press release.
+- https://scholarlypublications.universiteitleiden.nl/access/item%3A4247676/view - Kwakernaak thesis record, "Counting Metamaterials".
+- https://en.wikipedia.org/wiki/Digi-Comp_II - Digi-Comp II marble computer.
+- https://en.wikipedia.org/wiki/Compliant_mechanism - compliant mechanism design methods and limits.
 
 Fluidic logic
 - https://pmc.ncbi.nlm.nih.gov/articles/PMC6475414 - Preston et al., digital logic for soft devices.
@@ -885,9 +960,11 @@ Fluidic logic
 - https://zenodo.org/record/8127332 - STL files for the same.
 - https://www.hackster.io/news/these-3d-printed-pneumatic-logic-gates-make-for-robust-electronics-free-soft-robotics-1e0448a85961 - Conrad et al. printed gates.
 - https://techxplore.com/news/2024-02-scientists-3d-pneumatic-modules-movements.amp - same.
-- https://par.nsf.gov/biblio/10279902 - printed or tube-balloon fluidic circuit record.
-- https://par.nsf.gov/biblio/10556530 - FDM-printed logic gates from flexing beams.
+- https://par.nsf.gov/biblio/10279902 - Hubbard et al., fully 3D-printed soft robots with integrated fluidic circuitry.
+- https://par.nsf.gov/biblio/10556530 - FDM-printed logic gates from flexing beams (seen in results; record would not open).
 - https://arxiv.org/pdf/2110.01743 - printed pneumatic bistable valve with tunable characteristics.
+- https://en.wikipedia.org/wiki/Octobot_(robot) - Octobot.
+- https://en.wikipedia.org/wiki/Fluidics - fluidic amplifiers, no moving parts, printed ventilators.
 - https://pmc.ncbi.nlm.nih.gov/articles/PMC4240780 - paper-fluidic delays (sugar, wax).
 - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6953116/ - paper time-delay valves.
 
@@ -912,12 +989,15 @@ Puzzle and lock craft
 - https://makerworld.com/es/models/495201-spin-box - spin box with shake re-lock.
 - https://patents.google.com/patent/US11612807 - puzzle storage box with centrifugal balls.
 - https://patents.google.com/patent/US1733772 - gravity-control lock, 1929.
-- https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/5944311 - sequential attitude-responsive enclosure puzzle.
+- https://patents.google.com/patent/US5944311 - sequential attitude-responsive enclosure puzzle (Hartzell, 1999).
+- https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/5944311 - same, USPTO copy.
 - https://brainvoyage.blog/puzzle-box-mechanisms - overview of puzzle-box mechanism families.
 - https://en.wikipedia.org/wiki/Lock_puzzle - puzzle locks.
 - https://www.firgelliauto.com/es/blogs/mechanisms/curious-padlock - trick padlock mechanisms.
 - https://www.metmuseum.org/press-releases/extravagant-inventions-2012-exhibitions - Roentgen exhibition.
 - https://www.metmuseum.org/es/essays/abraham-and-david-roentgen - Roentgen essay.
+- https://en.wikipedia.org/wiki/Puzzle_box - puzzle box history and makers.
+- https://en.wikipedia.org/wiki/Seat_belt - inertia-reel locking mechanisms.
 
 Conditional objects
 - https://core.ac.uk/download/518710702.pdf - reed frequency meter and coupled reeds.
@@ -931,6 +1011,8 @@ Conditional objects
 - https://en.wikipedia.org/wiki/Rattleback - rattleback.
 - https://ar5iv.labs.arxiv.org/html/1202.6506 - rattleback dynamics.
 - https://arxiv.org/pdf/1112.4913 - rattleback with viscous friction.
+- https://en.wikipedia.org/wiki/Tippe_top - tippe top.
+- https://en.wikipedia.org/wiki/Dilatant - shear-thickening materials.
 - https://www.nature.com/articles/s41586-023-06306-y.pdf - trajectoids.
 - https://github.com/yaroslavsobolev/trajectoids/blob/main/README.md - trajectoid code.
 - https://arxiv.org/pdf/1009.4444 - universal jamming gripper.
@@ -954,6 +1036,11 @@ Magic prior art
 - https://www.vanishingincmagic.com/close-up-magic/crystal-cleaver/ - Crystal Cleaver.
 - https://www.vanishingincmagic.com/blog/talking-tenyo-toy-tricks/ - Tenyo as "toy tricks".
 - https://boingboing.net/2017/03/08/i-am-oz-the-great-and-powerful.html - critique of gadget tricks.
+- https://wiki.geniimagazine.com/index.php?title=Lippincott_Box - Magicpedia, Lippincott box.
+- https://wiki.geniimagazine.com/index.php?title=Tenyo - Magicpedia, Tenyo.
+- https://wiki.geniimagazine.com/index.php?title=Seven_Keys_to_Baldpate - Magicpedia, lock-and-key routines.
+- https://wiki.geniimagazine.com/index.php?title=Chinese_Sticks - Magicpedia, Chinese sticks.
+- https://en.wikipedia.org/wiki/Mystery_clock - mystery clocks and watches.
 
 Fabrication limits
 - https://utw10945.utweb.utexas.edu/sites/default/files/2016/188-Balderrama-Armendariz.pdf - fold cycles by material.
@@ -963,3 +1050,4 @@ Fabrication limits
 - https://www.sv-jme.eu/article/short-term-creep-behavior-of-different-polymers-used-in-additive-manufacturing-under-different-thermal-and-loading-conditions/ - creep of printed polymers.
 - https://www.ntu.edu.sg/sc3dp/research-capabilities/research-projects/rationalising-the-onset-of-bistability-in-polylactic-acid-(pla)-bilayer-laminates-using-fused-filament-fabrication-(fff) - PLA bilayer bistability.
 - https://repository.tudelft.nl/record/uuid:0e079f8c-873f-4645-8c18-c381c0554ccb - print-induced prestress for bistability.
+- https://help.prusa3d.com/article/modeling-with-3d-printing-in-mind_164135 - Prusa modelling guide: clearances, wall widths.
